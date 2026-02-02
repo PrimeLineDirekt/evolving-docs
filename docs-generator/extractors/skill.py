@@ -1,0 +1,288 @@
+"""Skill extractor for parsing Claude Code skill definitions."""
+
+from pathlib import Path
+from typing import Dict, Any, List
+
+# Handle both relative and absolute imports
+try:
+    from ..parser import parse_markdown
+    from ..config import Config
+except ImportError:
+    from parser import parse_markdown
+    from config import Config
+
+
+class SkillExtractor:
+    """Extract skill documentation from SKILL.md files in skill directories."""
+
+    def __init__(self, config: Config):
+        self.config = config
+        self.source_dir = Path(config.source_root) / ".claude" / "skills"
+
+    def extract_all(self) -> List[Dict[str, Any]]:
+        """Extract all skills from source directory."""
+        skills = []
+
+        if not self.source_dir.exists():
+            return skills
+
+        # Each skill is a directory with SKILL.md inside
+        for skill_dir in self.source_dir.iterdir():
+            if not skill_dir.is_dir():
+                continue
+
+            skill_file = skill_dir / "SKILL.md"
+            if not skill_file.exists():
+                continue
+
+            try:
+                skill_data = self.extract_one(skill_file)
+                if skill_data:
+                    skills.append(skill_data)
+            except Exception as e:
+                print(f"Error extracting skill {skill_dir.name}: {e}")
+
+        return skills
+
+    def extract_one(self, file_path: Path) -> Dict[str, Any]:
+        """Extract a single skill's documentation."""
+        frontmatter, content = parse_markdown(file_path)
+
+        # Extract name from parent directory
+        name = file_path.parent.name
+
+        # Build context dict matching template requirements
+        context = {
+            # Basic metadata
+            'name': name,
+            'type': 'skill',
+            'tags': frontmatter.get('tags', []),
+            'lang': 'en',
+
+            # Core fields
+            'title': frontmatter.get('name', name.replace('-', ' ').title()),
+            'description': frontmatter.get('description', ''),
+            'purpose': self._extract_purpose(content),
+
+            # Skill-specific metadata (handle both dict and string)
+            'version': self._safe_get_nested(frontmatter, 'metadata', 'version'),
+            'author': self._safe_get_nested(frontmatter, 'metadata', 'author'),
+            'source': self._safe_get_nested(frontmatter, 'metadata', 'source'),
+            'integration_date': self._safe_get_nested(frontmatter, 'metadata', 'integration_date'),
+
+            # Structured sections
+            'inputs': self._extract_list_from_section(content, 'Inputs/Prerequisites'),
+            'outputs': self._extract_list_from_section(content, 'Outputs/Deliverables'),
+            'workflow': self._extract_workflow(content),
+            'constraints': self._extract_list_from_section(content, 'Constraints'),
+            'troubleshooting': self._extract_troubleshooting(content),
+
+            # Integration info
+            'evolving_integration': self._extract_section_text(content, 'Evolving Integration'),
+            'related_components': self._extract_related_components(content),
+
+            # Examples
+            'examples': self._extract_examples(content),
+
+            # Source reference
+            'source_file': str(file_path.relative_to(self.config.source_root))
+        }
+
+        return context
+
+    def _safe_get_nested(self, data: Dict, *keys: str) -> str:
+        """Safely get nested dict value, handling string values."""
+        value = data
+        for key in keys:
+            if isinstance(value, dict):
+                value = value.get(key, '')
+            else:
+                return ''
+        return str(value) if value else ''
+
+    def _extract_purpose(self, content: str) -> str:
+        """Extract purpose from ## Purpose section."""
+        return self._extract_section_text(content, 'Purpose')
+
+    def _extract_section_text(self, content: str, section_name: str) -> str:
+        """Extract text content from a named section."""
+        in_section = False
+        text_lines = []
+
+        for line in content.split('\n'):
+            if f'## {section_name}' in line or f'### {section_name}' in line:
+                in_section = True
+                continue
+
+            if in_section and line.startswith('#'):
+                break
+
+            if in_section:
+                stripped = line.strip()
+                if stripped and not stripped.startswith('```'):
+                    text_lines.append(stripped)
+
+        return ' '.join(text_lines)
+
+    def _extract_list_from_section(self, content: str, section_name: str) -> List[str]:
+        """Extract bullet list items from a named section."""
+        items = []
+        in_section = False
+
+        for line in content.split('\n'):
+            if f'## {section_name}' in line or f'### {section_name}' in line:
+                in_section = True
+                continue
+
+            if in_section and line.startswith('#'):
+                break
+
+            if in_section:
+                stripped = line.strip()
+                if stripped.startswith('-') or stripped.startswith('*'):
+                    item = stripped.lstrip('-*').strip()
+                    if item:
+                        items.append(item)
+
+        return items
+
+    def _extract_workflow(self, content: str) -> List[Dict[str, Any]]:
+        """Extract workflow phases from ## Core Workflow section."""
+        phases = []
+        in_workflow = False
+        current_phase = None
+        current_steps = []
+
+        for line in content.split('\n'):
+            if '## Core Workflow' in line:
+                in_workflow = True
+                continue
+
+            if in_workflow and line.startswith('## ') and 'Core Workflow' not in line:
+                break
+
+            if in_workflow:
+                # New phase
+                if line.startswith('### Phase') or line.startswith('### '):
+                    if current_phase:
+                        phases.append({
+                            'name': current_phase,
+                            'steps': current_steps
+                        })
+                    current_phase = line.strip('#').strip()
+                    current_steps = []
+                    continue
+
+                # Checklist item
+                stripped = line.strip()
+                if stripped.startswith('- [ ]') or stripped.startswith('- [x]'):
+                    step = stripped.lstrip('-').lstrip('[').lstrip(']').lstrip('x').strip()
+                    if step:
+                        current_steps.append(step)
+
+        # Add last phase
+        if current_phase:
+            phases.append({
+                'name': current_phase,
+                'steps': current_steps
+            })
+
+        return phases
+
+    def _extract_troubleshooting(self, content: str) -> List[Dict[str, str]]:
+        """Extract troubleshooting table from ## Troubleshooting section."""
+        items = []
+        in_section = False
+        in_table = False
+
+        for line in content.split('\n'):
+            if '## Troubleshooting' in line:
+                in_section = True
+                continue
+
+            if in_section and line.startswith('## '):
+                break
+
+            if in_section:
+                # Detect table rows
+                if '|' in line and not line.startswith('|---'):
+                    if 'Issue' in line and 'Solution' in line:
+                        in_table = True
+                        continue
+
+                    if in_table:
+                        parts = [p.strip() for p in line.split('|')]
+                        if len(parts) >= 3:
+                            items.append({
+                                'issue': parts[1],
+                                'solution': parts[2]
+                            })
+
+        return items
+
+    def _extract_related_components(self, content: str) -> List[str]:
+        """Extract related Evolving components."""
+        related = []
+        in_section = False
+
+        for line in content.split('\n'):
+            if '**Related Evolving Components:**' in line:
+                in_section = True
+                continue
+
+            if in_section and line.startswith('#'):
+                break
+
+            if in_section:
+                stripped = line.strip()
+                if stripped.startswith('-'):
+                    component = stripped.lstrip('-').strip()
+                    if component:
+                        related.append(component)
+
+        return related
+
+    def _extract_examples(self, content: str) -> List[Dict[str, str]]:
+        """Extract code examples from content."""
+        examples = []
+        in_example = False
+        current_example = None
+        code_lines = []
+        code_lang = ''
+
+        for line in content.split('\n'):
+            if '## Example' in line or '### Example' in line:
+                in_example = True
+                if current_example:
+                    if code_lines:
+                        current_example['code'] = '\n'.join(code_lines)
+                        current_example['code_lang'] = code_lang
+                    examples.append(current_example)
+
+                current_example = {'title': line.strip('#').strip()}
+                code_lines = []
+                code_lang = ''
+                continue
+
+            if in_example and line.startswith('```'):
+                if not code_lines:
+                    code_lang = line.strip('`').strip() or 'text'
+                else:
+                    if current_example:
+                        current_example['code'] = '\n'.join(code_lines)
+                        current_example['code_lang'] = code_lang
+                        examples.append(current_example)
+                    current_example = None
+                    code_lines = []
+                    in_example = False
+                continue
+
+            if in_example and code_lines is not None:
+                code_lines.append(line)
+
+        if current_example and code_lines:
+            current_example['code'] = '\n'.join(code_lines)
+            current_example['code_lang'] = code_lang
+            examples.append(current_example)
+
+        return examples

@@ -20,7 +20,7 @@ Smarte Koordination von KI-Fähigkeiten für komplexe Aufgaben.
 | [Trait Composition](intelligent-orchestration.md#trait-composition) | 480 Agent-Persönlichkeitskombinationen |
 | [Model Selection](intelligent-orchestration.md#model-selection) | Automatisches haiku/sonnet/opus Routing |
 | [Parallel Execution](intelligent-orchestration.md#parallel-execution) | Gleichzeitige Task-Verarbeitung |
-| [Delegation Requests](intelligent-orchestration.md#delegation-requests) | Sub-Agent Task-Empfehlungen |
+| [Delegation Requests](intelligent-orchestration.md#delegation-request-pattern) | Sub-Agent Task-Empfehlungen |
 
 ### 📚 Wissensmanagement
 
@@ -46,7 +46,7 @@ Optimierte Nutzung des Context Windows für maximale Effektivität.
 | [Budget Awareness](context-engineering.md#budget-awareness) | Automatische Komprimierung bei Schwellwerten |
 | [Hydration Pattern](context-engineering.md#hydration-pattern) | Single-Call Context Loading |
 | [Staged Rules](context-engineering.md#staged-rules) | Trial → Stable Promotion |
-| [Clear > Compact](context-engineering.md#clear-over-compact) | Voller Reset vs. Zusammenfassung |
+| [Clear > Compact](context-engineering.md#clear-compact) | Voller Reset vs. Zusammenfassung |
 
 ### 🤖 Agent Koordination
 

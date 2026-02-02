@@ -1,0 +1,117 @@
+"""Scenario extractor for parsing Claude Code scenario definitions."""
+
+import json
+from pathlib import Path
+from typing import Dict, Any, List
+
+# Handle both relative and absolute imports
+try:
+    from ..config import Config
+except ImportError:
+    from config import Config
+
+
+class ScenarioExtractor:
+    """Extract scenario documentation from scenario directories."""
+
+    def __init__(self, config: Config):
+        self.config = config
+        self.source_dir = Path(config.source_root) / ".claude" / "scenarios"
+
+    def extract_all(self) -> List[Dict[str, Any]]:
+        """Extract all scenarios from source directory."""
+        scenarios = []
+
+        if not self.source_dir.exists():
+            return scenarios
+
+        # Each scenario is a directory
+        for scenario_dir in self.source_dir.iterdir():
+            if not scenario_dir.is_dir():
+                continue
+
+            # Skip index.json file if treated as directory
+            if scenario_dir.name == 'index.json':
+                continue
+
+            try:
+                scenario_data = self.extract_one(scenario_dir)
+                if scenario_data:
+                    scenarios.append(scenario_data)
+            except Exception as e:
+                print(f"Error extracting scenario {scenario_dir.name}: {e}")
+
+        return scenarios
+
+    def extract_one(self, dir_path: Path) -> Dict[str, Any]:
+        """Extract a single scenario's documentation."""
+        # Try to find scenario.json or index.json
+        scenario_file = dir_path / "scenario.json"
+        if not scenario_file.exists():
+            scenario_file = dir_path / "index.json"
+
+        if scenario_file.exists():
+            # Parse JSON file
+            with open(scenario_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+
+            # Build context dict matching template requirements
+            context = {
+                # Basic metadata
+                'name': data.get('name', dir_path.name),
+                'type': 'scenario',
+                'tags': data.get('tags', []),
+                'lang': 'en',
+
+                # Core fields
+                'title': data.get('display_name', data.get('name', dir_path.name)),
+                'description': data.get('description', ''),
+                'version': data.get('version', ''),
+                'status': data.get('status', 'unknown'),
+
+                # Dates
+                'created': data.get('created', ''),
+                'updated': data.get('updated', ''),
+
+                # Project info
+                'project': data.get('project', {}),
+                'tech_stack': data.get('tech_stack', {}),
+
+                # Components
+                'components': data.get('components', {}),
+                'agents': data.get('components', {}).get('agents', []),
+                'commands': data.get('components', {}).get('commands', []),
+                'skills': data.get('components', {}).get('skills', []),
+
+                # Features
+                'features': data.get('features', {}),
+
+                # Source reference
+                'source_file': str(scenario_file.relative_to(self.config.source_root)),
+                'source_dir': str(dir_path.relative_to(self.config.source_root))
+            }
+        else:
+            # Fallback: use directory name only
+            context = {
+                'name': dir_path.name,
+                'type': 'scenario',
+                'tags': [],
+                'lang': 'en',
+                'title': dir_path.name.replace('-', ' ').title(),
+                'description': f'Scenario: {dir_path.name}',
+                'version': '',
+                'status': 'unknown',
+                'created': '',
+                'updated': '',
+                'project': {},
+                'tech_stack': {},
+                'components': {},
+                'agents': [],
+                'commands': [],
+                'skills': [],
+                'features': {},
+                'source_file': '',
+                'source_dir': str(dir_path.relative_to(self.config.source_root))
+            }
+
+        return context

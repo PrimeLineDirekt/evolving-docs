@@ -92,6 +92,8 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
+      fallback_to_build_date: true
+      enable_git_follow: false
 
 markdown_extensions:
   - abbr
@@ -177,14 +179,15 @@ extra_javascript:
 nav:
   - Home: index.md
   - Agents (55): components/agents/index.md
-  - Blueprints (0): components/blueprints/index.md
+  - Blueprints (9): components/blueprints/index.md
   - Commands (80): components/commands/index.md
-  - Graphics_Tools (0): components/graphics_tools/index.md
-  - Hooks (0): components/hooks/index.md
+  - Graphics_Tools (40): components/graphics_tools/index.md
+  - Hooks (22): components/hooks/index.md
   - Learnings (53): components/learnings/index.md
   - Mcp_Servers (0): components/mcp_servers/index.md
-  - Patterns (58): components/patterns/index.md
-  - Rules (16): components/rules/index.md
-  - Scenarios (0): components/scenarios/index.md
-  - Skills (0): components/skills/index.md
+  - Patterns (59): components/patterns/index.md
+  - Prompts (1): components/prompts/index.md
+  - Rules (17): components/rules/index.md
+  - Scenarios (8): components/scenarios/index.md
+  - Skills (10): components/skills/index.md
   - Templates (6): components/templates/index.md

@@ -303,7 +303,7 @@ Domain Memory (project state) + Experience Memory (learned solutions) work toget
 3. Similar issue → Query both memories
 4. Apply learned solution
 
-[Learn more about Experience Memory →](../architecture/memory-system.md#experience-memory)
+[Learn more about Experience Memory →](../architecture/memory-system.md#2-experience-memory)
 
 ## Best Practices
 
@@ -481,5 +481,5 @@ Switch via `/project-switch` or update `active_context.project`
 ## Next Steps
 
 - [Memory System Architecture](../architecture/memory-system.md) - Technical details
-- [Experience Memory](../architecture/memory-system.md#experience-memory) - Learned solutions
+- [Experience Memory](../architecture/memory-system.md#2-experience-memory) - Learned solutions
 - [Quick Start](../getting-started/quick-start.md) - Try it yourself

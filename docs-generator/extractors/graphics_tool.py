@@ -1,0 +1,248 @@
+"""Graphics tool extractor for parsing graphics knowledge base tools."""
+
+from pathlib import Path
+from typing import Dict, Any, List
+
+# Handle both relative and absolute imports
+try:
+    from ..parser import parse_markdown
+    from ..config import Config
+except ImportError:
+    from parser import parse_markdown
+    from config import Config
+
+
+class GraphicsToolExtractor:
+    """Extract graphics tool documentation from markdown files."""
+
+    def __init__(self, config: Config):
+        self.config = config
+        self.source_dir = Path(config.source_root) / "knowledge" / "graphics" / "tools"
+
+    def extract_all(self) -> List[Dict[str, Any]]:
+        """Extract all graphics tools from source directory."""
+        tools = []
+
+        if not self.source_dir.exists():
+            return tools
+
+        # Recursively find all .md files
+        for tool_file in self.source_dir.rglob("*.md"):
+            try:
+                tool_data = self.extract_one(tool_file)
+                if tool_data:
+                    tools.append(tool_data)
+            except Exception as e:
+                print(f"Error extracting graphics tool {tool_file}: {e}")
+
+        return tools
+
+    def extract_one(self, file_path: Path) -> Dict[str, Any]:
+        """Extract a single graphics tool's documentation."""
+        frontmatter, content = parse_markdown(file_path)
+
+        # Extract name from filename
+        name = file_path.stem
+
+        # Determine category from parent directory
+        category = file_path.parent.name if file_path.parent != self.source_dir else 'general'
+
+        # Build context dict matching template requirements
+        context = {
+            # Basic metadata
+            'name': name,
+            'type': 'graphics_tool',
+            'tags': frontmatter.get('tags', []),
+            'lang': 'en',
+
+            # Core fields
+            'title': self._extract_title(content) or name.replace('-', ' ').title(),
+            'description': frontmatter.get('description', self._extract_description(content)),
+            'category': category,
+
+            # Tool-specific metadata from Quick Facts table
+            'ai_integration': self._extract_quick_fact(content, 'AI-Integration'),
+            'output_format': self._extract_quick_fact(content, 'Output'),
+            'language': self._extract_quick_fact(content, 'Language'),
+            'tool_category': self._extract_quick_fact(content, 'Category'),
+
+            # Usage info
+            'good_for': self._extract_when_to_use(content, good=True),
+            'not_for': self._extract_when_to_use(content, good=False),
+
+            # Technical details
+            'quick_start': self._extract_code_from_section(content, 'Quick Start'),
+            'installation': self._extract_code_from_section(content, 'CLI / Installation'),
+
+            # Related tools
+            'related_tools': self._extract_related_tools(content),
+
+            # Examples
+            'examples': self._extract_examples(content),
+
+            # Source reference
+            'source_file': str(file_path.relative_to(self.config.source_root))
+        }
+
+        return context
+
+    def _extract_title(self, content: str) -> str:
+        """Extract title from first # heading."""
+        for line in content.split('\n'):
+            if line.startswith('# '):
+                return line.strip('#').strip()
+        return ''
+
+    def _extract_description(self, content: str) -> str:
+        """Extract description from first paragraph after title."""
+        lines = content.split('\n')
+        found_title = False
+        for line in lines:
+            if line.startswith('# '):
+                found_title = True
+                continue
+            if found_title and line.strip() and not line.startswith('#') and not line.startswith('|'):
+                return line.strip()
+        return ''
+
+    def _extract_quick_fact(self, content: str, fact_name: str) -> str:
+        """Extract a specific fact from the Quick Facts table."""
+        in_table = False
+        for line in content.split('\n'):
+            if '## Quick Facts' in line:
+                in_table = True
+                continue
+
+            if in_table:
+                if line.startswith('##'):
+                    break
+                if '|' in line and fact_name in line:
+                    parts = [p.strip() for p in line.split('|')]
+                    if len(parts) >= 3:
+                        return parts[2]
+        return ''
+
+    def _extract_when_to_use(self, content: str, good: bool = True) -> List[str]:
+        """Extract 'Good for' or 'Not for' items."""
+        items = []
+        marker = '✅ **Good for:**' if good else '❌ **Not for:**'
+        in_section = False
+
+        for line in content.split('\n'):
+            if marker in line:
+                in_section = True
+                continue
+
+            if in_section:
+                if line.startswith('✅') or line.startswith('❌'):
+                    break
+                if line.startswith('##'):
+                    break
+
+                stripped = line.strip()
+                if stripped.startswith('-'):
+                    item = stripped.lstrip('-').strip()
+                    if item:
+                        items.append(item)
+
+        return items
+
+    def _extract_code_from_section(self, content: str, section_name: str) -> str:
+        """Extract code block from a named section."""
+        in_section = False
+        in_code = False
+        code_lines = []
+
+        for line in content.split('\n'):
+            if f'## {section_name}' in line:
+                in_section = True
+                continue
+
+            if in_section and line.startswith('## '):
+                break
+
+            if in_section:
+                if line.startswith('```'):
+                    if not in_code:
+                        in_code = True
+                        continue
+                    else:
+                        break
+
+                if in_code:
+                    code_lines.append(line)
+
+        return '\n'.join(code_lines)
+
+    def _extract_related_tools(self, content: str) -> List[Dict[str, str]]:
+        """Extract related tools from ## Related Tools section."""
+        tools = []
+        in_section = False
+
+        for line in content.split('\n'):
+            if '## Related Tools' in line:
+                in_section = True
+                continue
+
+            if in_section and line.startswith('## '):
+                break
+
+            if in_section:
+                stripped = line.strip()
+                if stripped.startswith('-'):
+                    # Parse "**ToolName** - description" format
+                    parts = stripped.lstrip('-').strip().split(' - ', 1)
+                    if len(parts) == 2:
+                        tool_name = parts[0].strip('*').strip()
+                        description = parts[1].strip()
+                        tools.append({
+                            'name': tool_name,
+                            'description': description
+                        })
+
+        return tools
+
+    def _extract_examples(self, content: str) -> List[Dict[str, str]]:
+        """Extract code examples from content."""
+        examples = []
+        in_example = False
+        current_example = None
+        code_lines = []
+        code_lang = ''
+
+        for line in content.split('\n'):
+            if '## Example' in line or '### Example' in line:
+                in_example = True
+                if current_example:
+                    if code_lines:
+                        current_example['code'] = '\n'.join(code_lines)
+                        current_example['code_lang'] = code_lang
+                    examples.append(current_example)
+
+                current_example = {'title': line.strip('#').strip()}
+                code_lines = []
+                code_lang = ''
+                continue
+
+            if in_example and line.startswith('```'):
+                if not code_lines:
+                    code_lang = line.strip('`').strip() or 'text'
+                else:
+                    if current_example:
+                        current_example['code'] = '\n'.join(code_lines)
+                        current_example['code_lang'] = code_lang
+                        examples.append(current_example)
+                    current_example = None
+                    code_lines = []
+                    in_example = False
+                continue
+
+            if in_example and code_lines is not None:
+                code_lines.append(line)
+
+        if current_example and code_lines:
+            current_example['code'] = '\n'.join(code_lines)
+            current_example['code_lang'] = code_lang
+            examples.append(current_example)
+
+        return examples

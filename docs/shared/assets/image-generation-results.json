@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-02-03T03:33:29.033530",
+  "successful": 0,
+  "failed": 4,
+  "results": [
+    {
+      "filename": "hero-system.png",
+      "status": "failed",
+      "timestamp": "2026-02-03T03:33:29.033339"
+    },
+    {
+      "filename": "hero-agents.png",
+      "status": "failed",
+      "timestamp": "2026-02-03T03:33:29.033382"
+    },
+    {
+      "filename": "hero-commands.png",
+      "status": "failed",
+      "timestamp": "2026-02-03T03:33:29.033414"
+    },
+    {
+      "filename": "hero-memory.png",
+      "status": "failed",
+      "timestamp": "2026-02-03T03:33:29.033443"
+    }
+  ]
+}

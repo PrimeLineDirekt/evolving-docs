@@ -218,7 +218,7 @@ Domain Memory (Projekt-Zustand) + Experience Memory (gelernte Lösungen) arbeite
 3. Ähnliches Issue → Beide Memories abfragen
 4. Gelernte Lösung anwenden
 
-[Mehr über Experience Memory →](../architecture/memory-system.md#experience-memory)
+[Mehr über Experience Memory →](../architecture/memory-system.md#2-experience-memory)
 
 ## Best Practices
 
@@ -281,7 +281,7 @@ Domain Memory (Projekt-Zustand) + Experience Memory (gelernte Lösungen) arbeite
 ## Nächste Schritte
 
 - [Memory System Architektur](../architecture/memory-system.md) - Technische Details
-- [Experience Memory](../architecture/memory-system.md#experience-memory) - Gelernte Lösungen
+- [Experience Memory](../architecture/memory-system.md#2-experience-memory) - Gelernte Lösungen
 - [Quick Start](../getting-started/quick-start.md) - Selbst ausprobieren
 
 ## Memory-Operationen (Erweitert)
