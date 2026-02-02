@@ -1,0 +1,224 @@
+---
+title: {{ name }}
+type: {{ type }}
+tags: {{ tags | tojson }}
+lang: {{ lang }}
+confidence: {{ confidence | default(100) }}
+{% if deprecated %}deprecated: true{% endif %}
+---
+
+# {{ name }}{% if deprecated %} <span class="deprecated-badge">Deprecated</span>{% endif %}
+
+{% if infographic_path %}
+![{{ name }} Infographic]({{ infographic_path }})
+{: .component-hero }
+{% endif %}
+
+{% if deprecated %}
+!!! warning "Deprecated Component"
+    {{ deprecated_reason | default("This component is deprecated and may be removed in future versions.") }}
+    {% if replacement %}**Replacement:** [{{ replacement }}]({{ replacement_link }}){% endif %}
+{% endif %}
+
+## Overview
+
+<div class="component-meta" markdown>
+| Attribute | Value |
+|-----------|-------|
+| **Type** | {{ type | title }} |
+| **Purpose** | {{ purpose }} |
+| **Complexity** | {{ complexity | default("Medium") }} |
+| **Model** | {{ model | default("sonnet") }} |
+{% if category %}| **Category** | {{ category }} |{% endif %}
+{% if created %}| **Created** | {{ created }} |{% endif %}
+{% if confidence < 80 %}| **Confidence** | <span class="confidence-badge confidence-{{ 'high' if confidence >= 80 else ('medium' if confidence >= 50 else 'low') }}">{{ confidence }}%</span> |{% endif %}
+</div>
+
+{% if tags %}
+<div class="component-tags">
+{% for tag in tags %}
+<span class="tag tag-{{ tag | lower | replace(' ', '-') }}">{{ tag }}</span>
+{% endfor %}
+</div>
+{% endif %}
+
+## What It Does
+
+{{ description }}
+
+{% if key_features %}
+### Key Features
+
+{% for feature in key_features %}
+- {{ feature }}
+{% endfor %}
+{% endif %}
+
+## System Impact
+
+{% if enables %}
+### Enables
+
+{% for item in enables %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+
+{% if integrates_with %}
+### Integrates With
+
+{% for component in integrates_with %}
+- [{{ component.name }}]({{ component.link }}){% if component.relationship %} - {{ component.relationship }}{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if part_of_workflows %}
+### Part of Workflows
+
+{% for workflow in part_of_workflows %}
+- {{ workflow }}
+{% endfor %}
+{% endif %}
+
+## Architecture
+
+{% if dependencies %}
+### Dependencies
+
+{% for dep in dependencies %}
+- `{{ dep.name }}`{% if dep.type %} ({{ dep.type }}){% endif %}{% if dep.required %} **required**{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if mermaid_diagram %}
+### Data Flow
+
+```mermaid
+{{ mermaid_diagram }}
+```
+{% endif %}
+
+{% if graph_relationships %}
+### Graph Relationships
+
+| Direction | Related Component | Relationship |
+|-----------|-------------------|--------------|
+{% for rel in graph_relationships %}
+| {{ rel.direction }} | [{{ rel.target }}]({{ rel.link }}) | {{ rel.type }} |
+{% endfor %}
+{% endif %}
+
+## Usage
+
+{% if trigger %}
+### Trigger
+
+{{ trigger }}
+{% endif %}
+
+{% if examples %}
+### Examples
+
+{% for example in examples %}
+#### {{ example.title | default("Example " ~ loop.index) }}
+
+{% if example.description %}
+{{ example.description }}
+{% endif %}
+
+{% if example.input %}
+**Input:**
+```{{ example.input_lang | default("") }}
+{{ example.input }}
+```
+{% endif %}
+
+{% if example.code %}
+**Code:**
+```{{ example.code_lang | default("python") }}
+{{ example.code }}
+```
+{% endif %}
+
+{% if example.output %}
+**Output:**
+```{{ example.output_lang | default("") }}
+{{ example.output }}
+```
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+{% if expected_output %}
+### Expected Output
+
+{{ expected_output }}
+{% endif %}
+
+## Configuration
+
+{% if config_options %}
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+{% for opt in config_options %}
+| `{{ opt.name }}` | {{ opt.type }} | {{ opt.default | default("-") }} | {{ opt.description }} |
+{% endfor %}
+{% endif %}
+
+{% if config_example %}
+### Configuration Example
+
+```{{ config_lang | default("yaml") }}
+{{ config_example }}
+```
+{% endif %}
+
+## Best Practices
+
+{% if dos %}
+### Do
+
+{% for item in dos %}
+- ✅ {{ item }}
+{% endfor %}
+{% endif %}
+
+{% if donts %}
+### Don't
+
+{% for item in donts %}
+- ❌ {{ item }}
+{% endfor %}
+{% endif %}
+
+{% if tips %}
+### Tips
+
+{% for tip in tips %}
+!!! tip "{{ tip.title | default('Tip') }}"
+    {{ tip.content }}
+{% endfor %}
+{% endif %}
+
+## Related
+
+{% if related %}
+{% for item in related %}
+- [{{ item.name }}]({{ item.link }}){% if item.description %} - {{ item.description }}{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if see_also %}
+### See Also
+
+{% for item in see_also %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+
+---
+
+{% if source_file %}
+<small>Source: `{{ source_file }}`</small>
+{% endif %}

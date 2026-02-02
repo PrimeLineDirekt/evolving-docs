@@ -1,0 +1,88 @@
+---
+title: {{ title }}
+lang: {{ lang }}
+---
+
+# {{ title }}
+
+{{ description }}
+
+{% if stats %}
+## At a Glance
+
+<div class="component-grid" markdown>
+{% for stat in stats %}
+<div class="component-card">
+<h3>{{ stat.value }}</h3>
+<p>{{ stat.label }}</p>
+</div>
+{% endfor %}
+</div>
+{% endif %}
+
+{% if categories %}
+## Categories
+
+{% for category in categories %}
+### {{ category.name }}
+
+{{ category.description }}
+
+| {{ item_type | default("Component") }} | Description |
+|-----------|-------------|
+{% for item in category.items %}
+| [{{ item.name }}]({{ item.link }}) | {{ item.description }} |
+{% endfor %}
+
+{% endfor %}
+{% endif %}
+
+{% if items %}
+## All {{ item_type | default("Components") }}
+
+{% if grouping == "alphabetical" %}
+{% for letter, group in items | groupby("name.0") %}
+### {{ letter | upper }}
+
+{% for item in group %}
+- [{{ item.name }}]({{ item.link }}){% if item.description %} - {{ item.description }}{% endif %}
+{% endfor %}
+
+{% endfor %}
+{% elif grouping == "type" %}
+{% for type, group in items | groupby("type") %}
+### {{ type | title }}
+
+{% for item in group %}
+- [{{ item.name }}]({{ item.link }}){% if item.description %} - {{ item.description }}{% endif %}
+{% endfor %}
+
+{% endfor %}
+{% else %}
+{% for item in items %}
+- [{{ item.name }}]({{ item.link }}){% if item.description %} - {{ item.description }}{% endif %}
+{% endfor %}
+{% endif %}
+{% endif %}
+
+{% if quick_links %}
+## Quick Links
+
+{% for link in quick_links %}
+- [{{ link.title }}]({{ link.url }})
+{% endfor %}
+{% endif %}
+
+{% if getting_started %}
+## Getting Started
+
+{{ getting_started }}
+{% endif %}
+
+{% if see_also %}
+## See Also
+
+{% for item in see_also %}
+- {{ item }}
+{% endfor %}
+{% endif %}

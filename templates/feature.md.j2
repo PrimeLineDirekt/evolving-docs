@@ -1,0 +1,177 @@
+---
+title: {{ name }}
+category: {{ category }}
+tier: {{ tier | default("Premium") }}
+lang: {{ lang }}
+---
+
+# {{ name }}
+
+{% if hero_image %}
+![{{ name }}]({{ hero_image }})
+{: .component-hero }
+{% endif %}
+
+## Overview
+
+{{ description }}
+
+<div class="component-meta" markdown>
+| Attribute | Value |
+|-----------|-------|
+| **Category** | {{ category }} |
+| **Tier** | {{ tier | default("Premium") }} |
+{% if components_count %}| **Components** | {{ components_count }} |{% endif %}
+{% if complexity %}| **Complexity** | {{ complexity }} |{% endif %}
+</div>
+
+## What Makes It Special
+
+{{ unique_value }}
+
+{% if benefits %}
+### Key Benefits
+
+{% for benefit in benefits %}
+- **{{ benefit.title }}**: {{ benefit.description }}
+{% endfor %}
+{% endif %}
+
+## How It Works
+
+{{ how_it_works }}
+
+{% if workflow_diagram %}
+### Workflow
+
+```mermaid
+{{ workflow_diagram }}
+```
+{% endif %}
+
+{% if steps %}
+### Process Steps
+
+{% for step in steps %}
+{{ loop.index }}. **{{ step.title }}**{% if step.description %}: {{ step.description }}{% endif %}
+{% endfor %}
+{% endif %}
+
+## Components Involved
+
+{% if components %}
+| Component | Type | Role |
+|-----------|------|------|
+{% for comp in components %}
+| [{{ comp.name }}]({{ comp.link }}) | {{ comp.type }} | {{ comp.role }} |
+{% endfor %}
+{% endif %}
+
+## Use Cases
+
+{% if use_cases %}
+{% for case in use_cases %}
+### {{ case.title }}
+
+{{ case.description }}
+
+{% if case.example %}
+```{{ case.example_lang | default("") }}
+{{ case.example }}
+```
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+## Getting Started
+
+{% if quick_start %}
+{{ quick_start }}
+{% endif %}
+
+{% if setup_steps %}
+### Setup
+
+{% for step in setup_steps %}
+{{ loop.index }}. {{ step }}
+{% endfor %}
+{% endif %}
+
+{% if examples %}
+### Examples
+
+{% for example in examples %}
+#### {{ example.title }}
+
+{{ example.description }}
+
+```{{ example.lang | default("python") }}
+{{ example.code }}
+```
+
+{% endfor %}
+{% endif %}
+
+## Configuration
+
+{% if config %}
+{{ config }}
+{% endif %}
+
+{% if config_options %}
+| Option | Description | Default |
+|--------|-------------|---------|
+{% for opt in config_options %}
+| `{{ opt.name }}` | {{ opt.description }} | {{ opt.default | default("-") }} |
+{% endfor %}
+{% endif %}
+
+## Best Practices
+
+{% if best_practices %}
+{% for practice in best_practices %}
+- {{ practice }}
+{% endfor %}
+{% endif %}
+
+{% if warnings %}
+### Warnings
+
+{% for warning in warnings %}
+!!! warning
+    {{ warning }}
+{% endfor %}
+{% endif %}
+
+## Related Features
+
+{% if related_features %}
+{% for feature in related_features %}
+- [{{ feature.name }}]({{ feature.link }}){% if feature.relationship %} - {{ feature.relationship }}{% endif %}
+{% endfor %}
+{% endif %}
+
+## Technical Details
+
+{% if technical_details %}
+{{ technical_details }}
+{% endif %}
+
+{% if architecture %}
+### Architecture
+
+{{ architecture }}
+{% endif %}
+
+{% if api_reference %}
+### API Reference
+
+{{ api_reference }}
+{% endif %}
+
+---
+
+{% if source %}
+<small>Based on: {{ source }}</small>
+{% endif %}

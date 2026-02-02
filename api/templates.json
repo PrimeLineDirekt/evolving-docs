@@ -1,0 +1,599 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "count": 0,
+  "description": "Creation templates",
+  "generated": "2026-02-03T01:20:46Z",
+  "items": [
+    {
+      "description": "**Template für**: Agent-Erstellung im Evolving System",
+      "docs_url": "/en/components/templates/agent-development-guide/",
+      "id": "agent-development-guide",
+      "name": "Agent Development Guide",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/agent-development-guide.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Selection Logic System Prompt",
+      "docs_url": "/en/components/templates/selection/",
+      "id": "selection",
+      "name": "Agent Selection Prompt Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/multi-agent-advisory/prompts/selection.md",
+      "type": "templates"
+    },
+    {
+      "description": "Agent templates provide production-ready architectures for building specialized AI agents in your workflows.",
+      "docs_url": "/en/components/templates/README/",
+      "id": "README",
+      "name": "Agent Templates",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/agents/README.md",
+      "type": "templates"
+    },
+    {
+      "description": "Determine analysis scope:",
+      "docs_url": "/en/components/templates/analysis-command/",
+      "id": "analysis-command",
+      "name": "Analysis Command",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/commands/analysis-command.md",
+      "type": "templates"
+    },
+    {
+      "description": "Dieses Template erstellt ein **Task Decomposition Pipeline** Szenario für systematische, autonome Recherche und Beratung.",
+      "docs_url": "/en/components/templates/README/",
+      "id": "README",
+      "name": "Autonomous Research Scenario Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/autonomous-research/README.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Konzept",
+      "docs_url": "/en/components/templates/chunking-strategy/",
+      "id": "chunking-strategy",
+      "name": "Chunking Strategy Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/chunking-strategy.md",
+      "type": "templates"
+    },
+    {
+      "description": "Command templates provide structures for creating slash commands (e.g., `/idea-new`, `/knowledge-add`) in `.claude/commands/`.",
+      "docs_url": "/en/components/templates/README/",
+      "id": "README",
+      "name": "Command Templates",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/commands/README.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Standard Confidence Scoring Methodology",
+      "docs_url": "/en/components/templates/confidence-scoring/",
+      "id": "confidence-scoring",
+      "name": "Confidence Scoring Prompt Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/multi-agent-advisory/prompts/confidence-scoring.md",
+      "type": "templates"
+    },
+    {
+      "description": "The Template System provides production-ready, reusable structures for rapidly building agents, commands, hooks, skills, patterns, and learnings in your Personal Knowledge & Innovation System.",
+      "docs_url": "/en/components/templates/README/",
+      "id": "README",
+      "name": "Evolving Template System",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/README.md",
+      "type": "templates"
+    },
+    {
+      "description": "Du bist ein Research Executor für {DOMAIN_DESCRIPTION}.",
+      "docs_url": "/en/components/templates/execution/",
+      "id": "execution",
+      "name": "Execution System Prompt",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/autonomous-research/prompts/execution.md",
+      "type": "templates"
+    },
+    {
+      "description": "Hook templates provide event-driven automation structures for Claude Desktop hooks (PostToolUse, Stop).",
+      "docs_url": "/en/components/templates/README/",
+      "id": "README",
+      "name": "Hook Templates",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/hooks/README.md",
+      "type": "templates"
+    },
+    {
+      "description": "**Quelle**: {SOURCE_REPO}",
+      "docs_url": "/en/components/templates/compatibility-report/",
+      "id": "compatibility-report",
+      "name": "Kompatibilitäts-Report: {FINDING_NAME}",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/compatibility-report.md",
+      "type": "templates"
+    },
+    {
+      "description": "Learning templates provide structures for capturing key insights and learnings from projects and experiences.",
+      "docs_url": "/en/components/templates/README/",
+      "id": "README",
+      "name": "Learning Templates",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/learnings/README.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Overview",
+      "docs_url": "/en/components/templates/README/",
+      "id": "README",
+      "name": "Multi-Agent Advisory Scenario Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/multi-agent-advisory/README.md",
+      "type": "templates"
+    },
+    {
+      "description": "**Source**: replicate/hype",
+      "docs_url": "/en/components/templates/README/",
+      "id": "README",
+      "name": "Multi-Source Aggregator Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/multi-source-aggregator/README.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Identity",
+      "docs_url": "/en/components/templates/orchestrator-agent/",
+      "id": "orchestrator-agent",
+      "name": "Orchestrator Agent Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/multi-agent-advisory/agents/orchestrator-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "**Quelle**: ccplugins/planning-prd-agent (34KB)",
+      "docs_url": "/en/components/templates/prd-planning-template/",
+      "id": "prd-planning-template",
+      "name": "PRD Planning Agent Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/prd-planning-template.md",
+      "type": "templates"
+    },
+    {
+      "description": "Pattern templates provide structures for documenting reusable architectural and design patterns.",
+      "docs_url": "/en/components/templates/README/",
+      "id": "README",
+      "name": "Pattern Templates",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/patterns/README.md",
+      "type": "templates"
+    },
+    {
+      "description": "Du bist ein Research Planner für {DOMAIN_DESCRIPTION}.",
+      "docs_url": "/en/components/templates/planning/",
+      "id": "planning",
+      "name": "Planning System Prompt",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/autonomous-research/prompts/planning.md",
+      "type": "templates"
+    },
+    {
+      "description": "**Quelle**: ccplugins/ceo-quality-controller-agent (16KB)",
+      "docs_url": "/en/components/templates/quality-orchestrator-template/",
+      "id": "quality-orchestrator-template",
+      "name": "Quality Orchestrator Agent Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/quality-orchestrator-template.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Reporter System Prompt",
+      "docs_url": "/en/components/templates/reporting/",
+      "id": "reporting",
+      "name": "Report Generation Prompt Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/multi-agent-advisory/prompts/reporting.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Identity",
+      "docs_url": "/en/components/templates/reporter-agent/",
+      "id": "reporter-agent",
+      "name": "Reporter Agent Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/multi-agent-advisory/agents/reporter-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Standard Risk Zone Classification",
+      "docs_url": "/en/components/templates/risk-zones/",
+      "id": "risk-zones",
+      "name": "Risk Zone Classification Prompt Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/multi-agent-advisory/prompts/risk-zones.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Agent",
+      "docs_url": "/en/components/templates/scenario-test/",
+      "id": "scenario-test",
+      "name": "Scenario: {AGENT_NAME}",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/tests/scenario-test.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Identity",
+      "docs_url": "/en/components/templates/selector-agent/",
+      "id": "selector-agent",
+      "name": "Selector Agent Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/multi-agent-advisory/agents/selector-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "> **Source**: Piebald-AI/claude-code-system-prompts (v2.0.58)",
+      "docs_url": "/en/components/templates/session-notes-template/",
+      "id": "session-notes-template",
+      "name": "Session Notes Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/session-notes-template.md",
+      "type": "templates"
+    },
+    {
+      "description": "Skill templates provide structures for building reusable, complex capabilities for Claude.",
+      "docs_url": "/en/components/templates/README/",
+      "id": "README",
+      "name": "Skill Templates",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/skills/README.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Full System Prompt Structure",
+      "docs_url": "/en/components/templates/specialist/",
+      "id": "specialist",
+      "name": "Specialist Agent System Prompt Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/multi-agent-advisory/prompts/specialist.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Identity",
+      "docs_url": "/en/components/templates/specialist-agent/",
+      "id": "specialist-agent",
+      "name": "Specialist Agent Template",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/multi-agent-advisory/agents/specialist-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "Du bist ein Research Synthesizer für {DOMAIN_DESCRIPTION}.",
+      "docs_url": "/en/components/templates/synthesis/",
+      "id": "synthesis",
+      "name": "Synthesis System Prompt",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/autonomous-research/prompts/synthesis.md",
+      "type": "templates"
+    },
+    {
+      "description": "If the user provided an argument ($ARGUMENTS is not empty), use that as {INPUT_NAME}.",
+      "docs_url": "/en/components/templates/workflow-command/",
+      "id": "workflow-command",
+      "name": "Workflow Command",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/commands/workflow-command.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Agent Role & Expertise",
+      "docs_url": "/en/components/templates/advisor-agent/",
+      "id": "advisor-agent",
+      "name": "{DOMAIN} Advisor Agent",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/agents/advisor-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Agent Role & Expertise",
+      "docs_url": "/en/components/templates/automation-agent/",
+      "id": "automation-agent",
+      "name": "{DOMAIN} Automation Agent",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/agents/automation-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Agent Role & Expertise",
+      "docs_url": "/en/components/templates/creative-agent/",
+      "id": "creative-agent",
+      "name": "{DOMAIN} Creative Agent",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/agents/creative-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Agent Role & Expertise",
+      "docs_url": "/en/components/templates/research-agent/",
+      "id": "research-agent",
+      "name": "{DOMAIN} Research Agent",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/agents/research-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Agent Role & Expertise",
+      "docs_url": "/en/components/templates/specialist-agent/",
+      "id": "specialist-agent",
+      "name": "{DOMAIN} Specialist Agent",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/agents/specialist-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Agent Role & Expertise",
+      "docs_url": "/en/components/templates/validator-agent/",
+      "id": "validator-agent",
+      "name": "{DOMAIN} Validator Agent",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/agents/validator-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Composed Identity",
+      "docs_url": "/en/components/templates/dynamic-agent/",
+      "id": "dynamic-agent",
+      "name": "{EXPERTISE_NAME} Agent ({PERSONALITY_NAME}, {APPROACH_NAME})",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/agents/dynamic-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Problem",
+      "docs_url": "/en/components/templates/reusable-pattern/",
+      "id": "reusable-pattern",
+      "name": "{PATTERN_NAME}",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/patterns/reusable-pattern.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Context",
+      "docs_url": "/en/components/templates/project-learning/",
+      "id": "project-learning",
+      "name": "{PROJECT_NAME} - Key Learnings",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/learnings/project-learning.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Rolle",
+      "docs_url": "/en/components/templates/executor-agent/",
+      "id": "executor-agent",
+      "name": "{SCENARIO_NAME} Executor Agent",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/autonomous-research/agents/executor-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Rolle",
+      "docs_url": "/en/components/templates/planner-agent/",
+      "id": "planner-agent",
+      "name": "{SCENARIO_NAME} Planner Agent",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/autonomous-research/agents/planner-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Rolle",
+      "docs_url": "/en/components/templates/synthesizer-agent/",
+      "id": "synthesizer-agent",
+      "name": "{SCENARIO_NAME} Synthesizer Agent",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/scenarios/autonomous-research/agents/synthesizer-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Overview",
+      "docs_url": "/en/components/templates/SKILL/",
+      "id": "SKILL",
+      "name": "{SKILL_NAME}",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/skills/progressive-skill/SKILL.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Purpose",
+      "docs_url": "/en/components/templates/SKILL/",
+      "id": "SKILL",
+      "name": "{SKILL_NAME}",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/skills/simple-skill/SKILL.md",
+      "type": "templates"
+    },
+    {
+      "description": "Practical examples for {SKILL_NAME}.",
+      "docs_url": "/en/components/templates/examples/",
+      "id": "examples",
+      "name": "{SKILL_NAME} - Examples",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/skills/progressive-skill/examples.md",
+      "type": "templates"
+    },
+    {
+      "description": "Complete technical reference for {SKILL_NAME}.",
+      "docs_url": "/en/components/templates/reference/",
+      "id": "reference",
+      "name": "{SKILL_NAME} - Reference Documentation",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/skills/progressive-skill/reference.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Agent Role & Expertise",
+      "docs_url": "/en/components/templates/system-builder-agent/",
+      "id": "system-builder-agent",
+      "name": "{SYSTEM_NAME} System Builder Agent",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/agents/system-builder-agent.md",
+      "type": "templates"
+    },
+    {
+      "description": "## Agent Role & Expertise",
+      "docs_url": "/en/components/templates/orchestrator-agent/",
+      "id": "orchestrator-agent",
+      "name": "{WORKFLOW_NAME} Orchestrator Agent",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/templates/agents/orchestrator-agent.md",
+      "type": "templates"
+    }
+  ],
+  "title": "Templates",
+  "type": "templates",
+  "version": "1.0.0"
+}

@@ -1,0 +1,190 @@
+site_name: Evolving System Documentation
+site_url: https://evolving.readthedocs.io
+site_description: Comprehensive documentation for the Evolving AI-First Development System
+site_author: Robin
+
+repo_url: https://github.com/neoforce/evolving
+repo_name: neoforce/evolving
+
+copyright: Copyright &copy; 2024-2026 Robin
+
+docs_dir: .
+site_dir: site
+
+theme:
+  name: material
+  language: en
+  custom_dir: overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/robot-outline
+
+plugins:
+  - search:
+      lang:
+        - en
+        - de
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: de
+          name: Deutsch
+          build: true
+          nav_translations:
+            Home: Startseite
+            Getting Started: Erste Schritte
+            Features: Funktionen
+            Components: Komponenten
+            Agents: Agents
+            Commands: Commands
+            Skills: Skills
+            Rules: Regeln
+            Hooks: Hooks
+            Patterns: Patterns
+            Blueprints: Blueprints
+            Templates: Templates
+            Graphics: Grafik-Tools
+            Architecture: Architektur
+            Guides: Anleitungen
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/neoforce/evolving
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  version:
+    provider: mike
+    default: latest
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: Deutsch
+      link: /de/
+      lang: de
+  feedback:
+    title: Was this page helpful?
+    ratings:
+      - icon: material/thumb-up-outline
+        name: This page was helpful
+        data: 1
+        note: Thanks for your feedback!
+      - icon: material/thumb-down-outline
+        name: This page could be improved
+        data: 0
+        note: Thanks for your feedback! Help us improve by opening an issue.
+
+extra_css:
+  - shared/assets/css/custom.css
+
+extra_javascript:
+  - shared/assets/js/feedback.js
+
+nav:
+  - Home: index.md
+  - Agents (55): components/agents/index.md
+  - Blueprints (0): components/blueprints/index.md
+  - Commands (80): components/commands/index.md
+  - Graphics_Tools (0): components/graphics_tools/index.md
+  - Hooks (0): components/hooks/index.md
+  - Learnings (53): components/learnings/index.md
+  - Mcp_Servers (0): components/mcp_servers/index.md
+  - Patterns (58): components/patterns/index.md
+  - Rules (16): components/rules/index.md
+  - Scenarios (0): components/scenarios/index.md
+  - Skills (0): components/skills/index.md
+  - Templates (6): components/templates/index.md

@@ -1,0 +1,980 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "count": 0,
+  "description": "Slash commands for interaction",
+  "generated": "2026-02-03T01:20:46Z",
+  "items": [
+    {
+      "description": "Batch-Analyse von pending Macro-Analyse Documents mit Claude Code Subscription.",
+      "docs_url": "/en/components/commands/analyze-batch/",
+      "id": "analyze-batch",
+      "name": "/analyze-batch",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/analyze-batch.md",
+      "type": "commands"
+    },
+    {
+      "description": "Führt manuelle Archivierung durch. Standardmäßig Dry-Run (safe mode).",
+      "docs_url": "/en/components/commands/archive/",
+      "id": "archive",
+      "name": "/archive Command",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/archive.md",
+      "type": "commands"
+    },
+    {
+      "description": "Bricht einen laufenden Ralph Loop ab.",
+      "docs_url": "/en/components/commands/cancel-ralph/",
+      "id": "cancel-ralph",
+      "name": "/cancel-ralph",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/cancel-ralph.md",
+      "type": "commands"
+    },
+    {
+      "description": "Lade relevanten Kontext aus dem Knowledge Graph basierend auf Keywords.",
+      "docs_url": "/en/components/commands/context/",
+      "id": "context",
+      "name": "/context",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/context.md",
+      "type": "commands"
+    },
+    {
+      "description": "Generiert ein vollständiges Multi-Agent System mit Agents, Commands, Knowledge-Injection und CLAUDE.md.",
+      "docs_url": "/en/components/commands/create-system/",
+      "id": "create-system",
+      "name": "/create-system",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/create-system.md",
+      "type": "commands"
+    },
+    {
+      "description": "Generiert und aktualisiert die Auswanderungs-KI Pro",
+      "docs_url": "/en/components/commands/doc-gen/",
+      "id": "doc-gen",
+      "name": "/doc-gen - Dokumentations-Generator",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/doc-gen.md",
+      "type": "commands"
+    },
+    {
+      "description": "Generate 30-day probability-weighted forecast for BTC, Gold, XRP, etc.",
+      "docs_url": "/en/components/commands/macro-forecast/",
+      "id": "macro-forecast",
+      "name": "/forecast",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/macro-forecast.md",
+      "type": "commands"
+    },
+    {
+      "description": "Generiere Bilder mit FAL.ai Nano Banana Pro.",
+      "docs_url": "/en/components/commands/generate-image/",
+      "id": "generate-image",
+      "name": "/generate-image",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/generate-image.md",
+      "type": "commands"
+    },
+    {
+      "description": "Schnelle Integritätsprüfung des Evolving-Systems ohne automatische Reparaturen.",
+      "docs_url": "/en/components/commands/integrity-check/",
+      "id": "integrity-check",
+      "name": "/integrity-check",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/integrity-check.md",
+      "type": "commands"
+    },
+    {
+      "description": "Generiert oder aktualisiert das vollständige Tool-Inventar für das aktuelle Projekt.",
+      "docs_url": "/en/components/commands/inventory-report/",
+      "id": "inventory-report",
+      "name": "/inventory-report",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/inventory-report.md",
+      "type": "commands"
+    },
+    {
+      "description": "**FORK** von Benjis Kenya GWO Plan. Robin's Version mit erweiterter Team-Struktur.",
+      "docs_url": "/en/components/commands/kenya-gwo-robin/",
+      "id": "kenya-gwo-robin",
+      "name": "/kenya-gwo-robin - Kenya GWO Training Center (Robin's Fork)",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/kenya-gwo-robin.md",
+      "type": "commands"
+    },
+    {
+      "description": "Validiert und aktualisiert bestehende Learnings und Patterns.",
+      "docs_url": "/en/components/commands/knowledge-refresh/",
+      "id": "knowledge-refresh",
+      "name": "/knowledge-refresh",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/knowledge-refresh.md",
+      "type": "commands"
+    },
+    {
+      "description": "Review system learning, accuracy metrics, and model performance.",
+      "docs_url": "/en/components/commands/learning-review/",
+      "id": "learning-review",
+      "name": "/learning-review",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/learning-review.md",
+      "type": "commands"
+    },
+    {
+      "description": "Iteriere eine Aufgabe bis ein Erfolgskriterium erfüllt ist (Ralph Wiggum Pattern).",
+      "docs_url": "/en/components/commands/loop-until-done/",
+      "id": "loop-until-done",
+      "name": "/loop-until-done",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/loop-until-done.md",
+      "type": "commands"
+    },
+    {
+      "description": "Startet das komplette Macro-Analyse Dashboard (Backend + Frontend).",
+      "docs_url": "/en/components/commands/macro-start/",
+      "id": "macro-start",
+      "name": "/macro-start",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/macro-start.md",
+      "type": "commands"
+    },
+    {
+      "description": "Stoppt das komplette Macro-Analyse Dashboard (Backend + Frontend).",
+      "docs_url": "/en/components/commands/macro-stop/",
+      "id": "macro-stop",
+      "name": "/macro-stop",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/macro-stop.md",
+      "type": "commands"
+    },
+    {
+      "description": "Deep market analysis using all Macro-Analyse agents.",
+      "docs_url": "/en/components/commands/market-analysis/",
+      "id": "market-analysis",
+      "name": "/market-analysis",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/market-analysis.md",
+      "type": "commands"
+    },
+    {
+      "description": "Zeige Statistiken ueber das Experience Memory System.",
+      "docs_url": "/en/components/commands/memory-stats/",
+      "id": "memory-stats",
+      "name": "/memory-stats",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/memory-stats.md",
+      "type": "commands"
+    },
+    {
+      "description": "Scan current market setup against historical pattern library.",
+      "docs_url": "/en/components/commands/pattern-scan/",
+      "id": "pattern-scan",
+      "name": "/pattern-scan",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/pattern-scan.md",
+      "type": "commands"
+    },
+    {
+      "description": "Zeige und verwalte User-Praeferenzen.",
+      "docs_url": "/en/components/commands/preferences/",
+      "id": "preferences",
+      "name": "/preferences [action] [category]",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/preferences.md",
+      "type": "commands"
+    },
+    {
+      "description": "Durchsuche das Experience Memory nach relevanten Erfahrungen.",
+      "docs_url": "/en/components/commands/recall/",
+      "id": "recall",
+      "name": "/recall [query] [--type TYPE] [--project PROJECT] [--recent DAYS]",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/recall.md",
+      "type": "commands"
+    },
+    {
+      "description": "Speichere eine Erfahrung im Experience Memory System.",
+      "docs_url": "/en/components/commands/remember/",
+      "id": "remember",
+      "name": "/remember [type]",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/remember.md",
+      "type": "commands"
+    },
+    {
+      "description": "Schneller Relevanz-Check für GitHub Repos bevor Deep Analysis.",
+      "docs_url": "/en/components/commands/repo-screen/",
+      "id": "repo-screen",
+      "name": "/repo-screen",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/repo-screen.md",
+      "type": "commands"
+    },
+    {
+      "description": "Manueller Spaced Repetition Review - überprüfe fällige Learnings.",
+      "docs_url": "/en/components/commands/review/",
+      "id": "review",
+      "name": "/review",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/review.md",
+      "type": "commands"
+    },
+    {
+      "description": "Startet Dual-Claude Review für einen Plan durch einen skeptischen \"Staff Engineer Critic\".",
+      "docs_url": "/en/components/commands/review-plan/",
+      "id": "review-plan",
+      "name": "/review-plan",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/review-plan.md",
+      "type": "commands"
+    },
+    {
+      "description": "Full System Sync - Synchronisiert ALLES nach größeren Änderungen.",
+      "docs_url": "/en/components/commands/sync-all/",
+      "id": "sync-all",
+      "name": "/sync-all",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/sync-all.md",
+      "type": "commands"
+    },
+    {
+      "description": "Startet Tool Inventory Agent und generiert eine visuelle Tool-Map des gesamten Evolving-Systems.",
+      "docs_url": "/en/components/commands/tool-map/",
+      "id": "tool-map",
+      "name": "/tool-map",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/tool-map.md",
+      "type": "commands"
+    },
+    {
+      "description": "Prüft auf neue Anthropic/Claude Code Features und integriert relevante Updates.",
+      "docs_url": "/en/components/commands/update-check/",
+      "id": "update-check",
+      "name": "/update-check",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/update-check.md",
+      "type": "commands"
+    },
+    {
+      "description": "Startet Plan Mode zur VERIFICATION - beweise dass etwas funktioniert.",
+      "docs_url": "/en/components/commands/verify-plan/",
+      "id": "verify-plan",
+      "name": "/verify-plan",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/verify-plan.md",
+      "type": "commands"
+    },
+    {
+      "description": "**Model**: sonnet",
+      "docs_url": "/en/components/commands/analyze-pitch-docs/",
+      "id": "analyze-pitch-docs",
+      "name": "Analyze Pitch Docs",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/analyze-pitch-docs.md",
+      "type": "commands"
+    },
+    {
+      "description": "**Natürliche Sprache funktioniert:**",
+      "docs_url": "/en/components/commands/analyze-repo/",
+      "id": "analyze-repo",
+      "name": "Analyze Repo",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/analyze-repo.md",
+      "type": "commands"
+    },
+    {
+      "description": "Du bist der **Remediation Orchestrator**. Analysiere Audit-Findings und führe semi-automatische Fixes durch mit einem dynamisch komponierten Fixer-Team.",
+      "docs_url": "/en/components/commands/audit-fix/",
+      "id": "audit-fix",
+      "name": "Audit Fix Command",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/audit-fix.md",
+      "type": "commands"
+    },
+    {
+      "description": "Generiere oder regeneriere Audit-Reports basierend auf gecachten Ergebnissen.",
+      "docs_url": "/en/components/commands/audit-report/",
+      "id": "audit-report",
+      "name": "Audit Report Command",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/audit-report.md",
+      "type": "commands"
+    },
+    {
+      "description": "Analysiere die Task-Beschreibung und empfehle das optimale Model.",
+      "docs_url": "/en/components/commands/auto-model/",
+      "id": "auto-model",
+      "name": "Auto Model Selection",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/auto-model.md",
+      "type": "commands"
+    },
+    {
+      "docs_url": "/en/components/commands/compose-agent/",
+      "id": "compose-agent",
+      "name": "Compose Agent",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/compose-agent.md",
+      "type": "commands"
+    },
+    {
+      "description": "## Project Discovery Phase",
+      "docs_url": "/en/components/commands/analyze-codebase/",
+      "id": "analyze-codebase",
+      "name": "Comprehensive Codebase Analysis",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/external/ccplugins/analyze-codebase.md",
+      "type": "commands"
+    },
+    {
+      "description": "```yaml",
+      "docs_url": "/en/components/commands/crawl/",
+      "id": "crawl",
+      "name": "Crawl Command",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/crawl.md",
+      "type": "commands"
+    },
+    {
+      "description": "Wenn der User eine Domain als Argument übergeben hat ($ARGUMENTS ist nicht leer), nutze das als Domain.",
+      "docs_url": "/en/components/commands/create-agent/",
+      "id": "create-agent",
+      "name": "Create Agent",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/create-agent.md",
+      "type": "commands"
+    },
+    {
+      "description": "Wenn der User einen Namen als Argument übergeben hat ($ARGUMENTS ist nicht leer), nutze das als Command-Namen.",
+      "docs_url": "/en/components/commands/create-command/",
+      "id": "create-command",
+      "name": "Create Command",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/create-command.md",
+      "type": "commands"
+    },
+    {
+      "description": "Wenn der User einen Typ als Argument übergeben hat ($ARGUMENTS ist nicht leer), nutze das als Hook-Typ.",
+      "docs_url": "/en/components/commands/create-hook/",
+      "id": "create-hook",
+      "name": "Create Hook",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/create-hook.md",
+      "type": "commands"
+    },
+    {
+      "description": "### Input prüfen",
+      "docs_url": "/en/components/commands/create-prompt/",
+      "id": "create-prompt",
+      "name": "Create Prompt",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/create-prompt.md",
+      "type": "commands"
+    },
+    {
+      "description": "Wenn der User einen Namen als Argument übergeben hat ($ARGUMENTS ist nicht leer), nutze das als Skill-Namen.",
+      "docs_url": "/en/components/commands/create-skill/",
+      "id": "create-skill",
+      "name": "Create Skill",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/create-skill.md",
+      "type": "commands"
+    },
+    {
+      "description": "**Input**: $ARGUMENTS",
+      "docs_url": "/en/components/commands/debug/",
+      "id": "debug",
+      "name": "Debug",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/debug.md",
+      "type": "commands"
+    },
+    {
+      "description": "**Input**: $ARGUMENTS",
+      "docs_url": "/en/components/commands/deep-research/",
+      "id": "deep-research",
+      "name": "Deep Research",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/deep-research.md",
+      "type": "commands"
+    },
+    {
+      "description": "Du bist der **Evolving Audit Orchestrator**. Führe einen maßgeschneiderten System-Audit für das Evolving-System durch.",
+      "docs_url": "/en/components/commands/evolving-audit/",
+      "id": "evolving-audit",
+      "name": "Evolving Audit Command",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/evolving-audit.md",
+      "type": "commands"
+    },
+    {
+      "description": "### Schritt 1: Context Percentage lesen",
+      "docs_url": "/en/components/commands/context-stats/",
+      "id": "context-stats",
+      "name": "Finde neueste Context-File für aktuelle Session",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/context-stats.md",
+      "type": "commands"
+    },
+    {
+      "description": "Du bist der **Audit Orchestrator**. Führe einen umfassenden Projekt-Audit durch.",
+      "docs_url": "/en/components/commands/full-audit/",
+      "id": "full-audit",
+      "name": "Full Audit Command",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/full-audit.md",
+      "type": "commands"
+    },
+    {
+      "description": "### Schritt 1: Daten sammeln",
+      "docs_url": "/en/components/commands/health-dashboard/",
+      "id": "health-dashboard",
+      "name": "Health Dashboard",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/health-dashboard.md",
+      "type": "commands"
+    },
+    {
+      "description": "### Fall A: Spezifische Idee ($ARGUMENTS = idea-id)",
+      "docs_url": "/en/components/commands/idea-connect/",
+      "id": "idea-connect",
+      "name": "Idea Connect",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/idea-connect.md",
+      "type": "commands"
+    },
+    {
+      "description": "### Argumente parsen",
+      "docs_url": "/en/components/commands/idea-list/",
+      "id": "idea-list",
+      "name": "Idea List",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/idea-list.md",
+      "type": "commands"
+    },
+    {
+      "description": "Wenn der User keine Idee als Argument übergeben hat ($ARGUMENTS ist leer), frage:",
+      "docs_url": "/en/components/commands/idea-new/",
+      "id": "idea-new",
+      "name": "Idea New",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/idea-new.md",
+      "type": "commands"
+    },
+    {
+      "description": "### Fall A: ID wurde übergeben ($ARGUMENTS = idea-id)",
+      "docs_url": "/en/components/commands/idea-work/",
+      "id": "idea-work",
+      "name": "Idea Work",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/idea-work.md",
+      "type": "commands"
+    },
+    {
+      "description": "Liste alle Dateien in `_inbox/`:",
+      "docs_url": "/en/components/commands/inbox-process/",
+      "id": "inbox-process",
+      "name": "Inbox Process",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/inbox-process.md",
+      "type": "commands"
+    },
+    {
+      "docs_url": "/en/components/commands/interview-plan/",
+      "id": "interview-plan",
+      "name": "Interview Plan",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/interview-plan.md",
+      "type": "commands"
+    },
+    {
+      "description": "**Prüfe ZUERST ob externe Links/Quellen enthalten sind:**",
+      "docs_url": "/en/components/commands/knowledge-add/",
+      "id": "knowledge-add",
+      "name": "Knowledge Add",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/knowledge-add.md",
+      "type": "commands"
+    },
+    {
+      "description": "### Fall A: $ARGUMENTS vorhanden",
+      "docs_url": "/en/components/commands/knowledge-search/",
+      "id": "knowledge-search",
+      "name": "Knowledge Search",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/knowledge-search.md",
+      "type": "commands"
+    },
+    {
+      "description": "**Input**: $ARGUMENTS",
+      "docs_url": "/en/components/commands/lab/",
+      "id": "lab",
+      "name": "Lab",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/lab.md",
+      "type": "commands"
+    },
+    {
+      "description": "✅ **Modell gewechselt zu Haiku** (Schnell & Kostengünstig)",
+      "docs_url": "/en/components/commands/haiku/",
+      "id": "haiku",
+      "name": "Model Switch: Haiku",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/haiku.md",
+      "type": "commands"
+    },
+    {
+      "description": "✅ **Modell gewechselt zu Opus** (Maximum Quality, Extended Thinking)",
+      "docs_url": "/en/components/commands/opus/",
+      "id": "opus",
+      "name": "Model Switch: Opus",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/opus.md",
+      "type": "commands"
+    },
+    {
+      "description": "✅ **Modell gewechselt zu Opus mit Ultrathink** (Maximum Reasoning & Extended Thinking)",
+      "docs_url": "/en/components/commands/opus+/",
+      "id": "opus+",
+      "name": "Model Switch: Opus + Ultrathink",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/opus+.md",
+      "type": "commands"
+    },
+    {
+      "description": "✅ **Modell gewechselt zu Sonnet 4.5** (Balanced Performance)",
+      "docs_url": "/en/components/commands/sonnet/",
+      "id": "sonnet",
+      "name": "Model Switch: Sonnet",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/sonnet.md",
+      "type": "commands"
+    },
+    {
+      "description": "Lese `_ONBOARDING.md` vollständig.",
+      "docs_url": "/en/components/commands/onboard-process/",
+      "id": "onboard-process",
+      "name": "Onboard Process",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/onboard-process.md",
+      "type": "commands"
+    },
+    {
+      "description": "### Fall A: README-Pfad wurde übergeben",
+      "docs_url": "/en/components/commands/project-add/",
+      "id": "project-add",
+      "name": "Project Add",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/project-add.md",
+      "type": "commands"
+    },
+    {
+      "description": "**Dieser Workflow wird ausgelöst durch**:",
+      "docs_url": "/en/components/commands/project-analyze/",
+      "id": "project-analyze",
+      "name": "Project Analyze",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/project-analyze.md",
+      "type": "commands"
+    },
+    {
+      "description": "Schneller Projekt-Audit mit den wichtigsten 5 Agents.",
+      "docs_url": "/en/components/commands/quick-audit/",
+      "id": "quick-audit",
+      "name": "Quick Audit Command",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/quick-audit.md",
+      "type": "commands"
+    },
+    {
+      "docs_url": "/en/components/commands/rules-review/",
+      "id": "rules-review",
+      "name": "Rules Review",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/rules-review.md",
+      "type": "commands"
+    },
+    {
+      "description": "### Input-Formate",
+      "docs_url": "/en/components/commands/run-prompt/",
+      "id": "run-prompt",
+      "name": "Run Prompt",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/run-prompt.md",
+      "type": "commands"
+    },
+    {
+      "description": "Führt einen Workflow aus dem `workflows/definitions/` Verzeichnis aus.",
+      "docs_url": "/en/components/commands/run-workflow/",
+      "id": "run-workflow",
+      "name": "Run Workflow",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/run-workflow.md",
+      "type": "commands"
+    },
+    {
+      "description": "### 1. Szenario ermitteln",
+      "docs_url": "/en/components/commands/scenario/",
+      "id": "scenario",
+      "name": "Scenario",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/scenario.md",
+      "type": "commands"
+    },
+    {
+      "description": "### 1. Name ermitteln",
+      "docs_url": "/en/components/commands/scenario-create/",
+      "id": "scenario-create",
+      "name": "Scenario Create",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/scenario-create.md",
+      "type": "commands"
+    },
+    {
+      "description": "### 1. Szenario ermitteln",
+      "docs_url": "/en/components/commands/scenario-edit/",
+      "id": "scenario-edit",
+      "name": "Scenario Edit",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/scenario-edit.md",
+      "type": "commands"
+    },
+    {
+      "description": "### 1. Szenarien laden",
+      "docs_url": "/en/components/commands/scenario-list/",
+      "id": "scenario-list",
+      "name": "Scenario List",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/scenario-list.md",
+      "type": "commands"
+    },
+    {
+      "description": "Tiefgehender Security-Audit mit dem @security-auditor-agent.",
+      "docs_url": "/en/components/commands/audit-security/",
+      "id": "audit-security",
+      "name": "Security Audit Command",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/audit-security.md",
+      "type": "commands"
+    },
+    {
+      "description": "```",
+      "docs_url": "/en/components/commands/security-review/",
+      "id": "security-review",
+      "name": "Security Review",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/security-review.md",
+      "type": "commands"
+    },
+    {
+      "description": "### Fall A: Thema im Argument",
+      "docs_url": "/en/components/commands/sparring/",
+      "id": "sparring",
+      "name": "Sparring",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/sparring.md",
+      "type": "commands"
+    },
+    {
+      "description": "### Schritt 1: 4 Audit-Agents PARALLEL starten",
+      "docs_url": "/en/components/commands/system-audit/",
+      "id": "system-audit",
+      "name": "System Audit",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/system-audit.md",
+      "type": "commands"
+    },
+    {
+      "description": "Parse `$ARGUMENTS` für Mode:",
+      "docs_url": "/en/components/commands/system-health/",
+      "id": "system-health",
+      "name": "System Health",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/system-health.md",
+      "type": "commands"
+    },
+    {
+      "description": "Du orchestrierst den Template-Sync-Workflow zwischen Evolving (Source) und einem Target-Repository.",
+      "docs_url": "/en/components/commands/template-sync/",
+      "id": "template-sync",
+      "name": "Template Sync Command",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/template-sync.md",
+      "type": "commands"
+    },
+    {
+      "description": "| Framework | Trigger | Best For |",
+      "docs_url": "/en/components/commands/think/",
+      "id": "think",
+      "name": "Think",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/think.md",
+      "type": "commands"
+    },
+    {
+      "description": "Dieser Workflow garantiert **mindestens 90% Confidence** für jedes Land durch automatisches Gap-Filling.",
+      "docs_url": "/en/components/commands/visa-kb-add/",
+      "id": "visa-kb-add",
+      "name": "Visa KB Integration Workflow (90% Confidence Garantie)",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/visa-kb-add.md",
+      "type": "commands"
+    },
+    {
+      "description": "```",
+      "docs_url": "/en/components/commands/whats-next/",
+      "id": "whats-next",
+      "name": "Whats Next",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/commands/whats-next.md",
+      "type": "commands"
+    }
+  ],
+  "title": "Commands",
+  "type": "commands",
+  "version": "1.0.0"
+}
