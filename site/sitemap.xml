@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://evolving.readthedocs.io/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/architecture/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/architecture/agent-orchestration/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/agent-orchestration/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/agent-orchestration/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/architecture/context-router/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/context-router/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/context-router/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/architecture/context-routing/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/context-routing/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/context-routing/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/architecture/knowledge-graph/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/knowledge-graph/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/knowledge-graph/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/architecture/memory-system/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/memory-system/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/memory-system/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/architecture/overview/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/overview/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/overview/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/agents/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/agents/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/agents/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/blueprints/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/blueprints/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/blueprints/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/commands/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/commands/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/commands/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/graphics_tools/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/graphics_tools/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/graphics_tools/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/hooks/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/learnings/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/learnings/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/learnings/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/mcp_servers/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/mcp_servers/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/mcp_servers/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/patterns/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/patterns/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/patterns/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/rules/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/rules/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/scenarios/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/scenarios/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/scenarios/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/skills/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/skills/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/skills/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/templates/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/templates/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/templates/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/core-concepts/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/core-concepts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/core-concepts/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/core-concepts/domain-memory/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/core-concepts/domain-memory/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/core-concepts/domain-memory/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/core-concepts/overview/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/core-concepts/overview/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/core-concepts/overview/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/core-concepts/prompt-patterns/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/core-concepts/prompt-patterns/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/core-concepts/prompt-patterns/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/features/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/features/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/features/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/features/agent-coordination/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/features/agent-coordination/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/features/agent-coordination/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/features/automation/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/features/automation/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/features/automation/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/features/context-engineering/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/features/context-engineering/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/features/context-engineering/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/features/intelligent-orchestration/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/features/intelligent-orchestration/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/features/intelligent-orchestration/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/features/knowledge-management/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/features/knowledge-management/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/features/knowledge-management/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/getting-started/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/getting-started/configuration/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/getting-started/configuration/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/getting-started/configuration/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/getting-started/installation/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/getting-started/installation/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/getting-started/installation/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/getting-started/quick-start/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/getting-started/quick-start/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/getting-started/quick-start/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/guides/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/guides/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/guides/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/guides/creating-agents/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/guides/creating-agents/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/guides/creating-agents/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/guides/creating-commands/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/guides/creating-commands/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/guides/creating-commands/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/guides/extending-system/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/guides/extending-system/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/guides/extending-system/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/guides/using-patterns/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/guides/using-patterns/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/guides/using-patterns/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/guides/writing-commands/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/guides/writing-commands/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/guides/writing-commands/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/architecture/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/architecture/agent-orchestration/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/agent-orchestration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/agent-orchestration/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/architecture/context-router/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/context-router/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/context-router/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/architecture/context-routing/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/context-routing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/context-routing/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/architecture/knowledge-graph/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/knowledge-graph/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/knowledge-graph/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/architecture/memory-system/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/memory-system/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/memory-system/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/architecture/overview/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/architecture/overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/architecture/overview/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/agents/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/agents/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/agents/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/blueprints/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/blueprints/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/blueprints/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/commands/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/commands/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/commands/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/graphics_tools/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/graphics_tools/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/graphics_tools/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/learnings/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/learnings/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/learnings/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/mcp_servers/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/mcp_servers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/mcp_servers/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/patterns/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/patterns/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/patterns/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/rules/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/rules/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/scenarios/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/scenarios/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/scenarios/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/skills/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/skills/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/skills/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/templates/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/templates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/templates/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/core-concepts/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/core-concepts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/core-concepts/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/core-concepts/domain-memory/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/core-concepts/domain-memory/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/core-concepts/domain-memory/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/core-concepts/overview/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/core-concepts/overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/core-concepts/overview/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/core-concepts/prompt-patterns/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/core-concepts/prompt-patterns/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/core-concepts/prompt-patterns/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/features/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/features/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/features/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/features/agent-coordination/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/features/agent-coordination/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/features/agent-coordination/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/features/automation/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/features/automation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/features/automation/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/features/context-engineering/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/features/context-engineering/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/features/context-engineering/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/features/intelligent-orchestration/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/features/intelligent-orchestration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/features/intelligent-orchestration/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/features/knowledge-management/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/features/knowledge-management/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/features/knowledge-management/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/getting-started/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/getting-started/configuration/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/getting-started/configuration/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/getting-started/configuration/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/getting-started/installation/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/getting-started/installation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/getting-started/installation/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/getting-started/quick-start/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/getting-started/quick-start/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/getting-started/quick-start/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/guides/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/guides/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/guides/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/guides/creating-agents/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/guides/creating-agents/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/guides/creating-agents/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/guides/creating-commands/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/guides/creating-commands/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/guides/creating-commands/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/guides/extending-system/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/guides/extending-system/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/guides/extending-system/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/guides/using-patterns/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/guides/using-patterns/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/guides/using-patterns/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/guides/writing-commands/</loc>
+        <lastmod>2026-02-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/guides/writing-commands/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/guides/writing-commands/"/>
+    </url>
+</urlset>

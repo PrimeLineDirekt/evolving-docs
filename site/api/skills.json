@@ -1,0 +1,666 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "count": 0,
+  "description": "Composable skills and capabilities",
+  "generated": "2026-02-03T01:20:46Z",
+  "items": [
+    {
+      "docs_url": "/en/components/skills/animations/",
+      "id": "animations",
+      "name": "Animations",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/animations.md",
+      "type": "skills"
+    },
+    {
+      "description": "You can create bar charts in Remotion by using regular React code - HTML and SVG is allowed, as well as D3.js.",
+      "docs_url": "/en/components/skills/charts/",
+      "id": "charts",
+      "name": "Charts in Remotion",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/charts.md",
+      "type": "skills"
+    },
+    {
+      "description": "Use Mediabunny to check if a video can be decoded by the browser before attempting to play it.",
+      "docs_url": "/en/components/skills/can-decode/",
+      "id": "can-decode",
+      "name": "Checking if a video can be decoded",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/can-decode.md",
+      "type": "skills"
+    },
+    {
+      "docs_url": "/en/components/skills/compositions/",
+      "id": "compositions",
+      "name": "Compositions",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/compositions.md",
+      "type": "skills"
+    },
+    {
+      "description": "This guide explains how to display captions in Remotion, assuming you already have captions in the `Caption` format.",
+      "docs_url": "/en/components/skills/display-captions/",
+      "id": "display-captions",
+      "name": "Displaying captions in Remotion",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/display-captions.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Core Identity",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Etsy Poster Creator",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/specialized/etsy-poster-creator/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Example 1: Wall Art - Beach Sunset",
+      "docs_url": "/en/components/skills/examples/",
+      "id": "examples",
+      "name": "Etsy Poster Creator Examples",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/specialized/etsy-poster-creator/examples.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Quick Start",
+      "docs_url": "/en/components/skills/reference/",
+      "id": "reference",
+      "name": "Etsy Poster Creator Reference",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/specialized/etsy-poster-creator/reference.md",
+      "type": "skills"
+    },
+    {
+      "description": "Use Mediabunny to extract frames from videos at specific timestamps. This is useful for generating thumbnails, filmstrips, or processing individual frames.",
+      "docs_url": "/en/components/skills/extract-frames/",
+      "id": "extract-frames",
+      "name": "Extracting frames from videos",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/extract-frames.md",
+      "type": "skills"
+    },
+    {
+      "description": "Mediabunny can extract the duration of an audio file. It works in browser, Node.js, and Bun environments.",
+      "docs_url": "/en/components/skills/get-audio-duration/",
+      "id": "get-audio-duration",
+      "name": "Getting audio duration with Mediabunny",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/get-audio-duration.md",
+      "type": "skills"
+    },
+    {
+      "description": "Mediabunny can extract the width and height of a video file. It works in browser, Node.js, and Bun environments.",
+      "docs_url": "/en/components/skills/get-video-dimensions/",
+      "id": "get-video-dimensions",
+      "name": "Getting video dimensions with Mediabunny",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/get-video-dimensions.md",
+      "type": "skills"
+    },
+    {
+      "description": "Mediabunny can extract the duration of a video file. It works in browser, Node.js, and Bun environments.",
+      "docs_url": "/en/components/skills/get-video-duration/",
+      "id": "get-video-duration",
+      "name": "Getting video duration with Mediabunny",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/get-video-duration.md",
+      "type": "skills"
+    },
+    {
+      "description": "If you have an existing `.srt` subtitle file, you can import it into Remotion using `parseSrt()` from `@remotion/captions`.",
+      "docs_url": "/en/components/skills/import-srt-captions/",
+      "id": "import-srt-captions",
+      "name": "Importing .srt subtitles into Remotion",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/import-srt-captions.md",
+      "type": "skills"
+    },
+    {
+      "description": "## The public folder",
+      "docs_url": "/en/components/skills/assets/",
+      "id": "assets",
+      "name": "Importing assets in Remotion",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/assets.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Core Identity",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "MapToPoster",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/specialized/maptoposter/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "Remotion applies a `scale()` transform to the video container, which affects values from `getBoundingClientRect()`. Use `useCurrentScale()` to get correct measurements.",
+      "docs_url": "/en/components/skills/measuring-dom-nodes/",
+      "id": "measuring-dom-nodes",
+      "name": "Measuring DOM nodes in Remotion",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/measuring-dom-nodes.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Prerequisites",
+      "docs_url": "/en/components/skills/measuring-text/",
+      "id": "measuring-text",
+      "name": "Measuring text in Remotion",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/measuring-text.md",
+      "type": "skills"
+    },
+    {
+      "description": "##",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Pentest Checklist",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/pentest-checklist/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Core Identity",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Prompt Pro Framework",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/frameworks/prompt-pro-framework/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "Diese Datei enthält die vollständige Dokumentation des Prompt Pro Frameworks.",
+      "docs_url": "/en/components/skills/reference/",
+      "id": "reference",
+      "name": "Prompt Pro Framework - Complete Reference",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/frameworks/prompt-pro-framework/reference.md",
+      "type": "skills"
+    },
+    {
+      "description": "Konkrete Beispiele für jeden Level und verschiedene Anwendungsfälle.",
+      "docs_url": "/en/components/skills/examples/",
+      "id": "examples",
+      "name": "Prompt Pro Framework - Practical Examples",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/frameworks/prompt-pro-framework/examples.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Core Identity",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Research Orchestrator",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/frameworks/research-orchestrator/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Example 1: Market Research",
+      "docs_url": "/en/components/skills/examples/",
+      "id": "examples",
+      "name": "Research Orchestrator Examples",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/frameworks/research-orchestrator/examples.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Quick Start",
+      "docs_url": "/en/components/skills/reference/",
+      "id": "reference",
+      "name": "Research Orchestrator Reference",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/frameworks/research-orchestrator/reference.md",
+      "type": "skills"
+    },
+    {
+      "docs_url": "/en/components/skills/sequencing/",
+      "id": "sequencing",
+      "name": "Sequencing",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/sequencing.md",
+      "type": "skills"
+    },
+    {
+      "description": "Wenn der User einen X/Twitter Post lesen will:",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Skill",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/x-reader/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "Wenn der User ein YouTube Video Transcript braucht:",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Skill",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/youtube/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "Use this skills whenever you are dealing with Remotion code to obtain the domain-specific knowledge.",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Skill",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "---",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Source: CloudAI-X/claude-workflow",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/external/claude-workflow/architecture-patterns/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "---",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Source: CloudAI-X/claude-workflow",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/external/claude-workflow/git-workflow/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "---",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Source: CloudAI-X/claude-workflow",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/external/claude-workflow/api-design/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "---",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Source: CloudAI-X/claude-workflow",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/external/claude-workflow/project-analysis/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "---",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Source: CloudAI-X/claude-workflow",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/external/claude-workflow/testing-strategy/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "---",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Source: CloudAI-X/claude-workflow",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/external/claude-workflow/performance-optimization/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "Execute implementation plans by dispatching independent subagents for each task, with mandatory two-stage review cycles.",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Subagent-Driven Development",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/workflows/subagent-driven-development/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Example 1: Feature Implementation",
+      "docs_url": "/en/components/skills/examples/",
+      "id": "examples",
+      "name": "Subagent-Driven Development Examples",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/workflows/subagent-driven-development/examples.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Complete Workflow",
+      "docs_url": "/en/components/skills/reference/",
+      "id": "reference",
+      "name": "Subagent-Driven Development Reference",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/workflows/subagent-driven-development/reference.md",
+      "type": "skills"
+    },
+    {
+      "docs_url": "/en/components/skills/tailwind/",
+      "id": "tailwind",
+      "name": "Tailwind",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/tailwind.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Role & Purpose",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Template Creator",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/core/template-creator/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "Real-world examples for creating each template type.",
+      "docs_url": "/en/components/skills/examples/",
+      "id": "examples",
+      "name": "Template Creator - Practical Examples",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/core/template-creator/examples.md",
+      "type": "skills"
+    },
+    {
+      "description": "Complete reference for all template types, placeholders, and advanced usage.",
+      "docs_url": "/en/components/skills/reference/",
+      "id": "reference",
+      "name": "Template Creator - Reference Documentation",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/core/template-creator/reference.md",
+      "type": "skills"
+    },
+    {
+      "description": "Based on `useCurrentFrame()`, reduce the string character by character to create a typewriter effect.",
+      "docs_url": "/en/components/skills/text-animations/",
+      "id": "text-animations",
+      "name": "Text Animations",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/text-animations.md",
+      "type": "skills"
+    },
+    {
+      "docs_url": "/en/components/skills/timing/",
+      "id": "timing",
+      "name": "Timing",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/timing.md",
+      "type": "skills"
+    },
+    {
+      "description": "Generiert oder aktualisiert das vollständige Tool-Inventar für das aktuelle Projekt mit parallelen Sub-Agents.",
+      "docs_url": "/en/components/skills/SKILL/",
+      "id": "SKILL",
+      "name": "Tool Inventory Generator Skill",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/inventory-report/SKILL.md",
+      "type": "skills"
+    },
+    {
+      "description": "Remotion provides several built-in options for transcribing audio to generate captions:",
+      "docs_url": "/en/components/skills/transcribe-captions/",
+      "id": "transcribe-captions",
+      "name": "Transcribing audio",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/transcribe-captions.md",
+      "type": "skills"
+    },
+    {
+      "description": "Using `<TransitionSeries>` to animate between multiple scenes or clips.",
+      "docs_url": "/en/components/skills/transitions/",
+      "id": "transitions",
+      "name": "Transitions",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/transitions.md",
+      "type": "skills"
+    },
+    {
+      "description": "A negative `from` value shifts time backwards, making the animation start partway through:",
+      "docs_url": "/en/components/skills/trimming/",
+      "id": "trimming",
+      "name": "Trimming",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/trimming.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Basic usage",
+      "docs_url": "/en/components/skills/gifs/",
+      "id": "gifs",
+      "name": "Using Animated images in Remotion",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/gifs.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Prerequisites",
+      "docs_url": "/en/components/skills/lottie/",
+      "id": "lottie",
+      "name": "Using Lottie Animations in Remotion",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/lottie.md",
+      "type": "skills"
+    },
+    {
+      "description": "Follow React Three Fiber and Three.js best practices.",
+      "docs_url": "/en/components/skills/3d/",
+      "id": "3d",
+      "name": "Using Three.js and React Three Fiber in Remotion",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/3d.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Prerequisites",
+      "docs_url": "/en/components/skills/audio/",
+      "id": "audio",
+      "name": "Using audio in Remotion",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/audio.md",
+      "type": "skills"
+    },
+    {
+      "description": "Use `calculateMetadata` on a `<Composition>` to dynamically set duration, dimensions, and transform props before rendering.",
+      "docs_url": "/en/components/skills/calculate-metadata/",
+      "id": "calculate-metadata",
+      "name": "Using calculateMetadata",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/calculate-metadata.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Google Fonts with @remotion/google-fonts",
+      "docs_url": "/en/components/skills/fonts/",
+      "id": "fonts",
+      "name": "Using fonts in Remotion",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/fonts.md",
+      "type": "skills"
+    },
+    {
+      "description": "## The `<Img>` component",
+      "docs_url": "/en/components/skills/images/",
+      "id": "images",
+      "name": "Using images in Remotion",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/images.md",
+      "type": "skills"
+    },
+    {
+      "description": "## Prerequisites",
+      "docs_url": "/en/components/skills/videos/",
+      "id": "videos",
+      "name": "Using videos in Remotion",
+      "relationships": {
+        "used_by": [],
+        "uses": []
+      },
+      "source": ".claude/skills/remotion/rules/videos.md",
+      "type": "skills"
+    }
+  ],
+  "title": "Skills",
+  "type": "skills",
+  "version": "1.0.0"
+}
