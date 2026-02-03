@@ -2,6 +2,8 @@
 
 Evolving's orchestration layer automatically delegates tasks to specialized agents, composes traits for optimal performance, and selects the right model for each job.
 
+![Intelligent Orchestration Architecture](../../shared/assets/infographics/intelligent-orchestration.png)
+
 ---
 
 ## Smart Delegation

@@ -2,6 +2,8 @@
 
 Evolving optimizes context window usage through progressive loading, summary layers, budget awareness, and strategic memory patterns.
 
+![Context Engineering Architecture](../../shared/assets/infographics/context-engineering.png)
+
 ---
 
 ## Progressive Loading

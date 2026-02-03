@@ -2,6 +2,8 @@
 
 Evolving coordinates specialized agents through built-in tools, plugin integrations, dependency management, automated reviews, and intelligent failure recovery.
 
+![Agent Coordination Architecture](../../shared/assets/infographics/agent-coordination.png)
+
 ---
 
 ## Built-in Agents

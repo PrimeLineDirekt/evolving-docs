@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Context Engineering for an AI system. Dark theme with deep orange (#FF5722) and blue accents. Shows a transformation pipeline: Raw Context \u2192 XML/YAML Format \u2192 Token Optimization \u2192 LLM Processing. Four buckets labeled: WRITE (better inputs), SELECT (right choice), COMPRESS (fewer tokens), ISOLATE (clean separation). Token budget pie chart showing: 10% System, 15% Critical, 40% History, 10% Query, 25% Response. Progressive loading visualization (Layer 1\u21922\u21923). Clean modern flat illustration, tech documentation style. Labels: '70% Token Savings', 'Budget Aware'. No photorealistic elements.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8cfd03/vaL9eZjs6fg1skCip4W1J_cCPSXLBE.png",
+  "timestamp": "2026-02-03T18:55:52.349613",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

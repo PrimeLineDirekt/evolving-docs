@@ -2,6 +2,8 @@
 
 Evolving's knowledge layer provides persistent memory across sessions, decay-aware experience retrieval, entity graphs, and intelligent context routing.
 
+![Knowledge Management Architecture](../../shared/assets/infographics/knowledge-management.png)
+
 ---
 
 ## Domain Memory
