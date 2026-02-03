@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Knowledge Graph structure. Dark theme with green (#4CAF50) and purple accents. Shows interconnected nodes: Agents (orange circles), Commands (blue squares), Patterns (green diamonds), Rules (purple hexagons), Skills (pink triangles). Edges connecting nodes with relationship labels. Timeline at bottom showing temporal validity. Key metrics: 360+ Entities, 500+ Relationships, 94.8 percent accuracy. Node clustering by domain. Clean flat illustration, tech documentation style, semantic network visualization.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d014d/xrisi9oeNcZf_CRtG5QQ1_N5WyNjX4.png",
+  "timestamp": "2026-02-03T21:59:40.922451",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

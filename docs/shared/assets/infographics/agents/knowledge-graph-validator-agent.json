@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for knowledge-graph-validator-agent: Validates Knowledge Graph integrity - nodes, edges, orphans, legacy status, and stats sync. Shows validation workflows and integrity checks.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d0ac2/mto58z2tRZmC0mdd7OdU1_p2X4x6av.png",
+  "timestamp": "2026-02-04T04:42:01.956856",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

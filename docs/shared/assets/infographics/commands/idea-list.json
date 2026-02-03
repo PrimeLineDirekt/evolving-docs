@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic: /idea-list command - Idea dashboard showing filtered overview of all ideas with status, tags, dates, and relationships",
+  "cost_usd": 0.15,
+  "aspect_ratio": "1:1",
+  "url": "https://v3b.fal.media/files/b/0a8d0a5c/1SHUb_ILqq1UH0eoDL4vx_ee9COORN.png",
+  "timestamp": "2026-02-04T04:25:12.067462",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

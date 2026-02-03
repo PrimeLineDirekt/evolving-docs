@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for /context command: Load relevant context from Knowledge Graph based on keywords",
+  "cost_usd": 0.15,
+  "aspect_ratio": "1:1",
+  "url": "https://v3b.fal.media/files/b/0a8d0a4a/FyKGFGMTJvdIGjAAFkSR3_VVnvycvl.png",
+  "timestamp": "2026-02-04T04:22:09.635399",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

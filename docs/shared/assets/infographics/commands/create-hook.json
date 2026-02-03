@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for /create-hook command: Creates new hook from template (post-tool-use, command, guard, or validation)",
+  "cost_usd": 0.15,
+  "aspect_ratio": "1:1",
+  "url": "https://v3b.fal.media/files/b/0a8d0a56/MJpENjRK1VoIFIEcodMly_z13kZNDi.png",
+  "timestamp": "2026-02-04T04:24:09.490885",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for /create-agent command: Creates new agent from template for specific domain or specialization",
+  "cost_usd": 0.15,
+  "aspect_ratio": "1:1",
+  "url": "https://v3b.fal.media/files/b/0a8d0a50/W41xaJPJWtQyr3sb2ih9y_lDRz8zyq.png",
+  "timestamp": "2026-02-04T04:23:08.728009",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

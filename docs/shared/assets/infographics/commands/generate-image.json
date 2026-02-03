@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic: /generate-image command - AI image generation using FAL.ai with ICS Framework (Image type, Content, Style). Shows prompt enhancement pipeline and photography layer",
+  "cost_usd": 0.15,
+  "aspect_ratio": "1:1",
+  "url": "https://v3b.fal.media/files/b/0a8d0a4f/KKy8-U3Wbu5OAC7maHF5V_J4ESwEei.png",
+  "timestamp": "2026-02-04T04:23:05.037523",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

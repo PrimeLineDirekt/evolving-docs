@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for /context-stats command: Shows context window usage with visual bar and recommendations",
+  "cost_usd": 0.15,
+  "aspect_ratio": "1:1",
+  "url": "https://v3b.fal.media/files/b/0a8d0a47/wKpVvdY4aP1F9805CYncx_zKTRGcbv.png",
+  "timestamp": "2026-02-04T04:21:38.503414",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

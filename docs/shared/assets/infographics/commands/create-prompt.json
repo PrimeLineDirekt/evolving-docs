@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for /create-prompt command: Creates optimized prompt using Prompt Pro Framework and saves for later execution",
+  "cost_usd": 0.15,
+  "aspect_ratio": "1:1",
+  "url": "https://v3b.fal.media/files/b/0a8d0a59/sPrMJtZjvSo6RFGAOKe5-_srxnECcm.png",
+  "timestamp": "2026-02-04T04:24:36.679168",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

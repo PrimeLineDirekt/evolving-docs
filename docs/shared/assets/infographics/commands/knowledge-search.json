@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for /knowledge-search command: Knowledge base search engine - finds relevant knowledge and summarizes it contextually",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d0a5d/7iJhspQdrqruYioxl_8Qa_RX79HfwB.png",
+  "timestamp": "2026-02-04T04:25:18.849589",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

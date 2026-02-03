@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic: /haiku command - Switch to Claude Haiku model for fast and cost-effective responses. Shows speed icon and cost savings visualization",
+  "cost_usd": 0.15,
+  "aspect_ratio": "1:1",
+  "url": "https://v3b.fal.media/files/b/0a8d0a53/AKuMqHhXshHm9ubqQSyQz_mG2zy1pJ.png",
+  "timestamp": "2026-02-04T04:23:37.557411",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

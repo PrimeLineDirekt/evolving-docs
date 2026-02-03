@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Prompt Patterns and Progressive Disclosure. Dark theme with green (#4CAF50) and purple accents. Shows 4-step workflow: SEARCH index, TIMELINE optional, REVIEW select IDs, FETCH load details. Waterfall layers showing Layer 1 Index 750 tokens, Layer 2 Details only for selected 1500 tokens. Token cost visibility indicators. Smart defaults: under 5 results auto-show, 5-20 index with fetch, over 20 index plus filters. Key metric: 70 percent token reduction. Clean flat illustration, progressive disclosure visualization, tech documentation style.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d0165/5yjhsB_2nDfbtT1hDjDRW_5UWQsD8Z.png",
+  "timestamp": "2026-02-03T22:02:50.930862",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

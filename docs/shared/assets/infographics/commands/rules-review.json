@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for /rules-review command: Manual review and management of rules in the staging system - shows validation metrics, status, enables promotion and archival",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d0a70/8DBWzuiykN83gg7xSnkix_BEtRb5r1.png",
+  "timestamp": "2026-02-04T04:28:50.915421",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

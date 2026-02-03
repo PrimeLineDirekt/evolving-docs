@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for /run-workflow command: Execute predefined workflows with steps, permissions and checkpoints - supports resume from checkpoint, logs progress",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d0a78/IrzReFluHXs5TOc-pFJT8_os5mlHtb.png",
+  "timestamp": "2026-02-04T04:29:50.520034",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Context Window management. Dark theme with blue (#2196F3) and orange accents. Shows 4-Bucket system: WRITE better inputs, SELECT right choice, COMPRESS fewer tokens, ISOLATE clean separation. Token Budget pie chart: 10 percent System, 15 percent Critical, 40 percent History, 10 percent Query, 25 percent Response. Transformation pipeline: Raw Context to Optimized Format to LLM. Key metric: 20-30 percent Token Reduction. Clean flat illustration, tech documentation style.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d015a/maIOPplCVpys3I0xfX2PY_Sf9BDoft.png",
+  "timestamp": "2026-02-03T22:01:06.530140",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

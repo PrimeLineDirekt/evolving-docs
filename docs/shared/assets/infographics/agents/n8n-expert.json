@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for n8n-expert agent: Specializes in n8n workflow automation and integration design. Node-based workflow diagrams, integration connections, and automation flow visualization.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "1:1",
+  "url": "https://v3b.fal.media/files/b/0a8d0abc/NSWLwN4nQZuV01g3qpJPC_INEU2fAx.png",
+  "timestamp": "2026-02-04T04:41:07.084266",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for /scenario command: Activate a scenario and load its context - loads scenario configuration, activates agents, commands and settings",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d0a83/gwJ1Z5SkeEqcYTbsXqfuI_U1uCE9LY.png",
+  "timestamp": "2026-02-04T04:31:43.741400",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

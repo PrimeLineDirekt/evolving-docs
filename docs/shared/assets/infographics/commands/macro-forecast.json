@@ -1,0 +1,9 @@
+{
+  "prompt": "Minimalist flat-design infographic for /macro-forecast command: Generate 30-day probability-weighted forecast for BTC, Gold, XRP. Show bull/base/bear scenario analysis with probability distributions, catalysts, and confidence metrics. Financial analytics theme, gold and blue colors, clean geometric shapes.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d0a50/p9xhX-q471DOXt8lEcGJ4_c8bgL1C3.png",
+  "timestamp": "2026-02-04T04:23:10.640670",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

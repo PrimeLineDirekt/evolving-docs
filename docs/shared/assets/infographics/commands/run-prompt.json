@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for /run-prompt command: Execute saved prompts in fresh sub-agent context - prevents context bleeding from planning, ensures clean execution",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d0a75/7N6jdtdhTn4KzuAj03fAc_hhwyIuoF.png",
+  "timestamp": "2026-02-04T04:29:21.338588",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

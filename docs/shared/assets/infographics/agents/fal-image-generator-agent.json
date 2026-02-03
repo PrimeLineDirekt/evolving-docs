@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for FAL Image Generator Agent: AI image generation using FAL.ai with ICS Framework prompting. Shows prompt structure (Identity, Context, Style), generation pipeline, output examples. Visual: creative studio with AI generating images. Creative AI theme.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d0ac6/vnjlYpPfqcIzB_oJZqgHv_IA8xbKX0.png",
+  "timestamp": "2026-02-04T04:42:52.094087",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

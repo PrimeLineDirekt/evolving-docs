@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic: /doc-gen command - Multi-wave documentation generator with 5 waves: planning, content generation, security gate, translation, and publishing. Shows parallel agent workflow",
+  "cost_usd": 0.15,
+  "aspect_ratio": "1:1",
+  "url": "https://v3b.fal.media/files/b/0a8d0a46/jTWTeke-tHSKy17Y1UUiF_rTCJXeOU.png",
+  "timestamp": "2026-02-04T04:21:33.796064",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

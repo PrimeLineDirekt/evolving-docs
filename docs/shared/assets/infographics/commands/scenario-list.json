@@ -1,0 +1,9 @@
+{
+  "prompt": "Infographic for /scenario-list command: Display all available scenarios with their configurations - shows names, descriptions and component counts",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d0a81/oZ91CfLNuuvUhsXtnbVZU_EwjzzETH.png",
+  "timestamp": "2026-02-04T04:31:16.355464",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

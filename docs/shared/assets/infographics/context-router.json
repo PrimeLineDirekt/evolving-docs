@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Context Router system. Dark theme with purple (#6366F1) and orange accents. Shows funnel visualization: User Keywords at top flowing through Confidence Scoring (HIGH 80+ auto-load, MEDIUM 50-79 ask, LOW skip). Three output layers: Layer 1 JSON Config 500 tokens, Layer 2 Summary 300 tokens, Layer 3 Full MD 3000 tokens. Route matching visualization with keyword-to-resource arrows. Key metric: 90 percent Token Savings. Clean flat illustration, smart routing visualization, tech documentation style.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d0156/t8m8eAF_XwulEJKNonpa5_qlgzMnRq.png",
+  "timestamp": "2026-02-03T22:00:23.513426",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}
