@@ -1,12 +1,12 @@
 ---
-title: workflow-detection
+title: Workflow Detection
 type: rule
 tags: []
 lang: en
 confidence: 100
 ---
 
-# workflow-detection
+# Workflow Detection
 
 
 ## Overview
@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Rule |
-| **Purpose** | Component description |
+| **Purpose** | Automatische Erkennung von Slash-Command Triggern aus natürlicher Sprache. |
 | **Complexity** | medium |
 | **Model** | sonnet |
 | **Category** | rules |</div>
@@ -23,7 +23,7 @@ confidence: 100
 
 ## What It Does
 
-
+Automatische Erkennung von Slash-Command Triggern aus natürlicher Sprache.
 
 
 ## System Impact
@@ -37,25 +37,6 @@ confidence: 100
 
 
 ## Usage
-
-
-### Examples
-
-#### Example
-
-
-
-**Code:**
-```bash
-User: "Ich habe eine neue Idee"
-→ Confidence 9 → "Soll ich /idea-new nutzen?"
-
-User: "Zeig mir meine Ideen"
-→ Confidence 10 → "Soll ich /idea-list nutzen?"
-
-User: "Ich muss mal schauen..."
-→ Confidence 2 → Normal antworten
-```
 
 
 

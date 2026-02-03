@@ -1,12 +1,12 @@
 ---
-title: core-principles
+title: Core Principles
 type: rule
 tags: []
 lang: en
 confidence: 100
 ---
 
-# core-principles
+# Core Principles
 
 
 ## Overview
@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Rule |
-| **Purpose** | Component description |
+| **Purpose** | --- Grundlegende Arbeitsregeln für alle Interaktionen. |
 | **Complexity** | medium |
 | **Model** | sonnet |
 | **Category** | rules |</div>
@@ -23,7 +23,7 @@ confidence: 100
 
 ## What It Does
 
-
+--- Grundlegende Arbeitsregeln für alle Interaktionen.
 
 
 ## System Impact

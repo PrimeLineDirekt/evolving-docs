@@ -1,12 +1,12 @@
 ---
-title: context-warning
-type: hook
+title: Session Evaluation Rule
+type: rule
 tags: []
 lang: en
 confidence: 100
 ---
 
-# context-warning
+# Session Evaluation Rule
 
 
 ## Overview
@@ -14,16 +14,16 @@ confidence: 100
 <div class="component-meta" markdown>
 | Attribute | Value |
 |-----------|-------|
-| **Type** | Hook |
-| **Purpose** | Component description |
+| **Type** | Rule |
+| **Purpose** | --- |
 | **Complexity** | medium |
 | **Model** | sonnet |
-| **Category** | hooks |</div>
+| **Category** | rules |</div>
 
 
 ## What It Does
 
-
+---
 
 
 ## System Impact
@@ -53,7 +53,6 @@ confidence: 100
 ## Related
 
 
-
 ---
 
-<small>Source: `.claude/hooks/context-warning.sh`</small>
+<small>Source: `.claude/rules/session-evaluation.md`</small>

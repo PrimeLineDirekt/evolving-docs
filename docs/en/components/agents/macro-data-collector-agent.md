@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Agent |
-| **Purpose** | Component description |
+| **Purpose** | **Primary Role**: Orchestrate parallel data collection from 7 free API sources (Crypto, Metals, Macro, Events, News, MSM, Geopolitical) |
 | **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | agents |</div>
+| **Model** | claude-sonnet-4-5 |
+| **Category** | market-analysis |</div>
 
 
 ## What It Does
@@ -39,26 +39,6 @@ confidence: 100
 ## Usage
 
 
-### Examples
-
-#### Example
-
-
-
-**Code:**
-```python
-SOURCES = {
-    'crypto': ['CoinGecko', 'Binance', 'Blockchain.com'],
-    'metals': ['FRED', 'LBMA', 'COMEX'],
-    'macro': ['BLS', 'Treasury', 'Zillow'],
-    'events': ['SEC RSS', 'Congress.gov', 'FedWatch'],
-    'news': ['Reuters', 'CryptoPanic', 'Reddit PRAW'],
-    'msm': ['Bloomberg RSS', 'CNBC RSS', 'Yahoo Finance'],
-    'geopolitical': ['NewsAPI', 'World Bank', 'UN Data']
-}
-```
-
-
 
 
 ## Configuration
@@ -71,7 +51,6 @@ SOURCES = {
 
 
 ## Related
-
 
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: Auto Cross Reference
-type: hook
-tags: ["general", "bash"]
+type: Hook
+tags: ["hook", "general"]
 lang: en
 confidence: 100
 ---
@@ -21,18 +21,14 @@ confidence: 100
 | **Category** | hooks |</div>
 
 <div class="component-tags">
+<span class="tag tag-hook">hook</span>
 <span class="tag tag-general">general</span>
-<span class="tag tag-bash">bash</span>
 </div>
 
 ## What It Does
 
  Auto Cross-Reference Hook (v4.0) Auto-syncs Master Documents after structural changes  Trigger: PostToolUse (Write|Edit) Strategy: BLACKLIST - trigger on everything EXCEPT known "noise" paths  v4.0: AUTO-SYNC - actually runs full-sync.sh for structural changes v3.0: Blacklist approach - future-proof, catches new paths automatically 
 
-### Key Features
-
-- Type: general
-- Language: bash
 
 ## System Impact
 
@@ -49,12 +45,12 @@ confidence: 100
 
 ### Examples
 
-#### Implementation
+#### Code
 
 
 
 **Code:**
-```bash
+```python
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
@@ -69,12 +65,6 @@ case "$file_path" in
   *knowledge/sessions/*|*_handoffs/*|*_ledgers/*)
     exit 0
     ;;
-  # Memory entries - auto-managed
-  *_memory/experiences/exp-*|*_memory/projects/*.json|*_memory/index.json)
-    exit 0
-    ;;
-  # Archive - historical, no sync
-  *_archive/*|*_sandbox/*)
 ```
 
 
@@ -94,4 +84,4 @@ case "$file_path" in
 
 ---
 
-<small>Source: `.claude/hooks/auto-cross-reference.sh`</small>
+<small>Source: `/Users/neoforce/Buisiness/Evolving/.claude/hooks/auto-cross-reference.sh`</small>

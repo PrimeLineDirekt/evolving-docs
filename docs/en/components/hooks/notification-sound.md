@@ -1,12 +1,12 @@
 ---
-title: notification-sound
+title: Notification Sound
 type: hook
-tags: []
+tags: ["general", "bash"]
 lang: en
 confidence: 100
 ---
 
-# notification-sound
+# Notification Sound
 
 
 ## Overview
@@ -15,16 +15,24 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Hook |
-| **Purpose** | Component description |
+| **Purpose** | Notification Sound Hook - Debug Version Log dass Hook getriggert wurde |
 | **Complexity** | medium |
 | **Model** | sonnet |
 | **Category** | hooks |</div>
 
+<div class="component-tags">
+<span class="tag tag-general">general</span>
+<span class="tag tag-bash">bash</span>
+</div>
 
 ## What It Does
 
+Notification Sound Hook - Debug Version Log dass Hook getriggert wurde
 
+### Key Features
 
+- Type: general
+- Language: bash
 
 ## System Impact
 
@@ -37,6 +45,21 @@ confidence: 100
 
 
 ## Usage
+
+
+### Examples
+
+#### Implementation
+
+
+
+**Code:**
+```bash
+echo "$(date): Sound hook triggered" >> /tmp/claude-sound-debug.log
+afplay /System/Library/Sounds/Glass.aiff 2>/dev/null
+echo "$(date): Sound finished" >> /tmp/claude-sound-debug.log
+exit 0
+```
 
 
 

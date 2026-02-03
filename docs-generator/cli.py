@@ -21,6 +21,10 @@ try:
     from extractors.learning import LearningExtractor
     from extractors.scenario import ScenarioExtractor
     from extractors.graphics_tool import GraphicsToolExtractor
+    # Function-based extractors
+    from extractors import hook as hook_extractor
+    from extractors import blueprint as blueprint_extractor
+    from extractors import rule as rule_extractor
     EXTRACTORS_AVAILABLE = True
 except ImportError as e:
     print(f"Warning: Could not import extractors: {e}")
@@ -149,6 +153,75 @@ def _extract_examples(content: str) -> list:
     return examples
 
 
+def _normalize_hook_metadata(raw: Dict, source_file: Path) -> Dict:
+    """Normalize hook extractor output to template format."""
+    description = raw.get('description', 'No description available')
+    # Extract first line/paragraph for short description
+    short_desc = description.split('\n')[0] if description else 'Hook component'
+
+    return {
+        'name': raw.get('title', source_file.stem),
+        'slug': slugify(raw.get('title', source_file.stem)),
+        'description': description,  # Full description
+        'category': 'hooks',
+        'type': 'hook',
+        'tags': [raw.get('hook_type', 'general'), raw.get('language', 'unknown')],
+        'lang': 'en',
+        'confidence': 100,
+        'complexity': 'medium',
+        'model': 'sonnet',
+        'purpose': short_desc[:200],  # Short version for purpose
+        'key_features': [f"Type: {raw.get('hook_type', 'general')}", f"Language: {raw.get('language', 'unknown')}"],
+        'usage': f"Hook file: `{raw.get('filename', source_file.name)}`",
+        'examples': [{'code': raw.get('code_snippet', ''), 'code_lang': raw.get('language', 'bash'), 'title': 'Implementation'}] if raw.get('code_snippet') else [],
+        'source_file': str(source_file.relative_to(Path('/Users/neoforce/Buisiness/Evolving'))),
+    }
+
+
+def _normalize_blueprint_metadata(raw: Dict, source_file: Path) -> Dict:
+    """Normalize blueprint extractor output to template format."""
+    # TODO: Implement based on blueprint extractor output format
+    return {
+        'name': raw.get('title', source_file.stem),
+        'slug': slugify(raw.get('title', source_file.stem)),
+        'description': raw.get('description', 'No description available'),
+        'category': 'blueprints',
+        'type': 'blueprint',
+        'tags': raw.get('tags', []),
+        'lang': 'en',
+        'confidence': 100,
+        'complexity': 'medium',
+        'model': 'sonnet',
+        'purpose': raw.get('description', 'Blueprint component')[:200],
+        'key_features': [],
+        'usage': '',
+        'examples': [],
+        'source_file': str(source_file.relative_to(Path('/Users/neoforce/Buisiness/Evolving'))),
+    }
+
+
+def _normalize_rule_metadata(raw: Dict, source_file: Path) -> Dict:
+    """Normalize rule extractor output to template format."""
+    # TODO: Implement based on rule extractor output format
+    return {
+        'name': raw.get('title', source_file.stem),
+        'slug': slugify(raw.get('title', source_file.stem)),
+        'description': raw.get('description', 'No description available'),
+        'category': 'rules',
+        'type': 'rule',
+        'tags': raw.get('tags', []),
+        'lang': 'en',
+        'confidence': 100,
+        'complexity': 'medium',
+        'model': 'sonnet',
+        'purpose': raw.get('description', 'Rule component')[:200],
+        'key_features': [],
+        'usage': '',
+        'examples': [],
+        'source_file': str(source_file.relative_to(Path('/Users/neoforce/Buisiness/Evolving'))),
+    }
+
+
 def ensure_output_dirs(language: str = "en"):
     """Create all output directories if they don't exist."""
     for category, output_dir in OUTPUT_DIRS[language].items():
@@ -182,7 +255,11 @@ def generate_category_docs(
     # Get appropriate extractor
     config = Config()
     extractor = get_extractor_for_category(category, config)
-    if extractor:
+
+    # Log which extractor will be used
+    if category in ['hooks', 'blueprints', 'rules']:
+        print(f"✓ Using function-based extractor: {category}_extractor.extract()")
+    elif extractor:
         print(f"✓ Using specialized extractor: {extractor.__class__.__name__}")
     else:
         print(f"ℹ️  Using simple metadata extractor (no specialized extractor for {category})")
@@ -195,9 +272,24 @@ def generate_category_docs(
     for source_file in source_files:
         try:
             # Extract metadata using specialized extractor or fallback
-            if extractor:
+            # Function-based extractors (hooks, blueprints, rules)
+            if category == 'hooks':
+                raw_metadata = hook_extractor.extract(source_file)
+                # Normalize to template format
+                metadata = _normalize_hook_metadata(raw_metadata, source_file)
+            elif category == 'blueprints':
+                raw_metadata = blueprint_extractor.extract(source_file)
+                # Normalize to template format
+                metadata = _normalize_blueprint_metadata(raw_metadata, source_file)
+            elif category == 'rules':
+                raw_metadata = rule_extractor.extract(source_file)
+                # Normalize to template format
+                metadata = _normalize_rule_metadata(raw_metadata, source_file)
+            elif extractor:
+                # Class-based extractor
                 metadata = extractor.extract_one(source_file)
             else:
+                # Fallback to simple extraction
                 metadata = extract_simple_metadata(source_file, category)
 
             if not metadata:

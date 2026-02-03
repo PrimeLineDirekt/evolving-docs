@@ -1,12 +1,12 @@
 ---
-title: delegation-enforcer
+title: Delegation Enforcer
 type: hook
-tags: []
+tags: ["enforcement", "python"]
 lang: en
 confidence: 100
 ---
 
-# delegation-enforcer
+# Delegation Enforcer
 
 
 ## Overview
@@ -15,16 +15,27 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Hook |
-| **Purpose** | Component description |
+| **Purpose** | Delegation Enforcer Hook (Multi-Event) Supports multiple hook events: |
 | **Complexity** | medium |
 | **Model** | sonnet |
 | **Category** | hooks |</div>
 
+<div class="component-tags">
+<span class="tag tag-enforcement">enforcement</span>
+<span class="tag tag-python">python</span>
+</div>
 
 ## What It Does
 
+Delegation Enforcer Hook (Multi-Event) Supports multiple hook events:
+- UserPromptSubmit: Enforces delegation rules on user prompts
+- Stop: Session-end summary of delegation gaps Bei Score >= DELEGATION_THRESHOLD wird eine Warnung ausgegeben,
+die Claude daran erinnert, zu delegieren statt selbst zu machen. Requires: Python 3.8+
 
+### Key Features
 
+- Type: enforcement
+- Language: python
 
 ## System Impact
 
@@ -37,6 +48,18 @@ confidence: 100
 
 
 ## Usage
+
+
+### Examples
+
+#### Implementation
+
+
+
+**Code:**
+```python
+def track_delegation_gap
+```
 
 
 

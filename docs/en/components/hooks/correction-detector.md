@@ -1,12 +1,12 @@
 ---
-title: correction-detector
+title: Correction Detector
 type: hook
-tags: []
+tags: ["detection", "python"]
 lang: en
 confidence: 100
 ---
 
-# correction-detector
+# Correction Detector
 
 
 ## Overview
@@ -15,16 +15,26 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Hook |
-| **Purpose** | Component description |
+| **Purpose** | Correction Detector Hook - Self-Evolving System Detects user corrections in prompts and offers to generate rules from them. |
 | **Complexity** | medium |
 | **Model** | sonnet |
 | **Category** | hooks |</div>
 
+<div class="component-tags">
+<span class="tag tag-detection">detection</span>
+<span class="tag tag-python">python</span>
+</div>
 
 ## What It Does
 
+Correction Detector Hook - Self-Evolving System Detects user corrections in prompts and offers to generate rules from them.
+Part of the closed-loop learning system. Event: UserPromptSubmit
+Timeout: 5s
 
+### Key Features
 
+- Type: detection
+- Language: python
 
 ## System Impact
 
@@ -37,6 +47,18 @@ confidence: 100
 
 
 ## Usage
+
+
+### Examples
+
+#### Implementation
+
+
+
+**Code:**
+```python
+def get_conversation_context
+```
 
 
 

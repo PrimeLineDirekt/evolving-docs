@@ -41,9 +41,11 @@ class AgentExtractor:
         context = {
             # Basic metadata
             'name': name,
+            'slug': file_path.stem,  # filename without extension
             'type': 'agent',
             'tags': frontmatter.get('tags', []),
             'lang': 'en',  # Default language
+            'confidence': 100,  # Default confidence level
 
             # Core fields
             'description': frontmatter.get('description', ''),

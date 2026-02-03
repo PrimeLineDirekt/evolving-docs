@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Agent |
-| **Purpose** | Component description |
+| **Purpose** | You are a **Graph Node Creator Agent** specialized in creating Knowledge Graph nodes by extracting metadata from files. |
 | **Complexity** | medium |
 | **Model** | sonnet |
-| **Category** | agents || **Created** | 2026-01-06 |</div>
+| **Category** | graph-management || **Created** | 2026-01-06 |</div>
 
 
 ## What It Does
@@ -39,102 +39,6 @@ confidence: 100
 ## Usage
 
 
-### Examples
-
-#### Example
-
-
-
-**Code:**
-```json
-{
-  "orphan_files": [
-    {
-      "path": ".claude/agents/new-agent.md",
-      "expected_type": "agent",
-      "expected_id": "agent-new-agent"
-    }
-  ],
-  "target_path": "/path/to/repo"
-}
-```
-
-
-#### Example
-
-
-
-**Code:**
-```json
-{
-  "id": "agent-new-agent",
-  "type": "agent",
-  "name": "New Agent",
-  "path": ".claude/agents/new-agent.md",
-  "domain": ["automation", "workflow"],
-  "description": "Brief description of purpose"
-}
-```
-
-
-#### Example
-
-
-
-**Code:**
-```json
-{
-  "created_nodes": [
-    {
-      "id": "agent-new-agent",
-      "type": "agent",
-      "name": "New Agent",
-      "path": ".claude/agents/new-agent.md",
-      "domain": ["automation", "workflow"],
-      "description": "Automates workflow tasks"
-    }
-  ],
-  "summary": {
-    "total": 6,
-    "created": 6,
-    "failed": 0
-  }
-}
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-🔨 NODE CREATION:
-├── agent-new-agent
-│   ├── type: agent
-│   ├── domain: [automation, workflow]
-│   └── description: "Automates workflow tasks"
-├── cmd-new-cmd
-│   ├── type: command
-│   └── domain: [utility]
-└── Created: 6 nodes
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-# Extract frontmatter
-sed -n '/^---$/,/^---$/p' file.md
-
-# Get first heading
-grep -m1 "^# " file.md
-```
-
-
 
 
 ## Configuration
@@ -143,11 +47,16 @@ grep -m1 "^# " file.md
 
 ## Best Practices
 
+### Do
+
+- ✅ Extract keywords from description
+- ✅ Common domains: automation, research, analysis, validation, sync, graph, memory
+- ✅ `knowledge/rules/debugging/` → `["debugging"]`
+- ✅ `.claude/agents/` → infer from filename
 
 
 
 ## Related
-
 
 
 ---
