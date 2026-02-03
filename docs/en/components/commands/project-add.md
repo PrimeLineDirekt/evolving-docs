@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du bist mein Project Knowledge Extractor. Deine Aufgabe ist es, aus Projekten wertvolles Wissen zu extrahieren und es wiederverwendbar zu machen. |
+| **Purpose** | Extract valuable knowledge from projects and make it reusable |
 | **Complexity** | high |
 | **Model** | sonnet |
 | **Category** | memory |</div>
@@ -27,19 +27,17 @@ Dokumentiere ein Projekt in der Knowledge Base
 
 ### Key Features
 
-- {Feature 1}
-- {Feature 2}
-- {Feature 3}
+- Extracts patterns and learnings from completed projects
+- Documents architecture decisions and outcomes
+- Creates reusable templates and blueprints
 
 ## System Impact
 
-
-
+Adds project documentation to knowledge base. Creates cross-references and updates indices.
 
 ## Architecture
 
-
-
+Knowledge extraction pipeline: analyze → extract patterns → document → index → cross-reference.
 
 ## Usage
 
@@ -64,8 +62,10 @@ Dokumentiere ein Projekt in der Knowledge Base
 
 ## Best Practices
 
-
-
+- Document projects while context is fresh
+- Focus on decisions and outcomes, not just code
+- Link to related patterns and learnings
+- Tag appropriately for discoverability
 
 ## Related
 

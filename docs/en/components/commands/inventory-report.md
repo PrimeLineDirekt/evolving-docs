@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Generiert oder aktualisiert das vollständige Tool-Inventar für das aktuelle Projekt. |
+| **Purpose** | Generates or updates complete tool inventory for the current project |
 | **Complexity** | medium |
 | **Model** | claude-sonnet-4-5 |
 | **Category** | memory |</div>
@@ -23,21 +23,25 @@ confidence: 100
 
 ## What It Does
 
-Generiert vollständiges Tool-Inventar für aktuelles Projekt
+Generates comprehensive tool inventory for current project. Scans all components, documents relationships, tracks versions, and produces structured report.
 
 
 ## System Impact
 
-
+- Scans `.claude/` directory structure
+- Reads all commands, agents, skills, hooks
+- Updates `_stats.json` with current counts
+- Creates or updates inventory report file
 
 
 ## Architecture
 
-
+Uses Sonnet for efficient scanning and cataloging. Implements recursive directory traversal with metadata extraction and relationship mapping.
 
 
 ## Usage
 
+Run without arguments to generate full inventory for current project.
 
 ### Examples
 
@@ -55,14 +59,21 @@ Generiert vollständiges Tool-Inventar für aktuelles Projekt
 
 ## Configuration
 
-
+Uses Sonnet model. Report format and detail level are configurable.
 
 ## Best Practices
 
-
-
+- Run after adding new components
+- Review before major refactoring
+- Use for documentation updates
+- Compare across projects for consistency
+- Include in project health checks
 
 ## Related
+
+- `/tool-map` - Interactive system map
+- `/integrity-check` - Validate system health
+- `/system-audit` - Deep system analysis
 
 
 ---

@@ -23,15 +23,107 @@ confidence: 100
 
 ## What It Does
 
+Agents wissen nicht, was sie nicht wissen:
+- Handeln außerhalb ihrer Kompetenz ohne Warnung
+- Overconfidence bei unsicheren Antworten
+- Keine Selbsteinschätzung der eigenen Limitationen
+- Falsche Model-Wahl (Haiku für komplexe Tasks)
+
+**Solution**: Self-Model mit Capability Assessment vor jeder Aktion:
+
+```
+Query
+  │
+  ▼
+┌─────────────────────────────────────────────┐
+│           SELF-ASSESSMENT                    │
+│                                             │
+│  "Kann ich das?"                            │
+│  "Was brauche ich dafür?"                   │
+│  "Wie sicher bin ich?"                      │
+│                                             │
+│  ┌─────────────────────────────────────┐    │
+│  │ Capabilities Check                   │   │
+│  │ • Required skills                    │   │
+│  │ • Available tools                    │   │
+│  │ • Model requirements                 │   │
+│  │ • Confidence level                   │   │
+│  └─────────────────────────────────────┘    │
+└─────────────────┬───────────────────────────┘
+                  │
+      ┌───────────┼───────────┐
+      │           │           │
+      ▼           ▼           ▼
+┌─────────┐ ┌─────────┐ ┌─────────┐
+│  HIGH   │ │ MEDIUM  │ │  LOW    │
+│Confidence│ │Confidence│ │Confidence│
+│         │ │         │ │         │
+│Execute  │ │ Clarify │ │Escalate │
+│directly │ │ first   │ │or Refuse│
+└─────────┘ └─────────┘ └─────────┘
+```
 
 
 
 ## System Impact
 
+**When to Apply:**
+- **YES**: Kritische Entscheidungen, Model Selection, Agent Routing
+- **NO**: Triviale Tasks, Chat, bekannte simple Workflows
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
+
 
 
 
 ## Architecture
+
+**Key Components:**
+
+```
+from pydantic import BaseModel, Field
+from typing import Optional
+from enum import Enum
+
+class ConfidenceLevel(str, Enum):
+    HIGH = "high"      # > 0.8
+    MEDIUM = "medium"  # 0.5 - 0.8
+    LOW = "low"        # < 0.5
+
+class SuggestedAction(str, Enum):
+    EXECUTE = "execute"           # Proceed with task
+    CLARIFY = "clarify"           # Ask for more info
+    ESCALATE = "escalate"         # Hand to human/better model
+    DELEGATE = "delegate"         # Use specialized agent
+    REFUSE = "refuse"             # Cannot/should not do
+
+class SelfAssessment(BaseModel):
+    can_handle: bool
+    confidence: float = Field(ge=0, le=1)
+    confidence_level: ConfidenceLevel
+    required_capabilities: list[str]
+    available_capabilities: list[str]
+    missing_capabilities: list[str]
+    suggested_action: SuggestedAction
+    reasoning: str
+    recommended_model: Optional[str] = None  # haiku/sonnet/opus
+    alternative_agents: list[str] = Field(default=[])
+
+class Capability(BaseModel):
+    name: str
+    description: str
+    proficiency: float = Field(ge=0, le=1)  # How good at this
+    requires_tools: list[str] = Field(default=[])
+```
+
+**Data Flow:**
+1. Controller analyzes current state
+2. Selects appropriate agent based on context
+3. Agent processes and contributes to shared state
+4. Iterate until completion criteria met
 
 
 
@@ -404,9 +496,39 @@ class ConfidenceCalibrator:
 
 ## Configuration
 
+**Trade-offs:**
+
+| Pro | Contra |
+|-----|--------|
+| Verhindert Overconfidence | Assessment Overhead |
+| Bessere Error Prevention | Kann zu konservativ sein |
+| Optimale Model-Nutzung | Zusätzliche Latenz |
+| Transparente Limitationen | Komplexere Agent-Logik |
+| Automatische Delegation | Self-Model kann falsch sein |
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

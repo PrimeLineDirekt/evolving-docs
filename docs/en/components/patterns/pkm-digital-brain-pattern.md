@@ -23,11 +23,53 @@ confidence: 100
 
 ## What It Does
 
+Personal Knowledge Management (PKM) Systeme scheitern an:
+- Zu viel Context Bloat bei Agent-Interaktionen
+- Keine klare Struktur für AI-Assistenz
+- Daten-Integrität gefährdet bei AI-Edits
+- Inkonsistente Voice bei Content-Generierung
+- Fragmentierte Beziehungs- und Wissens-Silos
+
+**Solution**: **5-Module Digital Brain Architecture** mit Progressive Disclosure und Append-Only Data Integrity.
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    DIGITAL BRAIN                             │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐    │
+│  │ IDENTITY │  │ CONTENT  │  │ KNOWLEDGE│  │ NETWORK  │    │
+│  │          │  │          │  │          │  │          │    │
+│  │ voice    │  │ ideas    │  │ bookmarks│  │ contacts │    │
+│  │ brand    │  │ posts    │  │ research │  │ circles  │    │
+│  │ values   │  │ calendar │  │ learning │  │ intros   │    │
+│  └──────────┘  └──────────┘  └──────────┘  └──────────┘    │
+│                                                              │
+│  ┌──────────────────────────────────────┐                  │
+│  │            OPERATIONS                 │                  │
+│  │  todos | goals | meetings | metrics   │                  │
+│  └──────────────────────────────────────┘                  │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
 
 
 
 ## System Impact
 
+**Capabilities Provided:**
+- Structured approach to component creation
+- Automated validation and best practices
+- Standardized output format
+- Integration with system architecture
+
+**When to Use:**
+- Creating new system components
+- Standardizing component structure
+- Ensuring consistency across codebase
+- Automating repetitive creation tasks
 
 
 
@@ -299,6 +341,18 @@ Evolving/
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

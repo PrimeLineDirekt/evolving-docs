@@ -23,25 +23,23 @@ confidence: 100
 
 ## What It Does
 
-
-
+Deep market analysis leveraging all macro-analyse agents in parallel. Combines sentiment, technical, fundamental, and catalyst analysis for comprehensive market view.
 
 ## System Impact
 
-
-
+Coordinates multiple specialized agents. Heavy operation requiring macro-analyse system running. Generates multi-perspective market report.
 
 ## Architecture
 
-
-
+Spawns parallel agents (sentiment analyzer, technical scanner, catalyst tracker, fundamentals checker), aggregates results, synthesizes into unified analysis with actionable insights.
 
 ## Usage
 
+Requires macro-analyse backend running. Invokes agent swarm for comprehensive analysis across all dimensions.
 
 ### Examples
 
-#### Usage
+#### Full Analysis
 
 
 

@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du bist der **Audit Orchestrator**. Führe einen umfassenden Projekt-Audit durch. |
+| **Purpose** | Comprehensive multi-dimension project audit with 8-10 specialized agents. |
 | **Complexity** | high |
 | **Model** | opus |
 | **Category** | workflow |</div>
@@ -23,10 +23,16 @@ confidence: 100
 
 ## What It Does
 
-Umfassender Multi-Dimensions Projekt-Audit mit 8-10 spezialisierten Agents
+Generic code audit covering security, quality, architecture, performance, documentation, and testing.
 
 
 ## System Impact
+
+- Deep code analysis across dimensions
+- Identifies vulnerabilities and issues
+- Generates actionable recommendations
+- Profiles project characteristics
+- Produces comprehensive audit report
 
 
 

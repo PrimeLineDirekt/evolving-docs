@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du bist der Health Dashboard Generator. Erstelle einen kompakten visuellen Überblick über den System-Zustand. |
+| **Purpose** | Generates compact visual overview of system health with key metrics. |
 | **Complexity** | medium |
 | **Model** | haiku |
 | **Category** | memory |</div>
@@ -23,10 +23,15 @@ confidence: 100
 
 ## What It Does
 
-Quick visual health overview - alle Key Metrics auf einen Blick
+Dashboard showing component status, system stats, memory health, git status, and recommendations at a glance.
 
 
 ## System Impact
+
+- Parallel data gathering via MCP
+- Visual health indicators
+- Quick system assessment
+- Identifies issues requiring attention
 
 
 

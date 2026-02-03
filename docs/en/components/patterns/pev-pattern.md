@@ -23,15 +23,87 @@ confidence: 100
 
 ## What It Does
 
+Komplexe Tasks scheitern weil:
+1. Keine explizite Planung vor Ausführung
+2. Keine Überprüfung der Ergebnisse
+3. Keine Möglichkeit zur Korrektur bei Fehlern
+
+**Solution**: Drei-Phasen-Ansatz mit Self-Correction Loop:
+
+```
+┌─────────────────────────────────────────────────────┐
+│                    PEV CYCLE                        │
+│                                                     │
+│    ┌──────────┐    ┌──────────┐    ┌──────────┐   │
+│    │  PLANNER │───▶│ EXECUTOR │───▶│ VERIFIER │   │
+│    └──────────┘    └──────────┘    └────┬─────┘   │
+│         ▲                               │          │
+│         │                               │          │
+│         │         ┌─────────┐          │          │
+│         └─────────│ REPLAN? │◀─────────┘          │
+│                   └─────────┘                      │
+│                        │                           │
+│                        ▼                           │
+│                   [COMPLETE]                       │
+└─────────────────────────────────────────────────────┘
+```
 
 
 
 ## System Impact
 
+**When to Apply:**
+- **YES**: Multi-Step Workflows, komplexe Analysen, Tasks mit Dependencies
+- **NO**: Single-Step Tasks, schnelle Lookups, Chat
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
+
 
 
 
 ## Architecture
+
+**Key Components:**
+
+```
+from pydantic import BaseModel, Field
+from typing import Optional
+
+class PlanStep(BaseModel):
+    step_id: int
+    description: str = Field(description="What to do")
+    expected_output: str = Field(description="Success criteria")
+    dependencies: list[int] = Field(default=[], description="IDs of required prior steps")
+    tools_needed: list[str] = Field(default=[], description="Tools to use")
+
+class Plan(BaseModel):
+    goal: str
+    steps: list[PlanStep]
+    estimated_complexity: int = Field(ge=1, le=10)
+
+class ExecutionResult(BaseModel):
+    step_id: int
+    actual_output: str
+    success: bool
+    error: Optional[str] = None
+    artifacts: dict = Field(default={})
+
+class VerificationResult(BaseModel):
+    step_id: int
+    is_valid: bool
+    issues: list[str] = Field(default=[])
+    needs_replan: bool
+    can_continue: bool
+```
+
+**Data Flow:**
+1. Controller analyzes current state
+2. Selects appropriate agent based on context
+3. Agent processes and contributes to shared state
+4. Iterate until completion criteria met
 
 
 
@@ -366,9 +438,39 @@ PROJECT_ANALYZE_STEPS = [
 
 ## Configuration
 
+**Trade-offs:**
+
+| Pro | Contra |
+|-----|--------|
+| Robust bei komplexen Tasks | Overhead bei einfachen Tasks |
+| Self-Correction eingebaut | Kann bei hartnäckigen Fehlern loopen |
+| Expliziter Fortschritt | Mehr Token durch Planung + Verifikation |
+| Nachvollziehbar | Replan kann Plan drastisch ändern |
+| Partial Results bei Failure | Initiale Planung kann suboptimal sein |
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

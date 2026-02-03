@@ -30,10 +30,50 @@ confidence: 100
 
 ## What It Does
 
+**Komplexe Anfragen werden oberflächlich oder unvollständig beantwortet.**
+
+**Context**:
+- User stellt eine Frage die mehrere Aspekte hat
+- KI versucht alles in einem Durchgang zu beantworten
+- Wichtige Teile werden vergessen oder übersprungen
+- Keine systematische Datensammlung
+
+**Symptoms**:
+- Antworten sind oberflächlich trotz detaillierter Frage
+- Teile der Frage werden ignoriert
+- Keine konkreten Zahlen oder Daten
+- Inkonsistente Qualität bei ähnlichen Anfragen
+
+**Why this is a problem**:
+Bei beratungsintensiven Themen (Steuern, Finanzen, Auswanderung) brauchen Nutzer vollständige, fundierte Antworten. Eine oberflächliche Antwort kann zu falschen Entscheidungen führen und Vertrauen zerstören.
+
+---
+
+**Solution**: **Task Decomposition Pipeline** löst das durch systematische Zerlegung in Phasen: Erst planen, dann ausführen, dann zusammenfassen.
 
 
 
 ## System Impact
+
+**When to Apply:**
+### Use This Pattern When:
+
+**YES**
+- Fragen haben mehrere Aspekte/Teile
+- Konkrete Daten/Zahlen werden benötigt
+- Vergleiche zwischen Optionen gefragt sind
+- Beratungsqualität wichtig ist
+- Antworten müssen nachvollziehbar sein
+
+**Ideal Conditions**:
+- Beratungs-intensive Domains (Steuern, Finanzen, Legal)
+- Multi-Faktoren-Entscheidungen
+- Recherche-intensive Aufgaben
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
 
 
 
@@ -359,9 +399,47 @@ Query → Planner → [User Review] → Executor → Synthesizer → Answer
 
 ## Configuration
 
+**Trade-offs:**
+
+### Pros
+
+- **Vollständigkeit**: Systematische Abdeckung aller Aspekte
+  - Impact: 100% der Frage wird beantwortet
+  - Example: Keine vergessenen Länder beim Steuervergleich
+
+- **Qualität**: Fundierte statt oberflächliche Antworten
+  - Impact: Konkrete Zahlen und Empfehlungen
+  - Example: "16.000€ Steuern" statt "moderate Steuern"
+
+- **Skalierbarkeit**: Funktioniert für einfache und komplexe Fragen
+  - Impact: Ein System für alle Query-Typen
+
+- **Nachvollziehbarkeit**: Jeder Schritt ist dokumentiert
+  - Impact: Debugging und Qualitätskontrolle möglich
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

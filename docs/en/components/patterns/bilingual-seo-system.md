@@ -30,10 +30,34 @@ confidence: 100
 
 ## What It Does
 
+E-Commerce Plattformen (Etsy, Amazon) haben separate Markets (etsy.com, etsy.de), aber manuelle Übersetzung ist:
+- Zeitintensiv (double work)
+- Inkonsistent (separate workflows)
+- Error-prone (vergessene Updates)
+- Nicht skalierbar
+
+**Solution**: **Combined Bilingual Generation** mit intelligenter Language-Specific Optimization.
 
 
 
 ## System Impact
+
+**When to Apply:**
+**YES**:
+- E-Commerce with multiple markets
+- Digital products (zero inventory constraint)
+- SEO-dependent products
+- Visual products (posters, art, design)
+
+**NO**:
+- Single-market products
+- Non-SEO platforms
+- Products with legal/compliance per-market restrictions
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
 
 
 
@@ -177,9 +201,37 @@ SEO Optimization: Market-specific keywords
 
 ## Configuration
 
+**Trade-offs:**
+
+### Pros
+- 50% faster than separate workflows
+- Perfect consistency
+- Larger market reach (EN + DE)
+- AI-optimized (one prompt)
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

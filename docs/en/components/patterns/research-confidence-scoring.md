@@ -29,15 +29,60 @@ confidence: 100
 
 ## What It Does
 
+Wie validiert man Research-Ergebnisse wenn man AI-gestützt recherchiert? Ohne systematisches Scoring System führt "gut gemeint" oft zu "falsch implementiert".
+
+**Solution**: **Multi-Source Confidence Scoring System** mit quantifizierbaren Metriken.
 
 
 
 ## System Impact
 
+**When to Apply:**
+**YES**:
+- Production systems with revenue dependency
+- Features with compliance requirements
+- Algorithm-dependent features (SEO, Social)
+- Critical business decisions
+
+**NO**:
+- Internal tools with low risk
+- Experimental features (iterate fast)
+- Well-established patterns (reinventing wheel)
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
+
 
 
 
 ## Architecture
+
+**Key Components:**
+
+```
+TIER 1 (Weight: 10)
+- Official Documentation
+- Expert Analysis (verified professionals)
+- Case Studies $100K+ revenue
+
+TIER 2 (Weight: 7)
+- Industry Publications
+- Reputable Blogs
+- Academic Research
+
+TIER 3 (Weight: 4)
+- Forums (Reddit, Quora)
+- User Reviews
+- Anecdotal Evidence
+```
+
+**Data Flow:**
+1. Controller analyzes current state
+2. Selects appropriate agent based on context
+3. Agent processes and contributes to shared state
+4. Iterate until completion criteria met
 
 
 
@@ -136,9 +181,37 @@ Confidence: 92%
 
 ## Configuration
 
+**Trade-offs:**
+
+### Pros
+- Quantifiable quality metrics
+- Multi-source bias prevention
+- Clear go/no-go decisions
+- Trackable over time
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

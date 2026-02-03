@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Manuelle Überprüfung und Verwaltung von Rules im Staging-System. Zeigt Validierungsmetriken, Status und ermöglicht Promotion, Archivierung oder Bearbeitung. |
+| **Purpose** | Manual review and management of rules in the staging system. Shows validation metrics, status, and enables promotion, archival, or editing |
 | **Complexity** | high |
 | **Model** | claude-sonnet-4-5 |
 | **Category** | memory |</div>
@@ -23,13 +23,12 @@ confidence: 100
 
 ## What It Does
 
-"--force, --all, --status=CANDIDATE|TRIAL|STABLE"
+Reviews staged rules with metrics (applied count, success rate, age). Supports promotion, archival, and editing. Flags: --force, --all, --status=CANDIDATE|TRIAL|STABLE
 
 
 ## System Impact
 
-
-
+Reads staging index, displays metrics, updates rule status based on user decisions.
 
 ## Architecture
 
@@ -59,8 +58,10 @@ confidence: 100
 
 ## Best Practices
 
-
-
+- Review candidate rules regularly
+- Promote rules with proven success rate (3+ applications)
+- Archive rules that conflict or are outdated
+- Monitor trial rules for effectiveness
 
 ## Related
 

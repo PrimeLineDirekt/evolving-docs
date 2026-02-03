@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du aktivierst ein Szenario und lädst dessen Kontext. |
+| **Purpose** | Activate a scenario and load its context |
 | **Complexity** | low |
 | **Model** | haiku |
 | **Category** | general |</div>
@@ -23,13 +23,12 @@ confidence: 100
 
 ## What It Does
 
-Aktiviert ein Szenario und zeigt verfügbare Komponenten
+Activates a scenario and displays available components
 
 
 ## System Impact
 
-
-
+Loads scenario configuration, activates agents, commands, and settings specific to the scenario.
 
 ## Architecture
 
@@ -59,8 +58,9 @@ Aktiviert ein Szenario und zeigt verfügbare Komponenten
 
 ## Best Practices
 
-
-
+- Use scenarios to organize context by project type
+- Switch scenarios when changing domains
+- Keep scenario configs up to date
 
 ## Related
 

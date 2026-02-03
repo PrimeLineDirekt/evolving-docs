@@ -28,6 +28,17 @@ confidence: 100
 
 ## System Impact
 
+**Capabilities Provided:**
+- Structured approach to component creation
+- Automated validation and best practices
+- Standardized output format
+- Integration with system architecture
+
+**When to Use:**
+- Creating new system components
+- Standardizing component structure
+- Ensuring consistency across codebase
+- Automating repetitive creation tasks
 
 
 
@@ -57,14 +68,14 @@ confidence: 100
               │  (3+ Occurrences)   │
               └─────────────────────┘
                     │         │
-                   JA        NEIN
+                   YES        NO
                     │         │
                     ▼         └──→ Weiter
          ┌─────────────────────┐
          │   Existiert Rule?   │
          └─────────────────────┘
                │         │
-              JA        NEIN
+              YES        NO
                │         │
                ▼         ▼
     ┌──────────────┐  ┌──────────────┐
@@ -87,12 +98,12 @@ confidence: 100
 **Code:**
 ```bash
 "Habe ich das schon 3x gemacht?"
-  → JA: Rule erstellen/erweitern
-  → NEIN: Weitermachen
+  → YES: Rule erstellen/erweitern
+  → NO: Weitermachen
 
 "Gab es dazu schon mal Review-Feedback?"
-  → JA: Rule erstellen
-  → NEIN: Notieren für später
+  → YES: Rule erstellen
+  → NO: Notieren für später
 ```
 
 
@@ -207,6 +218,18 @@ Bei Components mit vielen Varianten, nutze `cva()`:
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

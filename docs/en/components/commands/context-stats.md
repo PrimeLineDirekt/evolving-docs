@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du bist der Context Stats Generator. Zeige die aktuelle Context-Window-Nutzung visuell an. |
+| **Purpose** | Shows current context window usage with visual progress bar. |
 | **Complexity** | medium |
 | **Model** | haiku |
 | **Category** | workflow |</div>
@@ -23,41 +23,48 @@ confidence: 100
 
 ## What It Does
 
-Context Window Usage mit visuellem Balken und Empfehlungen
+Displays context window usage as visual bar with recommendations based on usage level.
 
 
 ## System Impact
 
-
+- Helps prevent degradation at high usage
+- Suggests /clear or /whats-next when needed
+- Reads from statusline temp files
 
 
 ## Architecture
 
-
+Reads `/tmp/claude-context-pct-*.txt` for current percentage, renders 30-char bar with status indicators.
 
 
 ## Usage
 
+No arguments. Shows percentage, visual bar, status, and recommendations.
 
 ### Examples
 
 #### Basic Usage
-
-
 
 **Code:**
 ```bash
 /context-stats
 ```
 
-
-
+**Output**: 38% filled bar, "Healthy" status
 
 ## Configuration
 
-
+Thresholds:
+- 0-59%: Healthy
+- 60-79%: Warning
+- 80-100%: Critical
 
 ## Best Practices
+
+- Check before starting complex tasks
+- Run /whats-next at 80%+ before /clear
+- Monitor during multi-step operations
 
 
 

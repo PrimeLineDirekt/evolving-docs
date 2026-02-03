@@ -23,15 +23,131 @@ confidence: 100
 
 ## What It Does
 
+Wenn Tool-Calls fehlschlagen, werden Fehler oft:
+
+- Raw in den Context gedumpt (Token-Verschwendung)
+- Nicht strukturiert formatiert (LLM versteht sie schlecht)
+- Ohne Limit akkumuliert (Infinite Error Loops)
+- Nicht für Self-Healing optimiert
+
+**Solution**: **Structured Error Handling**: Fehler kompakt und strukturiert in den Context einbauen, mit Limits und Escalation.
+
+```
+Tool Call Failed
+      │
+      ▼
+┌──────────────────────┐
+│  Format Error        │
+│  (Compact Structure) │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│  Append to Context   │
+│  <error>...</error>  │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐     ┌──────────────────┐
+│  Check Error Count   │────►│  > Threshold?    │
+└──────────────────────┘     └────────┬─────────┘
+                                      │
+                        ┌─────────────┴─────────────┐
+                        │                           │
+                        ▼                           ▼
+                 ┌──────────┐               ┌──────────────┐
+                 │  Retry   │               │  Escalate    │
+                 │  (LLM)   │               │  to Human    │
+                 └──────────┘               └──────────────┘
+```
 
 
 
 ## System Impact
 
+**Capabilities Provided:**
+- Structured approach to component creation
+- Automated validation and best practices
+- Standardized output format
+- Integration with system architecture
+
+**When to Use:**
+- Creating new system components
+- Standardizing component structure
+- Ensuring consistency across codebase
+- Automating repetitive creation tasks
 
 
 
 ## Architecture
+
+**Key Components:**
+
+```
+from dataclasses import dataclass
+from typing import Optional, List
+from datetime import datetime
+
+@dataclass
+class CompactError:
+    """Structured error for context inclusion."""
+
+    tool_name: str
+    error_type: str  # "validation", "timeout", "auth", "unknown"
+    message: str
+    suggestion: Optional[str] = None  # What the LLM could try instead
+    timestamp: datetime = None
+
+    def __post_init__(self):
+        if self.timestamp is None:
+            self.timestamp = datetime.now()
+
+    def to_context(self) -> str:
+        """Format for context window inclusion."""
+        parts = [
+            f"tool: {self.tool_name}",
+            f"type: {self.error_type}",
+            f"message: {self.message}"
+        ]
+        if self.suggestion:
+            parts.append(f"suggestion: {self.suggestion}")
+
+        return "<error>\n" + "\n".join(parts) + "\n</error>"
+
+
+def format_error(exception: Exception, tool_name: str) -> CompactError:
+    """Convert exception to compact error."""
+
+    # Categorize error
+    error_type = "unknown"
+    suggestion = None
+
+    if "timeout" in str(exception).lower():
+        error_type = "timeout"
+        suggestion = "Try with a simpler query or smaller dataset"
+    elif "auth" in str(exception).lower() or "401" in str(exception):
+        error_type = "auth"
+        suggestion = "Check credentials or request human approval"
+    elif "validation" in str(exception).lower() or "invalid" in str(exception).lower():
+        error_type = "validation"
+        suggestion = "Check input format and required fields"
+    elif "not found" in str(exception).lower() or "404" in str(exception):
+        error_type = "not_found"
+        suggestion = "Verify the resource exists or try alternative"
+
+    return CompactError(
+        tool_name=tool_name,
+        error_type=error_type,
+        message=str(exception)[:200],  # Truncate long errors
+        suggestion=suggestion
+    )
+```
+
+**Data Flow:**
+1. Controller analyzes current state
+2. Selects appropriate agent based on context
+3. Agent processes and contributes to shared state
+4. Iterate until completion criteria met
 
 
 
@@ -355,6 +471,18 @@ class ResilientOrchestrator:
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

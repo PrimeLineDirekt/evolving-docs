@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Führt einen Workflow aus dem `workflows/definitions/` Verzeichnis aus. |
+| **Purpose** | Execute a workflow from the workflows/definitions/ directory |
 | **Complexity** | medium |
 | **Model** | claude-sonnet-4-5 |
 | **Category** | workflow |</div>
@@ -23,18 +23,15 @@ confidence: 100
 
 ## What It Does
 
-
-
+Executes predefined workflows with steps, permissions, and checkpoints. Supports resume from checkpoint.
 
 ## System Impact
 
-
-
+Loads workflow definition, validates permissions, executes steps sequentially. Logs progress, creates checkpoints.
 
 ## Architecture
 
-
-
+Workflow engine with state management. Supports permissions, preferences, logging, and checkpoints.
 
 ## Usage
 

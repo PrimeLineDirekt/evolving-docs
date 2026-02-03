@@ -28,10 +28,44 @@ confidence: 100
 
 ## System Impact
 
+**Capabilities Provided:**
+- Structured approach to component creation
+- Automated validation and best practices
+- Standardized output format
+- Integration with system architecture
+
+**When to Use:**
+- Creating new system components
+- Standardizing component structure
+- Ensuring consistency across codebase
+- Automating repetitive creation tasks
 
 
 
 ## Architecture
+
+**Key Components:**
+
+```
+async function fetchBatch(ids: number[]): Promise<Experience[]> {
+  if (ids.length === 1) {
+    return [await fetchSingle(ids[0])];
+  }
+
+  // Batch-Request
+  const results = await Promise.all(
+    ids.map(id => readExperience(id))
+  );
+
+  return results.filter(Boolean);
+}
+```
+
+**Data Flow:**
+1. Controller analyzes current state
+2. Selects appropriate agent based on context
+3. Agent processes and contributes to shared state
+4. Iterate until completion criteria met
 
 
 
@@ -393,6 +427,18 @@ NICHT: Das ganze Buch von vorne nach hinten lesen
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

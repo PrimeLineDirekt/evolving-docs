@@ -23,15 +23,111 @@ confidence: 100
 
 ## What It Does
 
+Einzelne LLM-Antworten können:
+- Bias oder blinde Flecken haben
+- Bei kritischen Entscheidungen unzuverlässig sein
+- Falsche Confidence zeigen
+- Edge Cases übersehen
+
+**Solution**: Parallele Bewertung durch mehrere independent Agents mit Voting-Aggregation:
+
+```
+User Query
+    │
+    ▼
+┌─────────────────┐
+│   DISPATCHER    │
+│ Verteilt Query  │
+│ an Agent Pool   │
+└────────┬────────┘
+         │
+    ┌────┴────┬────────┬────────┐
+    ▼         ▼        ▼        ▼
+┌───────┐ ┌───────┐ ┌───────┐ ┌───────┐
+│Agent 1│ │Agent 2│ │Agent 3│ │Agent N│
+│Expert │ │Skeptic│ │Risk   │ │Domain │
+└───┬───┘ └───┬───┘ └───┬───┘ └───┬───┘
+    │         │        │        │
+    └────┬────┴────────┴────────┘
+         │
+         ▼
+┌─────────────────┐
+│   AGGREGATOR    │
+│ Voting/Konsens  │
+│ Conflict Res.   │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│    DECIDER      │
+│ Finale Antwort  │
+│ + Confidence    │
+└────────┬────────┘
+         │
+         ▼
+   Final Output
+```
 
 
 
 ## System Impact
 
+**When to Apply:**
+- **YES**: Security-Validierung, Risiko-Bewertung, kritische Entscheidungen, Fakten-Prüfung
+- **NO**: Kreative Tasks, einfache Fragen, zeitkritische Situationen, subjektive Präferenzen
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
+
 
 
 
 ## Architecture
+
+**Key Components:**
+
+```
+from pydantic import BaseModel, Field
+from typing import Optional
+from enum import Enum
+
+class VotingStrategy(str, Enum):
+    MAJORITY = "majority"
+    UNANIMOUS = "unanimous"
+    WEIGHTED = "weighted"
+    THRESHOLD = "threshold"
+
+class AgentVote(BaseModel):
+    agent_id: str
+    agent_role: str
+    decision: str = Field(description="The agent's decision/answer")
+    confidence: float = Field(ge=0, le=1)
+    reasoning: str = Field(description="Why this decision")
+    concerns: list[str] = Field(default_factory=list)
+    weight: float = Field(default=1.0, description="Agent expertise weight")
+
+class EnsembleResult(BaseModel):
+    final_decision: str
+    consensus_level: float = Field(ge=0, le=1)
+    voting_breakdown: dict[str, int]
+    dissenting_views: list[str]
+    aggregate_confidence: float
+    recommendation: str
+
+class ConflictResolution(BaseModel):
+    conflict_type: str
+    resolution_strategy: str
+    additional_agents_needed: bool
+    escalate_to_human: bool
+```
+
+**Data Flow:**
+1. Controller analyzes current state
+2. Selects appropriate agent based on context
+3. Agent processes and contributes to shared state
+4. Iterate until completion criteria met
 
 
 
@@ -448,9 +544,39 @@ def validate_critical_decision(
 
 ## Configuration
 
+**Trade-offs:**
+
+| Pro | Contra |
+|-----|--------|
+| Hohe Zuverlässigkeit | 3-5x Token-Verbrauch |
+| Reduziert Single-Agent Bias | Langsamer durch Parallelisierung |
+| Gut für kritische Entscheidungen | Konservativ/Risikoavers |
+| Dokumentiert verschiedene Perspektiven | Kann bei klaren Fällen overkill sein |
+| Erhöht Vertrauen in Ergebnis | Komplexe Konfliktlösung nötig |
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

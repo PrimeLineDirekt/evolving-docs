@@ -30,10 +30,32 @@ confidence: 100
 
 ## What It Does
 
+Freemium Pricing Balance:
+- Too restrictive → Users bounce (no value demonstration)
+- Too generous → No conversion incentive
+- Arbitrary limits → Frustration-driven upgrades (bad UX)
+
+**Solution**: **Value-Demonstration-Based Feature Gating** mit strategischer Progression.
 
 
 
 ## System Impact
+
+**When to Apply:**
+**YES**:
+- SaaS with clear usage metrics (reports, API calls)
+- Quality-differentiable AI models
+- Value demonstrable in 3-5 uses
+
+**NO**:
+- Enterprise-only products
+- Compliance/regulatory tools (no "freemium")
+- Products with high support costs
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
 
 
 
@@ -314,9 +336,37 @@ Free, Starter, Basic, Pro, Premium, Enterprise
 
 ## Configuration
 
+**Trade-offs:**
+
+### Pros
+- Value demonstration (not teaser)
+- Natural progression (not forced)
+- Clear tier benefits
+- Psychological pricing
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

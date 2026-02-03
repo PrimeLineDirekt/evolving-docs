@@ -23,15 +23,103 @@ confidence: 100
 
 ## What It Does
 
+LLMs generieren oft Antworten ohne systematische Untersuchung. Bei Debugging führt das zu:
+- Vorschnellen Fixes ohne Root-Cause-Verständnis
+- Übersehenen Edge Cases
+- Ineffizienten Trial-and-Error-Schleifen
+
+**Solution**: Strukturierter Reason-Act-Observe Loop der Hypothesen systematisch testet:
+
+```
+User Problem
+    │
+    ▼
+┌─────────────────┐
+│    REASON       │◄──────────────┐
+│ Analysiere      │               │
+│ Bilde Hypothese │               │
+└────────┬────────┘               │
+         │                        │
+         ▼                        │
+┌─────────────────┐               │
+│     ACT         │               │
+│ Führe Test aus  │               │
+│ Sammle Daten    │               │
+└────────┬────────┘               │
+         │                        │
+         ▼                        │
+┌─────────────────┐               │
+│   OBSERVE       │───────────────┘
+│ Dokumentiere    │    (Loop bis gelöst)
+│ Ergebnisse      │
+│ Update Wissen   │
+└────────┬────────┘
+         │
+         ▼
+   Problem gelöst
+   oder eskalieren
+```
 
 
 
 ## System Impact
 
+**When to Apply:**
+- **YES**: Bugs finden, Fehler analysieren, Code explorieren, Root-Cause-Analyse
+- **NO**: Kreative Tasks, Output-Verbesserung, bekannte Lösungen anwenden
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
+
 
 
 
 ## Architecture
+
+**Key Components:**
+
+```
+from pydantic import BaseModel, Field
+from typing import Optional
+from enum import Enum
+
+class HypothesisStatus(str, Enum):
+    UNTESTED = "untested"
+    CONFIRMED = "confirmed"
+    REJECTED = "rejected"
+    PARTIAL = "partial"
+
+class Hypothesis(BaseModel):
+    id: str = Field(description="Unique hypothesis ID")
+    statement: str = Field(description="What we think might be true")
+    probability: float = Field(ge=0, le=1, description="Initial likelihood")
+    test_action: str = Field(description="How to test this hypothesis")
+    status: HypothesisStatus = HypothesisStatus.UNTESTED
+
+class Observation(BaseModel):
+    action_taken: str = Field(description="What was done")
+    result: str = Field(description="What happened")
+    supports_hypothesis: Optional[bool] = Field(description="Does this support or refute?")
+    new_information: list[str] = Field(default_factory=list)
+
+class ReActState(BaseModel):
+    problem: str
+    hypotheses: list[Hypothesis] = Field(default_factory=list)
+    observations: list[Observation] = Field(default_factory=list)
+    current_hypothesis: Optional[str] = None
+    iteration: int = 0
+    max_iterations: int = 10
+    solved: bool = False
+    solution: Optional[str] = None
+```
+
+**Data Flow:**
+1. Controller analyzes current state
+2. Selects appropriate agent based on context
+3. Agent processes and contributes to shared state
+4. Iterate until completion criteria met
 
 
 
@@ -355,9 +443,39 @@ SOLUTION: Added null check for API response before accessing data property.
 
 ## Configuration
 
+**Trade-offs:**
+
+| Pro | Contra |
+|-----|--------|
+| Systematisch statt raten | 1.5-2x Token-Verbrauch |
+| Nachvollziehbarer Trace | Nicht für kreative Tasks |
+| Vermeidet Rabbit Holes | Braucht klares Problem |
+| Findet Root Cause | Overhead bei trivialen Bugs |
+| Dokumentiert Lernprozess | Kann bei komplexen Systemen langsam sein |
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

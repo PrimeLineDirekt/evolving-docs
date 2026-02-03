@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du bearbeitest ein bestehendes Szenario. |
+| **Purpose** | Edit an existing scenario |
 | **Complexity** | medium |
 | **Model** | sonnet |
 | **Category** | workflow |</div>
@@ -23,13 +23,12 @@ confidence: 100
 
 ## What It Does
 
-Bearbeitet ein Szenario (Components hinzufügen/entfernen)
+Edits a scenario (add/remove components)
 
 
 ## System Impact
 
-
-
+Modifies scenario configuration, adds/removes components, updates indices.
 
 ## Architecture
 
@@ -59,8 +58,9 @@ Bearbeitet ein Szenario (Components hinzufügen/entfernen)
 
 ## Best Practices
 
-
-
+- Test changes before using in production scenarios
+- Keep component lists minimal and focused
+- Document modifications for team visibility
 
 ## Related
 

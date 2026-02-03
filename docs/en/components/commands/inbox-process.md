@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du bist mein Inbox-Processing-Engine. Deine Aufgabe ist es, Dateien aus `_inbox/` zu analysieren, zu kategorisieren und ins System einzupflegen. |
+| **Purpose** | Inbox processing engine - analyzes, categorizes, and integrates files from `_inbox/` into the knowledge system |
 | **Complexity** | high |
 | **Model** | haiku |
 | **Category** | memory |</div>
@@ -23,20 +23,28 @@ confidence: 100
 
 ## What It Does
 
-Verarbeite Dateien aus der Inbox automatisch
+Automatically processes files from the `_inbox/` directory. Extracts key information, determines appropriate storage location, updates knowledge graph, and archives processed files.
 
 ### Key Features
 
-- "## Installation"
-- "Tech Stack", "Architecture"
-- Beschreibt WAS gebaut wurde
+- Auto-detects file type and content
+- Extracts metadata and key concepts
+- Categorizes by domain and relevance
+- Links to existing knowledge
+- Supports documents, code, images, and data files
 
 ## System Impact
 
-
+- Reads from `_inbox/` directory
+- Creates entries in knowledge base
+- Updates graph with new nodes/edges
+- Moves processed files to appropriate locations
+- Logs processing history
 
 
 ## Architecture
+
+Uses Haiku for fast processing of multiple files. Implements content analysis pipeline with classification, extraction, and integration stages.
 
 
 
@@ -60,14 +68,21 @@ Verarbeite Dateien aus der Inbox automatisch
 
 ## Configuration
 
-
+Configurable categorization rules and storage paths. Auto-processing can be scheduled or manual.
 
 ## Best Practices
 
-
-
+- Drop files in `_inbox/` as they arrive
+- Run regularly to keep inbox clean
+- Review categorization suggestions
+- Add custom processing rules for common file types
+- Archive important files separately
 
 ## Related
+
+- `/knowledge-add` - Manually add knowledge
+- `/onboard-process` - Process onboarding data
+- `/knowledge-search` - Find processed content
 
 
 ---

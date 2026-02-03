@@ -28,6 +28,17 @@ confidence: 100
 
 ## System Impact
 
+**Capabilities Provided:**
+- Structured approach to component creation
+- Automated validation and best practices
+- Standardized output format
+- Integration with system architecture
+
+**When to Use:**
+- Creating new system components
+- Standardizing component structure
+- Ensuring consistency across codebase
+- Automating repetitive creation tasks
 
 
 
@@ -73,12 +84,12 @@ SYNTHESIS
 Bevor du antwortest, IMMER fragen:
 "Gibt es mehrere Perspektiven die Exploration verdienen?"
 
-WENN JA:
+WENN YES:
   → Spawne Sub-Agents für jede Perspektive
   → Sammle alle Findings
   → Synthetisiere zu kohärentem Ergebnis
 
-WENN NEIN:
+WENN NO:
   → Antworte direkt mit Bias zu gründlicher Untersuchung
 ```
 
@@ -201,8 +212,8 @@ PROMPT="Du bist ein Research Agent.
 
 CORE INSTRUCTION:
 Bevor du antwortest, frage: 'Gibt es mehrere Perspektiven?'
-- JA → Spawne Sub-Agents, synthetisiere
-- NEIN → Antworte direkt
+- YES → Spawne Sub-Agents, synthetisiere
+- NO → Antworte direkt
 
 TO SPAWN SUB-AGENT:
 claude -p '[sub-question]' --model $RESEARCHER --allowedTools 'Bash(claude:*)'
@@ -273,6 +284,18 @@ done
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

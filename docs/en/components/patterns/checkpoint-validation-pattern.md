@@ -23,15 +23,105 @@ confidence: 100
 
 ## What It Does
 
+Checkpoint-basierte Systeme können stale (veraltete) Checkpoints verwenden, wenn sich die Konfiguration geändert hat. Dies führt zu:
+
+- Inkonsistenten Ergebnissen (alter Output + neue Config)
+- Schwer zu debuggenden Fehlern
+- Falsche Wiederaufnahme nach Crashes
+
+**Solution**: Hash-basierte Checkpoint-Validierung: Jeder Checkpoint enthält einen Hash der relevanten Konfiguration. Vor dem Laden wird der Hash verglichen.
+
+```
+Pipeline Config
+     │
+     ▼
+┌─────────────────┐
+│  Generate Hash  │
+│  (SHA-256)      │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐     ┌─────────────────┐
+│  Load Checkpoint│────►│  Compare Hashes │
+└─────────────────┘     └────────┬────────┘
+                                 │
+                   ┌─────────────┴─────────────┐
+                   │                           │
+                   ▼                           ▼
+            ┌──────────┐               ┌──────────────┐
+            │  MATCH   │               │  MISMATCH    │
+            │  Use CP  │               │  Invalidate  │
+            └──────────┘               │  Re-execute  │
+                                       └──────────────┘
+```
 
 
 
 ## System Impact
 
+**When to Apply:**
+- **YES**: Multi-Agent Pipelines, resumable Sessions, Production Systems
+- **NO**: Stateless APIs, Kurze Tasks ohne Recovery-Bedarf
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
+
 
 
 
 ## Architecture
+
+**Key Components:**
+
+```
+import hashlib
+import json
+from typing import Any
+
+def generate_config_hash(config: dict, include_keys: list[str] = None) -> str:
+    """
+    Generate deterministic hash of configuration.
+
+    Args:
+        config: Configuration dictionary
+        include_keys: Specific keys to include (None = all)
+
+    Returns:
+        SHA-256 hash string
+    """
+    if include_keys:
+        config_subset = {k: config[k] for k in include_keys if k in config}
+    else:
+        config_subset = config
+
+    # Ensure deterministic serialization
+    config_str = json.dumps(config_subset, sort_keys=True, default=str)
+    return hashlib.sha256(config_str.encode()).hexdigest()
+
+
+def generate_agent_hash(
+    agent_id: str,
+    system_prompt: str,
+    query: str,
+    model: str
+) -> str:
+    """Generate hash for agent execution context."""
+    context = {
+        "agent_id": agent_id,
+        "system_prompt_hash": hashlib.md5(system_prompt.encode()).hexdigest(),
+        "query_hash": hashlib.md5(query.encode()).hexdigest(),
+        "model": model
+    }
+    return generate_config_hash(context)
+```
+
+**Data Flow:**
+1. Controller analyzes current state
+2. Selects appropriate agent based on context
+3. Agent processes and contributes to shared state
+4. Iterate until completion criteria met
 
 
 
@@ -323,9 +413,38 @@ def load_agent_result(
 
 ## Configuration
 
+**Trade-offs:**
+
+| Pro | Contra |
+|-----|--------|
+| Verhindert stale Checkpoints | Hash-Berechnung Overhead (~1ms) |
+| Klare Invalidierungs-Logik | Mehr Speicher für Hashes |
+| Debug-freundlich (Hash-Diff) | Initial Setup-Aufwand |
+| Backwards-compatible erweiterbar | - |
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

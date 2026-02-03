@@ -23,15 +23,146 @@ confidence: 100
 
 ## What It Does
 
+Multi-agent systems require coordination. Direct agent-to-agent communication scales poorly (n² connections with n agents).
+
+**Solution**: Central "Blackboard" (shared memory) with controller coordination:
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                                                         │
+│                    ┌───────────────┐                    │
+│                    │  BLACKBOARD   │                    │
+│                    │ ┌───────────┐ │                    │
+│                    │ │ Entry 1   │ │                    │
+│                    │ │ Entry 2   │ │                    │
+│                    │ │ ...       │ │                    │
+│                    │ └───────────┘ │                    │
+│                    └───────┬───────┘                    │
+│                            │                            │
+│         ┌──────────────────┼──────────────────┐        │
+│         │                  │                  │        │
+│         ▼                  ▼                  ▼        │
+│   ┌──────────┐       ┌──────────┐       ┌──────────┐   │
+│   │ Agent A  │       │ Agent B  │       │ Agent C  │   │
+│   │(Expert 1)│       │(Expert 2)│       │(Expert 3)│   │
+│   └──────────┘       └──────────┘       └──────────┘   │
+│         │                  │                  │        │
+│         └──────────────────┼──────────────────┘        │
+│                            │                            │
+│                     ┌──────▼──────┐                     │
+│                     │ CONTROLLER  │                     │
+│                     │(Koordinator)│                     │
+│                     └─────────────┘                     │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+
+Workflow:
+1. Controller analyzes blackboard status
+2. Controller selects next agent
+3. Agent reads relevant entries
+4. Agent writes result to blackboard
+5. Repeat until task complete
+```
 
 
 
 ## System Impact
 
+**When to Apply:**
+- **YES**: Multi-expert systems requiring diverse perspectives, complex consulting scenarios, iterative refinement
+- **NO**: Simple Single-Agent Tasks, strictly sequential workflows
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
+
 
 
 
 ## Architecture
+
+**Key Components:**
+
+```
+from pydantic import BaseModel, Field
+from datetime import datetime
+from typing import Any, Optional
+from enum import Enum
+
+class EntryType(str, Enum):
+    QUERY = "query"
+    ANALYSIS = "analysis"
+    FINDING = "finding"
+    RECOMMENDATION = "recommendation"
+    DECISION = "decision"
+    FINAL = "final"
+
+class BlackboardEntry(BaseModel):
+    key: str
+    entry_type: EntryType
+    value: Any
+    source_agent: str
+    timestamp: datetime = Field(default_factory=datetime.now)
+    confidence: float = Field(ge=0, le=1)
+    dependencies: list[str] = Field(default=[])  # Keys of entries this depends on
+    metadata: dict = Field(default={})
+
+class Blackboard:
+    def __init__(self):
+        self.entries: dict[str, BlackboardEntry] = {}
+        self.history: list[BlackboardEntry] = []
+
+    def write(
+        self,
+        key: str,
+        value: Any,
+        entry_type: EntryType,
+        agent: str,
+        confidence: float,
+        dependencies: list[str] = []
+    ) -> BlackboardEntry:
+        entry = BlackboardEntry(
+            key=key,
+            entry_type=entry_type,
+            value=value,
+            source_agent=agent,
+            confidence=confidence,
+            dependencies=dependencies
+        )
+        self.entries[key] = entry
+        self.history.append(entry)
+        return entry
+
+    def read(self, key: str) -> Optional[BlackboardEntry]:
+        return self.entries.get(key)
+
+    def read_by_type(self, entry_type: EntryType) -> list[BlackboardEntry]:
+        return [e for e in self.entries.values() if e.entry_type == entry_type]
+
+    def read_by_agent(self, agent: str) -> list[BlackboardEntry]:
+        return [e for e in self.entries.values() if e.source_agent == agent]
+
+    def get_summary(self) -> dict:
+        return {
+            "total_entries": len(self.entries),
+            "by_type": {t.value: len(self.read_by_type(t)) for t in EntryType},
+            "by_agent": self._count_by_agent(),
+            "latest_entry": self.history[-1] if self.history else None
+        }
+
+    def _count_by_agent(self) -> dict:
+        counts = {}
+        for entry in self.entries.values():
+            counts[entry.source_agent] = counts.get(entry.source_agent, 0) + 1
+        return counts
+```
+
+**Data Flow:**
+1. Controller analyzes current state
+2. Selects appropriate agent based on context
+3. Agent processes and contributes to shared state
+4. Iterate until completion criteria met
 
 
 
@@ -76,11 +207,11 @@ confidence: 100
 └─────────────────────────────────────────────────────────┘
 
 Workflow:
-1. Controller analysiert Blackboard-Status
-2. Controller wählt nächsten Agent
-3. Agent liest relevante Einträge
-4. Agent schreibt Ergebnis auf Blackboard
-5. Repeat bis Task complete
+1. Controller analyzes blackboard status
+2. Controller selects next agent
+3. Agent reads relevant entries
+4. Agent writes result to blackboard
+5. Repeat until task complete
 ```
 
 
@@ -363,9 +494,39 @@ SPARRING_AGENTS = {
 
 ## Configuration
 
+**Trade-offs:**
+
+| Pro | Contra |
+|-----|--------|
+| Skaliert besser als direkte Kommunikation | Single Point of Failure |
+| Asynchrone Updates möglich | Controller kann Bottleneck werden |
+| Komplette Trace der Diskussion | Blackboard kann groß werden |
+| Flexible Agent-Aktivierung | Komplexere Implementierung |
+| Agents können parallel lesen | Schreib-Konflikte möglich |
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

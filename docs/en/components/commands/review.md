@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Manueller Spaced Repetition Review - überprüfe fällige Learnings. |
+| **Purpose** | Manual Spaced Repetition Review - review due learnings |
 | **Complexity** | high |
 | **Model** | claude-sonnet-4-5 |
 | **Category** | memory |</div>
@@ -23,13 +23,11 @@ confidence: 100
 
 ## What It Does
 
-
-
+Triggers manual spaced repetition review cycle. Presents due experiences, rules, and learnings for reinforcement.
 
 ## System Impact
 
-
-
+Reads spaced repetition schedule, presents due items, updates intervals based on user responses.
 
 ## Architecture
 
@@ -55,8 +53,9 @@ confidence: 100
 
 ## Best Practices
 
-
-
+- Review regularly to maintain knowledge retention
+- Use confirm/skip actions to adjust intervals
+- Practice active recall for better learning
 
 ## Related
 

@@ -28,10 +28,11 @@ System-Diagnostik für Knowledge Base
 
 ## System Impact
 
-
-
+Performs 4-8 diagnostic checks depending on mode (quick/full). Validates master document sync, file structure, frontmatter, cross-references, and more. Offers auto-fix for common issues.
 
 ## Architecture
+
+Two modes: Quick (4 checks, <30s) and Full (8 checks, <3min). Samples files for validation, calculates health score 0-100, provides actionable recommendations.
 
 
 

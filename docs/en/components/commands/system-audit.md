@@ -28,10 +28,11 @@ System-Integritäts-Audit mit 4 spezialisierten Validatoren
 
 ## System Impact
 
-
-
+Orchestrates 4 parallel validation agents. Checks detection index, knowledge graph, memory schema, and cross-references. Can auto-fix issues with user approval.
 
 ## Architecture
+
+Spawns 4 haiku agents in parallel (detection validator, graph validator, memory validator, stats validator), aggregates scores, generates visual audit report with fix recommendations.
 
 
 

@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Erstellt einen dynamischen Agent aus dem Trait-System. |
+| **Purpose** | Creates a dynamic agent from the Trait System (480 combinations). |
 | **Complexity** | high |
 | **Model** | sonnet |
 | **Category** | workflow |</div>
@@ -23,31 +23,32 @@ confidence: 100
 
 ## What It Does
 
-Execution pattern (systematic, iterative, etc.)
+Composes custom agents by combining expertise (10), personality (8), and approach (6) traits.
 
 
 ## System Impact
 
-
+- 480 unique agent combinations available
+- On-demand agent creation without files
+- Customized tone, tools, and execution pattern
 
 
 ## Architecture
 
-
-
+Uses trait taxonomy from `knowledge/agents/trait-taxonomy.json`:
+- Voice mappings for personality
+- Tool allowlists for expertise
+- Execution patterns for approach
 
 ## Usage
 
+`/compose-agent <expertise> [personality] [approach]`
+
+Defaults: personality=direct, approach=systematic
 
 ### Examples
 
-#### Usage
-
-
-
-
-
-#### Examples
+#### Basic
 
 
 

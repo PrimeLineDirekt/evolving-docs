@@ -23,15 +23,104 @@ confidence: 100
 
 ## What It Does
 
+Standard LLM Message-Formate (OpenAI-Style `role: user/assistant/system`) sind:
+
+- Token-ineffizient (viel Overhead)
+- Nicht optimiert für spezifische Use Cases
+- Starr und unflexibel
+- Keine Kontrolle über Information Density
+
+**Solution**: **Aktive Context-Kontrolle**: Statt Standard-Formate zu akzeptieren, Context explizit für den spezifischen Use Case strukturieren.
+
+```
+┌─────────────────────────────────────┐
+│         Context Components          │
+├─────────────────────────────────────┤
+│  • System Prompts & Instructions    │
+│  • Retrieved Data (RAG)             │
+│  • Historical State & Tool Results  │
+│  • Memory (Past Conversations)      │
+│  • Structured Output Specs          │
+└─────────────────────────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────────┐
+│    Custom Context Engineering       │
+│  ┌─────────────────────────────┐   │
+│  │  Transform to Optimal Format │   │
+│  │  (XML, YAML, Compact JSON)   │   │
+│  └─────────────────────────────┘   │
+└─────────────────────────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────────┐
+│         LLM Processing              │
+│   (Stateless: Input → Output)       │
+└─────────────────────────────────────┘
+```
+
+**Core Principle**: "Everything is context engineering. LLMs are stateless functions that turn inputs into outputs."
 
 
 
 ## System Impact
 
+**When to Apply:**
+- **YES**: Multi-Turn Agents, RAG Systems, Tool-Heavy Workflows
+- **NO**: Simple Single-Turn Calls, Bereits optimierte Pipelines
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
+
 
 
 
 ## Architecture
+
+**Key Components:**
+
+```
+from typing import Literal, Union, List
+from dataclasses import dataclass
+
+@dataclass
+class Event:
+    """Single event in the context thread."""
+    type: str  # e.g., "user_query", "tool_result", "error"
+    data: Union[dict, str]
+
+@dataclass
+class Thread:
+    """Complete context thread."""
+    events: List[Event]
+
+
+def event_to_prompt(event: Event) -> str:
+    """Convert event to XML-tagged prompt section."""
+    if isinstance(event.data, dict):
+        # YAML for structured data (more token-efficient than JSON)
+        import yaml
+        data_str = yaml.dump(event.data, default_flow_style=False)
+    else:
+        data_str = str(event.data)
+
+    return f"<{event.type}>\n{data_str}</{event.type}>"
+
+
+def thread_to_prompt(thread: Thread) -> str:
+    """Convert entire thread to LLM prompt."""
+    return '\n\n'.join(
+        event_to_prompt(event) for event in thread.events
+    )
+```
+
+**Data Flow:**
+1. Controller analyzes current state
+2. Selects appropriate agent based on context
+3. Agent processes and contributes to shared state
+4. Iterate until completion criteria met
 
 
 
@@ -338,6 +427,18 @@ if remaining > 0:
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

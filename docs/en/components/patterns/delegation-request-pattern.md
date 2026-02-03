@@ -28,6 +28,17 @@ confidence: 100
 
 ## System Impact
 
+**Capabilities Provided:**
+- Structured approach to component creation
+- Automated validation and best practices
+- Standardized output format
+- Integration with system architecture
+
+**When to Use:**
+- Creating new system components
+- Standardizing component structure
+- Ensuring consistency across codebase
+- Automating repetitive creation tasks
 
 
 
@@ -50,8 +61,8 @@ confidence: 100
 ┌─────────────────────────────────────────────────────────┐
 │                    LAYER 1 (Orchestrator)               │
 │                                                         │
-│  Empfängt Request → Validiert → Erstellt Tasks → Führt │
-│  aus → Sammelt Ergebnisse → Gibt zurück an User        │
+│  Receives request → Validates → Creates tasks → Executes │
+│  → Collects results → Returns to user        │
 └───────────────────────┬─────────────────────────────────┘
                         │
                         │ Delegation-Request (JSON)
@@ -59,8 +70,8 @@ confidence: 100
 ┌───────────────────────┴─────────────────────────────────┐
 │                    LAYER 2 (Sub-Agent)                  │
 │                                                         │
-│  Analysiert Task → Erkennt Komplexität → Empfiehlt     │
-│  weitere Agents via Delegation-Request                  │
+│  Analyzes task → Detects complexity → Recommends     │
+│  additional agents via delegation-request                  │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -73,19 +84,19 @@ confidence: 100
 ```json
 {
   "delegation_request": true,
-  "reason": "Kurze Begründung für die Empfehlung",
+  "reason": "Brief rationale for the recommendation",
   "recommended_tasks": [
     {
-      "subject": "Prägnante Task-Beschreibung",
-      "description": "Detaillierte Beschreibung (optional)",
+      "subject": "Concise task description",
+      "description": "Detailed description (optional)",
       "model": "haiku | sonnet",
       "agent": "Explore | debugger | general-purpose | Plan",
       "traits": ["expertise", "personality", "approach"],
       "blockedBy": ["Subject eines anderen Tasks"],
-      "expected_outcome": "Was soll der Task liefern"
+      "expected_outcome": "Expected task output"
     }
   ],
-  "coordination_notes": "Optionale Hinweise für Layer 1"
+  "coordination_notes": "Optional notes for Layer 1"
 }
 ```
 
@@ -158,7 +169,7 @@ Delegation-Request empfangen
 ```json
 {
   "delegation_request": true,
-  "reason": "Refactoring betrifft 3 Module mit klaren Dependencies",
+  "reason": "Refactoring affects 3 Module with clear dependencies",
   "recommended_tasks": [
     {
       "subject": "Types refactoren",
@@ -205,7 +216,7 @@ Delegation-Request empfangen
 ```json
 {
   "delegation_request": true,
-  "reason": "3 unabhängige Research-Bereiche",
+  "reason": "3 independent Research-Bereiche",
   "recommended_tasks": [
     {
       "subject": "API Documentation recherchieren",
@@ -249,6 +260,18 @@ Delegation-Request empfangen
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

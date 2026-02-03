@@ -28,10 +28,11 @@ Switch to Sonnet (balanced performance)
 
 ## System Impact
 
-
-
+Changes active model to Claude Sonnet 4.5. Balanced performance - good quality at reasonable speed and cost. Best for most tasks.
 
 ## Architecture
+
+Simple model switch command. No state changes or configuration required.
 
 
 

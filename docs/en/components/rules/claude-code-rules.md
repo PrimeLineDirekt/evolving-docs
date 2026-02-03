@@ -37,7 +37,21 @@ confidence: 100
 
 ## System Impact
 
+**When It Triggers:**
+- Session start (auto-loads core rules from `.claude/rules/`)
+- Keyword match (context router loads on-demand rules from `knowledge/rules/`)
 
+**Behavior Enforced:**
+- Token-optimized two-tier loading (core ~2K, on-demand ~0K default)
+- Prevents loading all rules at session start (saves ~25K tokens)
+- Context router enables dynamic rule loading based on task keywords
+- Separates critical always-needed rules from contextual rules
+
+**Integration Points:**
+- `.claude/rules/` - Auto-loaded at session start (4 core rules)
+- `knowledge/rules/` - Loaded via context router when keywords match
+- `_graph/cache/context-router.json` - Keyword-based routing configuration
+- `.claude/summaries/rules/` - Quick reference summaries
 
 
 ## Architecture

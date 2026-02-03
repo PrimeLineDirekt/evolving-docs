@@ -32,10 +32,34 @@ confidence: 100
 
 ## What It Does
 
+Single AI Agent für komplexe Tasks führt zu:
+- Langen Processing-Zeiten (8-12 Min für comprehensive reports)
+- Mangelnder Domain-Spezialisierung
+- Schwieriger Fehler-Isolierung
+- Schlechter Scalability
+
+**Solution**: **Master Orchestrator + Specialized Agents Pattern** mit paralleler Ausführung.
 
 
 
 ## System Impact
+
+**When to Apply:**
+**YES**:
+- Complex multi-domain tasks
+- Long processing times (>3 min)
+- Need for domain specialization
+- Personalization requirements
+
+**NO**:
+- Simple single-domain tasks
+- Sub-60-second tasks
+- Prototyping phase
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
 
 
 
@@ -135,7 +159,7 @@ Strukturiert (JSON/Markdown):
 - EXECUTIVE SUMMARY
 - DETAILLIERTE ANALYSE
 - ACTION ITEMS
-- DEPENDENCIES (für andere Agents)
+- DEPENDENCIES (für andere agents)
 
 ## Quality Criteria
 - Mindestens 3 konkrete Action Items
@@ -171,7 +195,7 @@ Output für:
 const relevantAgents = selectAgents(profile)
 
 // 2. Dependency Graph
-const graph = buildDependencyGraph(relevantAgents)
+const graph = buildDependencyGraph(relevantagents)
 
 // 3. Parallel Batches
 const batches = [
@@ -346,9 +370,38 @@ Thresholds:
 
 ## Configuration
 
+**Trade-offs:**
+
+### Pros
+- **70%+ faster** (parallel vs sequential)
+- Domain expertise (specialized agents)
+- Better error isolation
+- Scalable (add new agents easily)
+- Testable (test agents independently)
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

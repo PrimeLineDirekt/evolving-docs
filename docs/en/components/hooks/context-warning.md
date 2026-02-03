@@ -36,55 +36,70 @@ Context Warning Hook - PreToolUse (v4 - Progressive Escalation) Warnt bei hohem 
 
 ## System Impact
 
-
-
+Progressive escalation system preventing context overflow. Four escalation levels:
+- **70%:** Warning (continues work)
+- **85%:** Auto-triggers whats-next agent in background
+- **88%:** Forces handoff before continuing
+- **90%:** Blocks heavy tools, only handoff-actions allowed
 
 ## Architecture
 
-
-
+**Hook Type:** PreToolUse
+**Language:** Bash
+**Debouncing:** 120 seconds between warnings (bypassed at ≥85%)
+**Session Files:** `/tmp/claude-context-{warn,handoff-triggered}-{session}.txt`
 
 ## Usage
 
-
 ### Examples
 
-#### Implementation
-
-
-
-**Code:**
-```bash
-session_id="${CLAUDE_SESSION_ID:-$PPID}"
-pct_file="/tmp/claude-context-pct-${session_id}.txt"
-last_warn_file="/tmp/claude-context-warn-${session_id}.txt"
-handoff_triggered_file="/tmp/claude-handoff-triggered-${session_id}.txt"
-DEBOUNCE_SECONDS=120
-now=$(date +%s)
-last_warn=0
-if [[ -f "$last_warn_file" ]]; then
-  last_warn=$(cat "$last_warn_file" 2>/dev/null || echo 0)
-fi
-time_since=$((now - last_warn))
-input=$(cat)
-tool_name=$(echo "$input" | jq -r '.tool_name // ""' 2>/dev/null)
-pct=0
-if [[ -f "$pct_file" ]]; then
-  pct=$(cat "$pct_file" 2>/dev/null || echo 0)
-fi
-if [[ "$pct" -lt 85 ]] && [[ "$time_since" -lt "$DEBOUNCE_SECONDS" ]]; then
-  echo '{}'
-  exit 0
+#### 70% Warning
+```
+⚠️ Context at 70% - Consider handoff with /whats-next
 ```
 
+#### 85% Auto-trigger
+```
+⚠️ AUTO-HANDOFF: Context at 85%. Starting whats-next agent in background...
+```
 
+#### 88% Force handoff
+```
+🚨 HANDOFF REQUIRED: Context at 88%. Must start whats-next agent NOW!
+```
+**Blocks:** All tools until handoff agent completes
 
+#### 90% Critical block
+```
+🛑 Context at 90% - ONLY handoff-actions allowed!
+```
+**Allowed Tools:** Read, Write, Bash, Skill, Glob, Grep, TodoWrite, Task
+**Blocked:** Edit, heavy operations
 
 ## Configuration
 
+**Thresholds:**
+- Warning: 70%
+- Auto-handoff: 85%
+- Force handoff: 88%
+- Block: 90%
 
+**Debounce:** 120 seconds (2 minutes) for warnings <85%
+**One-shot:** Handoff agent only triggered once per session
 
 ## Best Practices
+
+**Do:**
+- Act on 70% warnings before they escalate
+- Let auto-handoff complete at 85%
+- Create handoff immediately at 88%
+- Use /clear after handoff at 90%
+
+**Don't:**
+- Ignore escalating warnings
+- Try to continue heavy work at 90%
+- Manually delete trigger files (breaks one-shot protection)
+- Force through blocks (defeats safety)
 
 
 

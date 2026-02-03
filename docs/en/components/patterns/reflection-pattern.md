@@ -23,15 +23,81 @@ confidence: 100
 
 ## What It Does
 
+LLM-Outputs sind oft beim ersten Versuch suboptimal. Fehler, Unvollständigkeiten oder inkonsistente Argumentation werden nicht erkannt.
+
+**Solution**: Self-kritischer Feedback-Loop mit drei Komponenten:
+
+```
+User Query
+    │
+    ▼
+┌─────────────────┐
+│   GENERATOR     │◄──────────────┐
+│  Erstellt Draft │               │
+└────────┬────────┘               │
+         │                        │
+         ▼                        │
+┌─────────────────┐               │
+│    CRITIC       │               │
+│ Bewertet Draft  │               │
+│ Findet Probleme │               │
+└────────┬────────┘               │
+         │                        │
+         ▼                        │
+┌─────────────────┐               │
+│   REFINER       │───────────────┘
+│ Verbessert      │    (Loop bis akzeptabel)
+│ basierend auf   │
+│ Feedback        │
+└────────┬────────┘
+         │
+         ▼
+   Final Output
+```
 
 
 
 ## System Impact
 
+**When to Apply:**
+- **YES**: Report-Generierung, komplexe Analysen, Prompt-Erstellung
+- **NO**: Einfache Lookups, schnelle Antworten, Chat
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
+
 
 
 
 ## Architecture
+
+**Key Components:**
+
+```
+from pydantic import BaseModel, Field
+
+class GeneratedDraft(BaseModel):
+    content: str = Field(description="Generated content")
+    reasoning: str = Field(description="Why this approach was chosen")
+
+class CriticFeedback(BaseModel):
+    issues: list[str] = Field(description="Problems identified")
+    suggestions: list[str] = Field(description="Specific improvements")
+    is_acceptable: bool = Field(description="Meets quality threshold?")
+    quality_score: float = Field(ge=0, le=10, description="Quality 0-10")
+
+class RefinedOutput(BaseModel):
+    content: str = Field(description="Improved content")
+    changes_made: list[str] = Field(description="What was changed")
+```
+
+**Data Flow:**
+1. Controller analyzes current state
+2. Selects appropriate agent based on context
+3. Agent processes and contributes to shared state
+4. Iterate until completion criteria met
 
 
 
@@ -361,9 +427,40 @@ result = reflection_chain.invoke({
 
 ## Configuration
 
+**Trade-offs:**
+
+| Pro | Contra |
+|-----|--------|
+| Höhere Output-Qualität | 2-3x Token-Verbrauch |
+| Automatische Fehlerkorrektur | Höhere Latenz |
+| Nachvollziehbare Verbesserungen | Kann in Loops stecken |
+| Selbst-dokumentierend | Overhead bei einfachen Tasks |
+| **Gleaning**: Konfigurierbar pro Use Case | Zusätzliche Komplexität |
+| **Gleaning**: Conditional Trigger möglich | Evaluation-Overhead |
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

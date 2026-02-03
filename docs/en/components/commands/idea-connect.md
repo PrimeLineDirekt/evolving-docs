@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du bist mein Connection-Engine und Innovation Catalyst. Deine Aufgabe ist es, Synergien zwischen Ideen zu finden und neue Möglichkeiten zu entdecken. |
+| **Purpose** | Connection engine and innovation catalyst - finds synergies between ideas and discovers new possibilities |
 | **Complexity** | high |
 | **Model** | opus |
 | **Category** | workflow |</div>
@@ -23,21 +23,24 @@ confidence: 100
 
 ## What It Does
 
-Finde Verbindungen & Synergien zwischen Ideen
+Finds connections and synergies between ideas using AI analysis. Identifies complementary concepts, shared patterns, and potential integration opportunities across your idea collection.
 
 
 ## System Impact
 
-
+- Reads from `_memory/ideas/` directory
+- Creates connection maps in knowledge graph
+- Updates idea metadata with discovered relationships
 
 
 ## Architecture
 
-
+Uses Opus model for deep semantic analysis. Employs pattern matching and conceptual bridging to identify non-obvious connections between disparate ideas.
 
 
 ## Usage
 
+Run without arguments to analyze all ideas, or specify idea IDs to focus analysis.
 
 ### Examples
 
@@ -55,14 +58,20 @@ Finde Verbindungen & Synergien zwischen Ideen
 
 ## Configuration
 
-
+Uses high complexity settings with Opus model for maximum insight depth. No special configuration required.
 
 ## Best Practices
 
-
-
+- Run periodically as new ideas accumulate
+- Review connection suggestions before accepting
+- Use to identify promising idea combinations for development
+- Helpful when deciding which idea to work on next
 
 ## Related
+
+- `/idea-list` - View all ideas
+- `/idea-work` - Develop a specific idea
+- `/idea-new` - Capture new ideas
 
 
 ---

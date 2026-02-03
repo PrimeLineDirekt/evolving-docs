@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Generiere Bilder mit FAL.ai Nano Banana Pro. |
+| **Purpose** | Generates images using FAL.ai Nano Banana Pro with ICS Framework. |
 | **Complexity** | medium |
 | **Model** | claude-sonnet-4-5 |
 | **Category** | workflow |</div>
@@ -23,10 +23,15 @@ confidence: 100
 
 ## What It Does
 
-
+AI image generation with intelligent prompt enhancement using ICS Framework (Image type + Content + Style).
 
 
 ## System Impact
+
+- Auto-enhances vague prompts
+- Adds photography layer for realistic images
+- Handles style recommendations
+- Integrates with FAL.ai API
 
 
 

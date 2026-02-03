@@ -23,18 +23,15 @@ confidence: 100
 
 ## What It Does
 
-
-
+Scans the current market setup against a historical pattern library to identify matching configurations and potential outcomes.
 
 ## System Impact
 
-
-
+Reads pattern library, analyzes current state, returns confidence-scored matches with historical outcomes.
 
 ## Architecture
 
-
-
+Pattern matching engine with historical data comparison. Uses confidence scoring for pattern recognition.
 
 ## Usage
 
@@ -55,8 +52,9 @@ confidence: 100
 
 ## Best Practices
 
-
-
+- Use regularly to identify emerging patterns early
+- Compare multiple timeframes for context
+- Validate high-confidence matches against current conditions
 
 ## Related
 

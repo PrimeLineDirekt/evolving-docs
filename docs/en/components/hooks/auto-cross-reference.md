@@ -36,55 +36,61 @@ confidence: 100
 
 ## System Impact
 
+Triggers after Write/Edit operations to detect structural changes. Automatically syncs master documentation (README.md, COMMANDS.md, SYSTEM-MAP.md) when components are added/modified. Uses blacklist strategy to filter noise and focus on structural changes.
 
-
+**Auto-sync for:** Commands, Agents, Patterns, Learnings, Blueprints, Skills, Scenarios, Rules
 
 ## Architecture
 
-
-
+**Hook Type:** PostToolUse (Write/Edit)
+**Language:** Bash
+**Strategy:** Blacklist filtering (ignores noise paths)
+**Execution:** Background sync via `full-sync.sh`
+**Lock:** `/tmp/evolving-sync.lock` prevents concurrent runs
 
 ## Usage
 
-
 ### Examples
 
-#### Implementation
+#### Automatic trigger
+Hook runs automatically after Write/Edit on structural paths:
 
-
-
-**Code:**
 ```bash
-set -euo pipefail
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-SYNC_SCRIPT="$SCRIPT_DIR/../scripts/full-sync.sh"
-SYNC_LOCK="/tmp/evolving-sync.lock"
-SYNC_QUEUE="/tmp/evolving-sync-queue.txt"
-input=$(cat)
-file_path=$(echo "$input" | jq -r '.tool_input.file_path // empty')
-[[ -z "$file_path" ]] && exit 0
-case "$file_path" in
-  # Session files - transient, no sync needed
-  *knowledge/sessions/*|*_handoffs/*|*_ledgers/*)
-    exit 0
-    ;;
-  # Memory entries - auto-managed
-  *_memory/experiences/exp-*|*_memory/projects/*.json|*_memory/index.json)
-    exit 0
-    ;;
-  # Archive - historical, no sync
-  *_archive/*|*_sandbox/*)
+# Claude creates new command
+Write .claude/commands/new-cmd.md
+→ Hook detects: "Command"
+→ Auto-syncs: COMMANDS.md, SYSTEM-MAP.md, README.md, detection-index.json
 ```
 
-
-
+#### Blacklisted paths (no sync)
+- Session files: `knowledge/sessions/*`, `_handoffs/*`, `_ledgers/*`
+- Memory: `_memory/experiences/exp-*`, `_memory/projects/*.json`
+- Archive: `_archive/*`, `_sandbox/*`
+- Build artifacts: `dashboard/.next/*`, `node_modules/*`
 
 ## Configuration
 
+**Sync Lock:** `/tmp/evolving-sync.lock`
+**Sync Log:** `/tmp/evolving-sync.log`
+**Sync Script:** `.claude/scripts/full-sync.sh`
 
+**Change Detection:**
+- Commands → COMMANDS.md, SYSTEM-MAP.md, README.md, detection-index.json
+- Agents → SYSTEM-MAP.md, README.md
+- Patterns/Learnings → SYSTEM-MAP.md, README.md, knowledge/index.md
+- Hooks → SYSTEM-MAP.md, settings.json
 
 ## Best Practices
+
+**Do:**
+- Let hook run automatically for structural changes
+- Check sync log if changes not reflected
+- Add new noise paths to blacklist as needed
+
+**Don't:**
+- Manually run sync while hook is active
+- Modify master docs during sync (race conditions)
+- Remove sync lock manually (breaks protection)
 
 
 

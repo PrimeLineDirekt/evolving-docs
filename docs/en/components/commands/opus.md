@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | ✅ **Modell gewechselt zu Opus** (Maximum Quality, Extended Thinking) |
+| **Purpose** | Switch to Opus model for maximum quality and extended thinking |
 | **Complexity** | low |
 | **Model** | opus |
 | **Category** | general |</div>
@@ -28,13 +28,11 @@ Switch to Opus (maximum quality)
 
 ## System Impact
 
-
-
+Changes the active model to Claude Opus 4.5 for the current session. Uses maximum reasoning capabilities and extended thinking time for complex tasks.
 
 ## Architecture
 
-
-
+Simple model switch command. No additional state or configuration required.
 
 ## Usage
 
@@ -59,8 +57,11 @@ Switch to Opus (maximum quality)
 
 ## Best Practices
 
-
-
+Use Opus for:
+- Complex architectural decisions
+- Deep code analysis
+- Multi-step reasoning tasks
+- Tasks requiring maximum quality
 
 ## Related
 

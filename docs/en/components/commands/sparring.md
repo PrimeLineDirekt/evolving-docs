@@ -28,10 +28,11 @@ Freies Brainstorming & Sparring (nicht Ideen-spezifisch)
 
 ## System Impact
 
-
-
+Activates Opus for free-form brainstorming and thought partnership. No memory persistence - pure sparring session.
 
 ## Architecture
+
+Lightweight wrapper around Opus. Focuses on challenging assumptions, exploring possibilities, and constructive critique without formal structure.
 
 
 

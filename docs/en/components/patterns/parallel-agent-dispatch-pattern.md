@@ -32,6 +32,26 @@ Sequential (slow):
 
 ## System Impact
 
+**When to Apply:**
+**Good candidates:**
+- Multiple independent features
+- Parallel test fixes
+- Multi-file refactoring with clear boundaries
+- Research across different domains
+
+**Poor candidates:**
+- Sequential dependencies
+- Shared state modifications
+- Single-file changes
+- Tightly coupled components
+
+---
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
+
 
 
 
@@ -193,6 +213,18 @@ Agent 3 → Fix race-conditions.test.ts
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

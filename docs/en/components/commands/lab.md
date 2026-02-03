@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du bist ein Lab-Orchestrator. Du nutzt Perplexity Labs via Chrome um komplexe Projekte zu erstellen: Reports, Dashboards, Spreadsheets oder Code-Prototypen. |
+| **Purpose** | Lab orchestrator - creates complex projects using Perplexity Labs: reports, dashboards, spreadsheets, or code prototypes |
 | **Complexity** | high |
 | **Model** | opus |
 | **Category** | memory |</div>
@@ -23,21 +23,25 @@ confidence: 100
 
 ## What It Does
 
-Perplexity Labs Projekte (Reports, Dashboards, Spreadsheets, Code)
+Orchestrates Perplexity Labs projects via Chrome automation. Creates reports, dashboards, spreadsheets, or code prototypes through guided workflow with asset generation.
 
 
 ## System Impact
 
-
+- Requires Claude-in-Chrome extension
+- Creates project files in designated output directory
+- May download generated assets
+- Logs project metadata to knowledge base
 
 
 ## Architecture
 
-
+Uses Opus for complex project orchestration. Implements browser automation for Labs interaction with multi-step workflow management.
 
 
 ## Usage
 
+Describe project type and requirements. System guides through Labs workflow and manages asset creation.
 
 ### Examples
 
@@ -55,12 +59,16 @@ Perplexity Labs Projekte (Reports, Dashboards, Spreadsheets, Code)
 
 ## Configuration
 
-
+Uses Opus model. Requires Claude-in-Chrome extension and Perplexity Labs access.
 
 ## Best Practices
 
-
-
+- Define clear project requirements upfront
+- Review generated assets before saving
+- Organize output in project-specific folders
+- Document Labs project parameters
+- Iterate on complex projects
+- Save intermediate results
 
 ## Related
 

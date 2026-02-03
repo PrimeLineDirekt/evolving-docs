@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Schneller Projekt-Audit mit den wichtigsten 5 Agents. |
+| **Purpose** | Fast project audit with the top 5 essential agents |
 | **Complexity** | low |
 | **Model** | sonnet |
 | **Category** | analysis |</div>
@@ -28,13 +28,11 @@ Schneller Security & Quality Check mit 5 Core-Agents (5-8 Minuten)
 
 ## System Impact
 
-
-
+Runs 5 core audit agents in parallel. Completes in 5-8 minutes. Produces security and quality findings.
 
 ## Architecture
 
-
-
+Parallel agent execution for fast results. Covers critical security, code quality, and architectural concerns.
 
 ## Usage
 
@@ -59,8 +57,10 @@ Schneller Security & Quality Check mit 5 Core-Agents (5-8 Minuten)
 
 ## Best Practices
 
-
-
+- Run before deployments or major releases
+- Use as first pass before full audit
+- Address critical findings immediately
+- Follow up with full-audit for comprehensive coverage
 
 ## Related
 

@@ -28,6 +28,17 @@ confidence: 100
 
 ## System Impact
 
+**Capabilities Provided:**
+- Structured approach to component creation
+- Automated validation and best practices
+- Standardized output format
+- Integration with system architecture
+
+**When to Use:**
+- Creating new system components
+- Standardizing component structure
+- Ensuring consistency across codebase
+- Automating repetitive creation tasks
 
 
 
@@ -344,9 +355,39 @@ Context > 80% Full?
 
 ## Configuration
 
+**Trade-offs:**
+
+| Strategy | Token-Reduktion | Kontext-Erhalt | Geschwindigkeit | Kosten |
+|----------|-----------------|----------------|-----------------|--------|
+| TRIM | 40-60% | Mittel | Schnell | Keine |
+| SMART-TRIM | 30-50% | Hoch | Langsam | LLM-Kosten |
+| ROLLOVER | 90%+ | Niedrig | Schnell | Optional LLM |
+
+---
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

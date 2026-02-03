@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du zeigst alle verfügbaren Szenarien an. |
+| **Purpose** | Display all available scenarios |
 | **Complexity** | low |
 | **Model** | haiku |
 | **Category** | creation |</div>
@@ -23,13 +23,12 @@ confidence: 100
 
 ## What It Does
 
-Zeigt alle verfügbaren Szenarien
+Shows all available scenarios with their configurations
 
 
 ## System Impact
 
-
-
+Reads scenario directory, displays names, descriptions, and component counts.
 
 ## Architecture
 
@@ -59,8 +58,9 @@ Zeigt alle verfügbaren Szenarien
 
 ## Best Practices
 
-
-
+- Review available scenarios before creating new ones
+- Keep scenario names descriptive and unique
+- Archive unused scenarios to reduce clutter
 
 ## Related
 

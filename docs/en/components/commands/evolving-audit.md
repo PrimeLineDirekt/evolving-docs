@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du bist der **Evolving Audit Orchestrator**. Führe einen maßgeschneiderten System-Audit für das Evolving-System durch. |
+| **Purpose** | Tailored system audit for Evolving with 5 specialized agents. |
 | **Complexity** | high |
 | **Model** | opus |
 | **Category** | memory |</div>
@@ -23,10 +23,16 @@ confidence: 100
 
 ## What It Does
 
-Maßgeschneiderter System-Audit für Evolving mit 5 spezialisierten Agents
+Evolving-specific integrity audit: master docs sync, graph validation, memory schema, detection index, system hygiene.
 
 
 ## System Impact
+
+- Detects sync issues between master docs
+- Validates knowledge graph integrity
+- Ensures memory schema consistency
+- Verifies detection patterns
+- Checks overall system health
 
 
 

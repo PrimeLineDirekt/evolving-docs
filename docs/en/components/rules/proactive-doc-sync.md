@@ -23,8 +23,7 @@ confidence: 100
 
 ## What It Does
 
-
-
+Automatically updates master documentation files (COMMANDS.md, SYSTEM-MAP.md, README.md, detection-index.json) when the auto-cross-reference.sh hook detects structural changes like new commands, agents, skills, or patterns. Eliminates manual doc sync overhead by proactively maintaining documentation consistency.
 
 ## System Impact
 

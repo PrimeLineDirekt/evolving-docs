@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Durchsuche das Experience Memory nach relevanten Erfahrungen. |
+| **Purpose** | Search the Experience Memory for relevant experiences |
 | **Complexity** | medium |
 | **Model** | claude-sonnet-4-5 |
 | **Category** | memory |</div>
@@ -23,13 +23,11 @@ confidence: 100
 
 ## What It Does
 
-
-
+Queries the Experience Memory system to retrieve relevant past experiences, solutions, and learnings based on keywords or context.
 
 ## System Impact
 
-
-
+Reads experience memory with decay-aware filtering. Returns confidence-scored matches.
 
 ## Architecture
 
@@ -59,8 +57,9 @@ confidence: 100
 
 ## Best Practices
 
-
-
+- Use specific keywords for better matches
+- Review confidence scores before applying solutions
+- Update experiences when circumstances change
 
 ## Related
 

@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du erstellst ein neues Szenario mit Agents, Commands und Konfiguration. |
+| **Purpose** | Create a new scenario with agents, commands, and configuration |
 | **Complexity** | medium |
 | **Model** | sonnet |
 | **Category** | workflow |</div>
@@ -23,13 +23,12 @@ confidence: 100
 
 ## What It Does
 
-Erstellt ein neues Szenario mit Agents, Commands und Konfiguration
+Creates a new scenario with agents, commands, and configuration
 
 
 ## System Impact
 
-
-
+Creates scenario directory structure, generates config files, registers components.
 
 ## Architecture
 
@@ -59,8 +58,9 @@ Erstellt ein neues Szenario mit Agents, Commands und Konfiguration
 
 ## Best Practices
 
-
-
+- Create scenarios for distinct project types or domains
+- Document scenario purpose and components
+- Include relevant agents and commands for the use case
 
 ## Related
 

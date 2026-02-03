@@ -28,10 +28,47 @@ confidence: 100
 
 ## System Impact
 
+**When to Apply:**
+✅ **Use this pattern when:**
+- Multi-Manager System (3+ Managers)
+- MCP Server oder API mit vielen Endpoints
+- Team mit mehreren Entwicklern
+- Langfristiges Projekt (6+ Monate)
+
+❌ **Skip this pattern when:**
+- Single Manager System
+- Proof-of-Concept / Throwaway Code
+- Sehr unterschiedliche Datenquellen (SQL vs NoSQL vs API)
+
+---
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
+
 
 
 
 ## Architecture
+
+**Key Components:**
+
+```
+# evolving_core/managers/base_manager.py
+class BaseManager:
+    """Base class für alle Managers"""
+    def __init__(self, base_path: Path):
+        self.base_path = Path(base_path)
+        self.db = JSONDatabase(base_path)
+        self.file_ops = FileOps(base_path)
+```
+
+**Data Flow:**
+1. Controller analyzes current state
+2. Selects appropriate agent based on context
+3. Agent processes and contributes to shared state
+4. Iterate until completion criteria met
 
 
 
@@ -293,6 +330,18 @@ class AsyncManager:
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

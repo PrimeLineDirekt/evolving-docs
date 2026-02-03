@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Generiert ein vollständiges Multi-Agent System mit Agents, Commands, Knowledge-Injection und CLAUDE.md. |
+| **Purpose** | Generates complete multi-agent system with agents, commands, knowledge injection, and CLAUDE.md. |
 | **Complexity** | high |
 | **Model** | sonnet |
 | **Category** | memory |</div>
@@ -23,41 +23,50 @@ confidence: 100
 
 ## What It Does
 
-Generiert ein komplettes Multi-Agent System in einem Ziel-Ordner
+Blueprint-based system generation. Analyzes requirements, matches blueprint, customizes architecture, generates all files.
 
 
 ## System Impact
 
-
+- Creates standalone project with .claude/ structure
+- Configures domain-specific agents
+- Sets up memory and knowledge base
 
 
 ## Architecture
 
-
+5-wave generation:
+1. Orchestrator (planning)
+2. Builder agents (parallel file creation)
+3. Security gate
+4. Validation
+5. Assembly
 
 
 ## Usage
 
+Provide target path, optionally blueprint. Interactive customization follows.
 
 ### Examples
 
 #### Basic Usage
 
-
-
 **Code:**
 ```bash
-/create-system
+/create-system ~/projects/tax-advisor
 ```
 
-
-
+**Result**: Complete system with specialized agents
 
 ## Configuration
 
-
+Blueprints in `.claude/blueprints/`
 
 ## Best Practices
+
+- Use blueprints for common patterns
+- Validate before external path
+- Review generated CLAUDE.md
 
 
 

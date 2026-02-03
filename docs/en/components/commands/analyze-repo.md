@@ -23,17 +23,20 @@ confidence: 100
 
 ## What It Does
 
-5-Phasen Repository-Analyse mit Rel-Extraktion + Tpl-Abstraktion
-
+Five-phase repository analysis with relevance extraction and template abstraction. Analyzes external repos for Claude Code components and integrates valuable findings into the Evolving system.
 
 ## System Impact
 
-
-
+Creates entries in `external/{repo}/`, generates templates, updates knowledge graph and SYSTEM-MAP. Can significantly expand system capabilities by importing proven patterns.
 
 ## Architecture
 
-
+**Phase 1:** Remote relevance check (README + structure)
+**Phase 2:** Deep dive (local clone, code extraction)
+**Phase 3:** REL extraction (EXT/TPL/SKIP decisions)
+**Phase 3.5:** Compatibility check
+**Phase 4:** Archive to `_archive/repos/`
+**Phase 5:** Full system integration
 
 
 ## Usage

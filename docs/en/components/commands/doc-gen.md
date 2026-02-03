@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Generiert und aktualisiert die Auswanderungs-KI Produktdokumentation. |
+| **Purpose** | Generates/updates Auswanderungs-KI product documentation for ReadTheDocs. |
 | **Complexity** | medium |
 | **Model** | claude-sonnet-4-5 |
 | **Category** | workflow |</div>
@@ -23,41 +23,51 @@ confidence: 100
 
 ## What It Does
 
-"--section=X, --lang=X, --dry-run, --skip-security"
+Multi-wave documentation generation using specialized agents (writers, analysts, translators) with security gates.
 
 
 ## System Impact
 
-
+- Generates complete ReadTheDocs site
+- Enforces security constraints (no leaks)
+- Incremental updates via state tracking
 
 
 ## Architecture
 
-
+5-wave process:
+- Wave 0: Orchestrator planning
+- Wave 1-2: Parallel content generation
+- Wave 3: Security gate (blocking)
+- Wave 4: Translation (DE→EN)
+- Wave 5: Assembly + publish
 
 
 ## Usage
 
+Modes: full (complete rebuild), update (changed sections), section (single), publish (build only).
 
 ### Examples
 
 #### Basic Usage
 
-
-
 **Code:**
 ```bash
-/doc-gen
+/doc-gen full
 ```
 
-
-
+**Result**: Complete documentation generated + pushed
 
 ## Configuration
 
-
+Options: --section, --lang, --dry-run, --skip-security
 
 ## Best Practices
+
+- Use update mode for incremental changes
+- Never skip security gate in production
+- Test with --dry-run first
+- Review state file after updates
 
 
 

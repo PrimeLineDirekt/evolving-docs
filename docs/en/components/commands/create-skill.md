@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du bist mein Skill Creation Assistant. Deine Aufgabe ist es, einen neuen Skill aus Templates zu erstellen. |
+| **Purpose** | Creates new skill from templates (simple or progressive). |
 | **Complexity** | high |
 | **Model** | haiku |
 | **Category** | memory |</div>
@@ -23,37 +23,37 @@ confidence: 100
 
 ## What It Does
 
-Erstellt neuen Skill aus Template
+Interactive skill creation wizard. Generates simple (<500 lines) or progressive (multi-file) skills with auto-detection.
 
 
 ## System Impact
 
-
+- Adds skill to .claude/skills/
+- Enables auto-activation on keywords
+- Provides domain expertise on-demand
 
 
 ## Architecture
 
-
+Uses templates from `.claude/templates/skills/`:
+- simple-skill/SKILL.md (single file)
+- progressive-skill/ (SKILL.md + reference.md + examples.md)
 
 
 ## Usage
 
+Optionally provide skill name, otherwise prompts for configuration.
 
 ### Examples
 
-#### Examples
-
-
+#### Simple Skill
 
 **Code:**
+```bash
+/create-skill api-rate-limiting
 ```
 
-### Simple Skill Beispiel
-
-```
-
-
-
+**Result**: Single-file skill for rate limiting patterns
 
 ## Configuration
 

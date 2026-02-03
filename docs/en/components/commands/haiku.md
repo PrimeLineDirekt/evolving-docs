@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | ✅ **Modell gewechselt zu Haiku** (Schnell & Kostengünstig) |
+| **Purpose** | Switches to Haiku model (fast & cost-effective). |
 | **Complexity** | low |
 | **Model** | haiku |
 | **Category** | general |</div>
@@ -28,10 +28,15 @@ Switch to Haiku (fast & cheap)
 
 ## System Impact
 
+- Faster responses
+- Lower cost per token
+- Best for simple/straightforward tasks
 
-
+Changes active model to Claude Haiku. Optimized for speed and cost, suitable for simple tasks, quick iterations, and high-volume operations.
 
 ## Architecture
+
+Simple model switch command. No state changes or configuration required.
 
 
 

@@ -28,10 +28,11 @@ Session-Handoff erstellen für Kontextwechsel oder Pause
 
 ## System Impact
 
-
-
+Creates session handoff in `_handoffs/`. Updates memory with progress. Auto-triggers at 85% context. Can run in background with --background flag.
 
 ## Architecture
+
+Delegates to specialized whats-next agent with fresh context. Agent reads memory, analyzes plans, writes structured handoff, updates project memory. Returns handoff path to user.
 
 
 

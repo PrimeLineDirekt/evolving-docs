@@ -23,15 +23,135 @@ confidence: 100
 
 ## What It Does
 
+Bei komplexen Entscheidungen mit mehreren Optionen:
+- Erste Idee wird oft bevorzugt (Anchoring Bias)
+- Alternativen werden nicht systematisch exploriert
+- Tradeoffs werden nicht explizit verglichen
+- Nicht-offensichtliche Lösungen werden übersehen
+
+**Solution**: Systematische Branch-Exploration mit Evaluation und Pruning:
+
+```
+Initial Problem
+       │
+       ▼
+┌──────────────────┐
+│    GENERATE      │
+│  Create Branches │
+│  (3-5 Options)   │
+└────────┬─────────┘
+         │
+    ┌────┼────┬────┐
+    ▼    ▼    ▼    ▼
+  [B1] [B2] [B3] [B4]  ← Initial Branches
+    │    │    │    │
+    ▼    ▼    ▼    ▼
+┌──────────────────┐
+│    EVALUATE      │
+│  Score Branches  │
+│  (Rubric-based)  │
+└────────┬─────────┘
+         │
+    ┌────┼────┐
+    ▼    ▼    ▼
+  [B1] [B2] [B4]  ← Pruned (B3 eliminated)
+   8.2  7.5  6.8
+    │
+    ▼
+┌──────────────────┐
+│    EXPAND        │
+│ Deepen Best (B1) │
+│ Sub-branches     │
+└────────┬─────────┘
+         │
+    ┌────┼────┐
+    ▼    ▼    ▼
+ [B1.1][B1.2][B1.3]  ← Sub-branches
+    │    │    │
+    ▼    ▼    ▼
+┌──────────────────┐
+│    SELECT        │
+│ Best Overall Path│
+│ with Justification│
+└────────┬─────────┘
+         │
+         ▼
+   Final Decision
+   + Reasoning Trace
+```
 
 
 
 ## System Impact
 
+**When to Apply:**
+- **YES**: Architektur-Entscheidungen, Technologie-Wahl, strategische Planung, komplexe Tradeoffs
+- **NO**: Nur eine Option, einfache ja/nein Fragen, Zeitdruck, klare Best Practices
+
+**Integration Points:**
+- Can be combined with multi-agent orchestration patterns
+- Integrates with task coordination systems
+- Requires proper state management
+
 
 
 
 ## Architecture
+
+**Key Components:**
+
+```
+from pydantic import BaseModel, Field
+from typing import Optional
+
+class Branch(BaseModel):
+    id: str
+    parent_id: Optional[str] = None
+    depth: int = 0
+    description: str = Field(description="What this option entails")
+    key_features: list[str] = Field(description="Main characteristics")
+    assumptions: list[str] = Field(description="What must be true")
+    risks: list[str] = Field(default_factory=list)
+
+class EvaluationScore(BaseModel):
+    feasibility: float = Field(ge=0, le=10, description="How implementable?")
+    impact: float = Field(ge=0, le=10, description="Potential benefit?")
+    risk: float = Field(ge=0, le=10, description="Risk level (inverted)")
+    effort: float = Field(ge=0, le=10, description="Required effort (inverted)")
+    alignment: float = Field(ge=0, le=10, description="Fits goals?")
+    total: float = Field(description="Weighted total score")
+    reasoning: str = Field(description="Evaluation rationale")
+
+class TreeState(BaseModel):
+    problem: str
+    constraints: list[str]
+    goals: list[str]
+    branches: list[Branch]
+    scores: dict[str, EvaluationScore]
+    pruned: list[str]
+    selected_path: list[str]
+    final_decision: Optional[str] = None
+
+class ToTConfig(BaseModel):
+    initial_branches: int = Field(default=3, ge=2, le=5)
+    max_branches: int = Field(default=5, ge=3, le=7)
+    max_depth: int = Field(default=3, ge=1, le=5)
+    pruning_threshold: float = Field(default=0.4, ge=0, le=1)
+    expansion_threshold: float = Field(default=0.7, ge=0, le=1)
+    weights: dict[str, float] = Field(default={
+        "feasibility": 0.25,
+        "impact": 0.25,
+        "risk": 0.20,
+        "effort": 0.15,
+        "alignment": 0.15
+    })
+```
+
+**Data Flow:**
+1. Controller analyzes current state
+2. Selects appropriate agent based on context
+3. Agent processes and contributes to shared state
+4. Iterate until completion criteria met
 
 
 
@@ -445,9 +565,39 @@ graph TD
 
 ## Configuration
 
+**Trade-offs:**
+
+| Pro | Contra |
+|-----|--------|
+| Systematisch und nachvollziehbar | 2-4x Token-Verbrauch |
+| Findet nicht-offensichtliche Lösungen | Aufwendig bei klaren Entscheidungen |
+| Explizite Tradeoff-Dokumentation | Kann Analysis Paralysis fördern |
+| Reduziert Anchoring Bias | Braucht klare Evaluationskriterien |
+| Gut für Team-Entscheidungen | Overkill für triviale Choices |
+
+**Configuration Options:**
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| max_iterations | 10 | Maximum agent iterations |
+| min_confidence | 0.7 | Minimum confidence threshold |
+| timeout_seconds | 300 | Maximum execution time |
+
 
 
 ## Best Practices
+
+**Do:**
+- Use for multi-expert coordination requiring diverse perspectives
+- Apply when problem benefits from iterative refinement
+- Combine with proper state management and validation
+- Monitor blackboard size to prevent context overflow
+
+**Don't:**
+- Use for simple single-agent tasks
+- Apply to strictly sequential workflows
+- Ignore controller bottleneck risks
+- Forget to handle write conflicts in concurrent scenarios
 
 
 

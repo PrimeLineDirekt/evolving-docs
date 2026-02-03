@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Speichere eine Erfahrung im Experience Memory System. |
+| **Purpose** | Store an experience in the Experience Memory System |
 | **Complexity** | medium |
 | **Model** | claude-sonnet-4-5 |
 | **Category** | memory |</div>
@@ -23,13 +23,11 @@ confidence: 100
 
 ## What It Does
 
-
-
+Captures and stores experiences, solutions, decisions, or learnings in the Experience Memory system for future retrieval.
 
 ## System Impact
 
-
-
+Writes to experience memory with metadata, tags, and decay parameters. Updates indices for searchability.
 
 ## Architecture
 
@@ -59,8 +57,10 @@ confidence: 100
 
 ## Best Practices
 
-
-
+- Capture learnings while context is fresh
+- Include clear tags for discoverability
+- Document both successes and failures
+- Set appropriate decay parameters based on longevity
 
 ## Related
 

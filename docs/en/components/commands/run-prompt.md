@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Du führst gespeicherte Prompts aus dem `prompts/` Ordner aus. Der Hauptvorteil: Ausführung in einem **frischen Sub-Agent Kontext** ohne Context-Bleeding vom Planning. |
+| **Purpose** | Execute saved prompts from the prompts/ folder. Main advantage: execution in fresh sub-agent context without context bleeding from planning |
 | **Complexity** | high |
 | **Model** | sonnet |
 | **Category** | workflow |</div>
@@ -28,13 +28,11 @@ Führe gespeicherte Prompts in frischem Sub-Agent Kontext aus
 
 ## System Impact
 
-
-
+Loads prompt, spawns sub-agent with fresh context, executes in isolation. No context bleeding.
 
 ## Architecture
 
-
-
+Prompt loader + sub-agent spawner. Ensures clean execution context for specialized tasks.
 
 ## Usage
 
@@ -59,8 +57,10 @@ Führe gespeicherte Prompts in frischem Sub-Agent Kontext aus
 
 ## Best Practices
 
-
-
+- Use for complex, self-contained tasks
+- Create prompts with Prompt Pro Framework
+- Leverage fresh context for better results
+- Store reusable prompts in prompts/ directory
 
 ## Related
 

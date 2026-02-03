@@ -15,7 +15,7 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Zeige und verwalte User-Praeferenzen. |
+| **Purpose** | Display and manage user preferences |
 | **Complexity** | medium |
 | **Model** | claude-sonnet-4-5 |
 | **Category** | memory |</div>
@@ -23,13 +23,11 @@ confidence: 100
 
 ## What It Does
 
-
-
+Manages user preferences for command behavior, delegation settings, memory retention, and system defaults.
 
 ## System Impact
 
-
-
+Reads/writes to preference storage. Changes affect command execution and system behavior.
 
 ## Architecture
 
@@ -59,8 +57,9 @@ confidence: 100
 
 ## Best Practices
 
-
-
+- Review preferences periodically
+- Document custom settings for team collaboration
+- Use project-specific overrides when needed
 
 ## Related
 
