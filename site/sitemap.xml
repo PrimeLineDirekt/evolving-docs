@@ -1394,6 +1394,13 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/auto-archival/"/>
     </url>
     <url>
+        <loc>https://evolving.readthedocs.io/components/hooks/auto-cross-reference-TEST/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/auto-cross-reference-TEST/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/auto-cross-reference-TEST/"/>
+    </url>
+    <url>
         <loc>https://evolving.readthedocs.io/components/hooks/auto-cross-reference/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -2374,6 +2381,13 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/auto-rule-generation/"/>
     </url>
     <url>
+        <loc>https://evolving.readthedocs.io/components/rules/claude-code-rules/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/rules/claude-code-rules/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/claude-code-rules/"/>
+    </url>
+    <url>
         <loc>https://evolving.readthedocs.io/components/rules/core-principles/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -2386,6 +2400,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/rules/delegation/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/delegation/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/rules/domain-memory-bootup-ritual/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/rules/domain-memory-bootup-ritual/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/domain-memory-bootup-ritual/"/>
     </url>
     <url>
         <loc>https://evolving.readthedocs.io/components/rules/domain-memory-bootup/</loc>
@@ -2451,6 +2472,13 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/proactive-doc-sync/"/>
     </url>
     <url>
+        <loc>https://evolving.readthedocs.io/components/rules/proactive-documentation-sync/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/rules/proactive-documentation-sync/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/proactive-documentation-sync/"/>
+    </url>
+    <url>
         <loc>https://evolving.readthedocs.io/components/rules/readme/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -2463,6 +2491,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/rules/self-evolving-rule-generation/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/self-evolving-rule-generation/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/components/rules/session-evaluation-rule/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/rules/session-evaluation-rule/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/session-evaluation-rule/"/>
     </url>
     <url>
         <loc>https://evolving.readthedocs.io/components/rules/session-evaluation/</loc>
@@ -3851,167 +3886,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/graphics_tools/"/>
     </url>
     <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/auto-archival/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/auto-archival/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/auto-archival/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/auto-cross-reference/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/auto-cross-reference/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/auto-cross-reference/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/code-review-reminder/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/code-review-reminder/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/code-review-reminder/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/context-monitor/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/context-monitor/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/context-monitor/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/context-warning/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/context-warning/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/context-warning/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/correction-detector/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/correction-detector/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/correction-detector/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/delegation-enforcer/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/delegation-enforcer/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/delegation-enforcer/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/graph-update/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/graph-update/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/graph-update/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/inventory-update/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/inventory-update/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/inventory-update/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/ledger-auto-save/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/ledger-auto-save/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/ledger-auto-save/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/notification-sound/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/notification-sound/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/notification-sound/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/ralph-loop-stop/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/ralph-loop-stop/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/ralph-loop-stop/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/security-tier-check/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/security-tier-check/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/security-tier-check/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/session-end-cleanup/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/session-end-cleanup/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/session-end-cleanup/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/session-summary/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/session-summary/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/session-summary/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/session-task-sync/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/session-task-sync/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/session-task-sync/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/subagent-router/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/subagent-router/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/subagent-router/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/template-reminder/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/template-reminder/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/template-reminder/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/tmux-hint/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/tmux-hint/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/tmux-hint/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/usage-tracker/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/usage-tracker/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/usage-tracker/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/utils/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/utils/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/utils/"/>
-    </url>
-    <url>
-        <loc>https://evolving.readthedocs.io/de/components/hooks/weekly-inventory-check/</loc>
-        <lastmod>2026-02-03</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/weekly-inventory-check/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/weekly-inventory-check/"/>
-    </url>
-    <url>
         <loc>https://evolving.readthedocs.io/de/components/learnings/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -5132,6 +5006,174 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/graphics_tools/visjs-timeline/"/>
     </url>
     <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/auto-archival/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/auto-archival/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/auto-archival/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/auto-cross-reference-TEST/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/auto-cross-reference-TEST/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/auto-cross-reference-TEST/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/auto-cross-reference/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/auto-cross-reference/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/auto-cross-reference/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/code-review-reminder/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/code-review-reminder/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/code-review-reminder/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/context-monitor/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/context-monitor/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/context-monitor/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/context-warning/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/context-warning/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/context-warning/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/correction-detector/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/correction-detector/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/correction-detector/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/delegation-enforcer/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/delegation-enforcer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/delegation-enforcer/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/graph-update/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/graph-update/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/graph-update/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/inventory-update/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/inventory-update/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/inventory-update/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/ledger-auto-save/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/ledger-auto-save/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/ledger-auto-save/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/notification-sound/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/notification-sound/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/notification-sound/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/ralph-loop-stop/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/ralph-loop-stop/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/ralph-loop-stop/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/security-tier-check/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/security-tier-check/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/security-tier-check/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/session-end-cleanup/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/session-end-cleanup/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/session-end-cleanup/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/session-summary/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/session-summary/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/session-summary/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/session-task-sync/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/session-task-sync/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/session-task-sync/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/subagent-router/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/subagent-router/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/subagent-router/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/template-reminder/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/template-reminder/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/template-reminder/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/tmux-hint/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/tmux-hint/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/tmux-hint/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/usage-tracker/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/usage-tracker/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/usage-tracker/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/utils/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/utils/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/utils/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/hooks/weekly-inventory-check/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/hooks/weekly-inventory-check/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/hooks/weekly-inventory-check/"/>
+    </url>
+    <url>
         <loc>https://evolving.readthedocs.io/de/components/learnings/12-factor-agents-framework/</loc>
         <lastmod>2026-02-03</lastmod>
         <changefreq>daily</changefreq>
@@ -5501,6 +5543,34 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/learnings/web-layer-testing-roi-auth--routes--templates/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/learnings/web-layer-testing-roi-auth--routes--templates/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/rules/claude-code-rules/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/claude-code-rules/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/rules/claude-code-rules/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/rules/domain-memory-bootup-ritual/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/domain-memory-bootup-ritual/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/rules/domain-memory-bootup-ritual/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/rules/proactive-documentation-sync/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/proactive-documentation-sync/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/rules/proactive-documentation-sync/"/>
+    </url>
+    <url>
+        <loc>https://evolving.readthedocs.io/de/components/rules/session-evaluation-rule/</loc>
+        <lastmod>2026-02-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://evolving.readthedocs.io/de/components/rules/session-evaluation-rule/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evolving.readthedocs.io/components/rules/session-evaluation-rule/"/>
     </url>
     <url>
         <loc>https://evolving.readthedocs.io/de/components/scenarios/auswanderungs-ki/</loc>

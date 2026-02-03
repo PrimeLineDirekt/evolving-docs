@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Knowledge Management architecture for an AI system. Dark theme with deep orange (#FF5722) accent color. Shows four stacked memory layers: Domain Memory (top, orange), Experience Memory (blue), Knowledge Graph (green), Context Router (purple). Connected nodes representing entities with relationship lines. Flow arrows showing data movement between layers. Clean modern design, flat illustration style, tech documentation aesthetic. Text labels: '90% from Memory', 'Decay-aware', '360+ Entities'. No photorealistic elements, pure diagram style.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8cfcff/iOv0ZA8qpWyRfqgkcjB7-_hnwh3r2K.png",
+  "timestamp": "2026-02-03T18:55:09.657219",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

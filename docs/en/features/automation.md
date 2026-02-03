@@ -2,7 +2,7 @@
 
 Evolving automates repetitive workflows through hooks, natural language detection, self-learning, documentation sync, session evaluation, and spaced repetition.
 
-![Automation Architecture](../../shared/assets/infographics/automation.png)
+![Automation Architecture](/shared/assets/infographics/automation.png)
 
 ---
 
