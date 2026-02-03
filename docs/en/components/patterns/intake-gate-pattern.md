@@ -285,7 +285,6 @@ Bestätige vor Ausführung:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/intake-gate-pattern.md`</small>

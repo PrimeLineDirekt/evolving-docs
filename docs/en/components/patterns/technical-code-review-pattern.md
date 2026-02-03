@@ -179,7 +179,6 @@ IF conflicts with prior decisions:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/technical-code-review-pattern.md`</small>

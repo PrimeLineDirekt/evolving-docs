@@ -341,7 +341,6 @@ form_input(ref_12, "Long text...")
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/browser-automation-pattern.md`</small>

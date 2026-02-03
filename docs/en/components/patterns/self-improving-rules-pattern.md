@@ -214,7 +214,6 @@ Bei Components mit vielen Varianten, nutze `cva()`:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/self-improving-rules-pattern.md`</small>

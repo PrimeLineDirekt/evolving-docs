@@ -345,7 +345,6 @@ if remaining > 0:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/context-window-ownership-pattern.md`</small>

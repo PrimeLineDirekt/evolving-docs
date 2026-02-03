@@ -1,12 +1,12 @@
 ---
-title: haiku
+title: /haiku
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# haiku
+# /haiku
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Purpose** | ✅ **Modell gewechselt zu Haiku** (Schnell & Kostengünstig) |
+| **Complexity** | low |
+| **Model** | haiku |
+| **Category** | general |</div>
 
 
 ## What It Does
@@ -39,6 +39,18 @@ Switch to Haiku (fast & cheap)
 ## Usage
 
 
+### Examples
+
+#### Basic Usage
+
+
+
+**Code:**
+```bash
+/haiku
+```
+
+
 
 
 ## Configuration
@@ -51,7 +63,6 @@ Switch to Haiku (fast & cheap)
 
 
 ## Related
-
 
 
 ---

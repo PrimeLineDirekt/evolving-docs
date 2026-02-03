@@ -53,7 +53,6 @@ confidence: 100
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/hooks/weekly-inventory-check.py`</small>

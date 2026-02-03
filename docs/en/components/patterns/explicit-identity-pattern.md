@@ -161,7 +161,6 @@ def load_state(session_id: str):
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/explicit-identity-pattern.md`</small>

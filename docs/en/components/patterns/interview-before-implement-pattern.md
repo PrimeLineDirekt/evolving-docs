@@ -100,7 +100,6 @@ Continue until complete, then update plan.
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/interview-before-implement-pattern.md`</small>

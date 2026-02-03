@@ -53,7 +53,6 @@ confidence: 100
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/hooks/context-warning.sh`</small>

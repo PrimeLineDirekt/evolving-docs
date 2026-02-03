@@ -1,12 +1,12 @@
 ---
-title: scenario-create
+title: /scenario-create
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# scenario-create
+# /scenario-create
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
+| **Purpose** | Du erstellst ein neues Szenario mit Agents, Commands und Konfiguration. |
 | **Complexity** | medium |
 | **Model** | sonnet |
-| **Category** | commands |</div>
+| **Category** | workflow |</div>
 
 
 ## What It Does
@@ -41,37 +41,13 @@ Erstellt ein neues Szenario mit Agents, Commands und Konfiguration
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-mkdir -p .claude/scenarios/{name}/{commands,agents,skills,knowledge}
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-Szenario "{name}" erstellt!
-
-## Erstellt
-- scenario.json
-- README.md
-- {x} Agents: {liste}
-- {x} Commands: {liste}
-
-## Nächste Schritte
-1. /scenario {name} - Szenario aktivieren
-2. Projekt-Pfad in scenario.json setzen
-3. Agents nach Bedarf anpassen
-4. Mit Development starten
-
-Soll ich das Szenario jetzt aktivieren?
+/scenario-create
 ```
 
 
@@ -87,7 +63,6 @@ Soll ich das Szenario jetzt aktivieren?
 
 
 ## Related
-
 
 
 ---

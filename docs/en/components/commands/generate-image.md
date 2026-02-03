@@ -1,12 +1,12 @@
 ---
-title: generate-image
+title: /generate-image
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# generate-image
+# /generate-image
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
+| **Purpose** | Generiere Bilder mit FAL.ai Nano Banana Pro. |
 | **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Model** | claude-sonnet-4-5 |
+| **Category** | workflow |</div>
 
 
 ## What It Does
@@ -41,25 +41,13 @@ confidence: 100
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-User: "Erstelle ein Bild für meinen Kaffee-Blog"
-
-Claude:
-1. Erkennt: "blog" → Editorial Style
-2. Enhanced Prompt:
-   "Editorial lifestyle photograph of an artisan latte
-    with intricate foam art, served in a handcrafted
-    ceramic cup on a rustic wooden table. Morning
-    sunlight streaming through a nearby window,
-    shot with 50mm lens at f/2.8, shallow depth of field,
-    warm and inviting color palette."
-3. Generiert Bild
-4. Zeigt: Bild + Kosten ($0.15) + Prompt
+/generate-image
 ```
 
 
@@ -76,6 +64,9 @@ Claude:
 
 ## Related
 
+- [Agent: `.claude/agents/fal-image-generator-agent.md`](#agent:-`.claude/agents/fal-image-generator-agent.md)
+- [Script: `.claude/scripts/fal_generate.py`](#script:-`.claude/scripts/fal_generate.py)
+- [Stats: `python3 .claude/scripts/fal_generate.py --stats`](#stats:-`python3-.claude/scripts/fal_generate.py---stats)
 
 
 ---

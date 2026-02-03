@@ -1,12 +1,12 @@
 ---
-title: market-analysis
+title: /market-analysis
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# market-analysis
+# /market-analysis
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Purpose** | Deep market analysis using all Macro-Analyse agents. |
+| **Complexity** | low |
+| **Model** | claude-sonnet-4-5 |
+| **Category** | workflow |</div>
 
 
 ## What It Does
@@ -41,49 +41,10 @@ confidence: 100
 
 ### Examples
 
-#### Example
+#### Usage
 
 
 
-**Code:**
-```bash
-## Market Analysis Report
-
-### Current Setup
-[Price feeds, market conditions]
-
-### Technical Analysis
-Score: 67/100
-[MAs, RSI, MACD, levels]
-
-### Macro Analysis
-Score: 63/100
-[Liquidity, CPI, Fed, real yields]
-
-### Meta-Analysis (Hidden Drivers)
-- Narrative Discrepancy: [narrative vs reality gap]
-- Geopolitical: [current event chains]
-- Cui Bono: [who benefits from current setup]
-- Contrarian Signals: [sentiment extremes]
-
-### Pattern Matches
-[Similar historical setups with outcomes]
-
-### Overall Assessment
-[Synthesized view of market setup]
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-/market-analysis
-/market-analysis BTC
-/market-analysis GOLD
-```
 
 
 
@@ -98,7 +59,6 @@ Score: 63/100
 
 
 ## Related
-
 
 
 ---

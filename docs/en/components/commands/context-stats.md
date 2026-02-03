@@ -1,12 +1,12 @@
 ---
-title: context-stats
+title: /context-stats
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# context-stats
+# /context-stats
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
+| **Purpose** | Du bist der Context Stats Generator. Zeige die aktuelle Context-Window-Nutzung visuell an. |
 | **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Model** | haiku |
+| **Category** | workflow |</div>
 
 
 ## What It Does
@@ -41,104 +41,13 @@ Context Window Usage mit visuellem Balken und Empfehlungen
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-# Finde neueste Context-File für aktuelle Session
-ls -t /tmp/claude-context-pct-*.txt 2>/dev/null | head -1 | xargs cat 2>/dev/null || echo "0"
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-filled = round(percentage * 30 / 100)
-empty = 30 - filled
-bar = "█" * filled + "░" * empty
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-╔═══════════════════════════════════════════════════════╗
-║            CONTEXT WINDOW USAGE                       ║
-╠═══════════════════════════════════════════════════════╣
-║ {bar}  {pct}%                                        ║
-║                                                       ║
-║ Tokens: ~{tokens}K / 200K                            ║
-║ Status: {status_icon} {status_text}                  ║
-╠═══════════════════════════════════════════════════════╣
-║ {recommendations}                                     ║
-╚═══════════════════════════════════════════════════════╝
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-CAPACITY
-  Good capacity for complex tasks
-  Multi-step operations safe
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-RECOMMENDATIONS
-  Consider /clear or /whats-next soon
-  Avoid starting new complex tasks
-  Current work can continue
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-ACTION REQUIRED
-  Run /whats-next to create handoff
-  Then /clear to reset context
-  Resume with saved context
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-╔═══════════════════════════════════════════════════════╗
-║            CONTEXT WINDOW USAGE                       ║
-╠═══════════════════════════════════════════════════════╣
-║ ████████████░░░░░░░░░░░░░░░░░░░  38%                 ║
-║                                                       ║
-║ Tokens: ~76K / 200K                                  ║
-║ Status: ✅ Healthy                                    ║
-╠═══════════════════════════════════════════════════════╣
-║ CAPACITY                                              ║
-║   Good capacity for complex tasks                     ║
-║   Multi-step operations safe                          ║
-╚═══════════════════════════════════════════════════════╝
+/context-stats
 ```
 
 
@@ -154,7 +63,6 @@ ACTION REQUIRED
 
 
 ## Related
-
 
 
 ---

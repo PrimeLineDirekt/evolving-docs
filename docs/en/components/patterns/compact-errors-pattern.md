@@ -362,7 +362,6 @@ class ResilientOrchestrator:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/compact-errors-pattern.md`</small>

@@ -37,6 +37,10 @@ def parse_markdown(file_path: Path) -> Tuple[Dict[str, str], str]:
     return frontmatter, body
 
 
+# Alias for extractors that expect this name
+parse_markdown_file = parse_markdown
+
+
 def parse_json(file_path: Path) -> Dict:
     """
     Parse JSON file.

@@ -2,8 +2,8 @@
 
 from pathlib import Path
 from typing import Dict, Any, List
-from ..parser import parse_markdown_file
-from ..config import Config
+from parser import parse_markdown_file
+from config import Config
 
 
 class CommandExtractor:
@@ -36,14 +36,18 @@ class CommandExtractor:
 
         # Extract name from filename (add slash prefix)
         name = f"/{file_path.stem}"
+        # Create slug (filename without extension, for URLs)
+        slug = file_path.stem
 
         # Build context dict matching template requirements
         context = {
             # Basic metadata
             'name': name,
+            'slug': slug,
             'type': 'command',
             'tags': frontmatter.get('tags', []),
             'lang': 'en',
+            'confidence': frontmatter.get('confidence', 100),
 
             # Core fields
             'description': frontmatter.get('description', ''),
@@ -70,6 +74,9 @@ class CommandExtractor:
 
             # Examples
             'examples': self._extract_examples(content, name),
+
+            # Related items
+            'related': self._extract_related(content),
 
             # Source reference
             'source_file': str(file_path.relative_to(self.config.source_root))
@@ -151,13 +158,72 @@ class CommandExtractor:
         donts.extend(self._extract_list_from_section(content, "Avoid"))
         return donts
 
-    def _extract_tips(self, content: str) -> List[str]:
-        """Extract tips."""
+    def _extract_tips(self, content: str) -> List[Dict[str, str]]:
+        """Extract tips with proper Do's/Don'ts grouping."""
         tips = []
-        tips.extend(self._extract_list_from_section(content, 'Tips'))
-        tips.extend(self._extract_list_from_section(content, 'Best Practices'))
-        tips.extend(self._extract_list_from_section(content, 'Notes'))
+        in_section = False
+        current_group = None
+
+        for line in content.split('\n'):
+            # Check if entering Best Practices/Tips/Notes section
+            if any(header in line for header in ['## Tips', '### Tips', '## Best Practices', '### Best Practices', '## Notes', '### Notes']):
+                in_section = True
+                continue
+
+            # Exit if we hit another section
+            if in_section and line.startswith('#'):
+                break
+
+            if in_section:
+                stripped = line.strip()
+
+                # Detect subsection headers (Do's, Don'ts, etc.)
+                if stripped.startswith('**') and stripped.endswith('**:'):
+                    current_group = stripped.strip('*').rstrip(':')
+                    continue
+
+                # Extract bullet points
+                if stripped.startswith('-') or stripped.startswith('*'):
+                    item_text = stripped.lstrip('-*').strip()
+                    if item_text:
+                        tips.append({
+                            'title': current_group if current_group else '',
+                            'content': item_text
+                        })
+
         return tips
+
+    def _extract_related(self, content: str) -> List[Dict[str, str]]:
+        """Extract related items from Related section."""
+        related = []
+        items = self._extract_list_from_section(content, 'Related')
+        for item in items:
+            # Parse "name - description" format
+            if ' - ' in item:
+                name, description = item.split(' - ', 1)
+                name = name.strip()
+                description = description.strip()
+            else:
+                name = item.strip()
+                description = None
+
+            if name:
+                # Create slug: remove slashes, backticks, convert to lowercase kebab-case
+                slug = name.strip('`/').lower().replace(' ', '-')
+                # For commands (start with /), link to sibling file
+                if name.startswith('/'):
+                    link = f"{slug}.md"
+                else:
+                    link = f"#{slug}"
+
+                result = {
+                    'name': name,
+                    'link': link
+                }
+                if description:
+                    result['description'] = description
+                related.append(result)
+        return related
 
     def _extract_list_from_section(self, content: str, section_name: str) -> List[str]:
         """Extract bullet list items from a named section."""

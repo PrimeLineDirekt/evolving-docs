@@ -176,7 +176,6 @@ Keine weiteren Loops.
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/rules/failure-recovery.md`</small>

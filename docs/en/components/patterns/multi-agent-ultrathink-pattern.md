@@ -117,7 +117,6 @@ Synthesis:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/multi-agent-ultrathink-pattern.md`</small>

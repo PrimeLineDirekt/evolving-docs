@@ -1,12 +1,12 @@
 ---
-title: auto-model
+title: /auto-model
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# auto-model
+# /auto-model
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Purpose** | Analysiere die Task-Beschreibung und empfehle das optimale Model. |
+| **Complexity** | low |
+| **Model** | haiku |
+| **Category** | workflow |</div>
 
 
 ## What It Does
@@ -41,44 +41,13 @@ Automatische Model-Auswahl basierend auf Task-Komplexität
 
 ### Examples
 
-#### Example
-
-
-
-**Code:**
-```xml
-<task_analysis>
-  <complexity_indicators>
-    Multi-step erforderlich: [ja/nein]
-    Domain-Expertise nötig: [keine/etwas/tief]
-    Reasoning-Tiefe: [flach/mittel/tief]
-    Output-Komplexität: [einfach/strukturiert/umfassend]
-    Ambiguität: [klar/mittel/hoch]
-  </complexity_indicators>
-
-  <requirements_check>
-    □ Code-Generierung
-    □ Research/Recherche
-    □ Kreative Ideation
-    □ Risiko-Bewertung
-    □ Multi-Perspektiven
-    □ Strategische Planung
-  </requirements_check>
-</task_analysis>
-```
-
-
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-Complexity Score: {X}/10
-Empfohlenes Model: {haiku|sonnet|opus}
-Confidence: {high|medium|low}
-
-Begründung: {Warum dieses Model}
+/auto-model
 ```
 
 
@@ -94,7 +63,6 @@ Begründung: {Warum dieses Model}
 
 
 ## Related
-
 
 
 ---

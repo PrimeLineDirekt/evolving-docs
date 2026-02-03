@@ -1,12 +1,12 @@
 ---
-title: quick-audit
+title: /quick-audit
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# quick-audit
+# /quick-audit
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
+| **Purpose** | Schneller Projekt-Audit mit den wichtigsten 5 Agents. |
+| **Complexity** | low |
 | **Model** | sonnet |
-| **Category** | commands |</div>
+| **Category** | analysis |</div>
 
 
 ## What It Does
@@ -41,42 +41,13 @@ Schneller Security & Quality Check mit 5 Core-Agents (5-8 Minuten)
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-$ARGUMENTS: path (default: .)
-
-1. Direkt starten (kein Intake-Profiling)
-2. Alle 5 Agents PARALLEL
-3. Kurzer Summary-Report
-```
-
-
-#### Example
-
-
-
-**Code:**
-```markdown
-# Quick Audit: {project}
-
-**Duration**: {time}
-**Health Score**: {score}/100
-
-## Critical Issues ({count})
-{list_critical_only}
-
-## High Priority ({count})
-{list_high_only}
-
-## Quick Wins
-{top_3_quick_wins}
-
----
-Für vollständigen Audit: `/full-audit --deep`
+/quick-audit
 ```
 
 
@@ -93,6 +64,8 @@ Für vollständigen Audit: `/full-audit --deep`
 
 ## Related
 
+- [`/full-audit`](#full-audit) - Vollständiger Deep Audit
+- [`/audit-security`](#audit-security) - Nur Security Focus
 
 
 ---

@@ -218,7 +218,6 @@ def hybrid_query(query, query_time=None):
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/memory-architecture-pattern.md`</small>

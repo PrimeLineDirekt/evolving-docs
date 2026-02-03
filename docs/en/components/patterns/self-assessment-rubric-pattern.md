@@ -150,7 +150,6 @@ Agent Output → Self-Assessment → Score < 4? → Refinement Loop
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/self-assessment-rubric-pattern.md`</small>

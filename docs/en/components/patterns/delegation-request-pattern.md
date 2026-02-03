@@ -256,7 +256,6 @@ Delegation-Request empfangen
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/delegation-request-pattern.md`</small>

@@ -8,14 +8,64 @@ from typing import Dict
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent))
 
-from config import get_source_files, get_output_dir, OUTPUT_DIRS, TEMPLATE_DIR
+from config import get_source_files, get_output_dir, OUTPUT_DIRS, TEMPLATE_DIR, Config
 from renderer import Renderer
 from parser import parse_markdown, extract_markdown_title, extract_markdown_sections
+
+# Import extractors dynamically to avoid import errors
+try:
+    from extractors.command import CommandExtractor
+    from extractors.agent import AgentExtractor
+    from extractors.skill import SkillExtractor
+    from extractors.pattern import PatternExtractor
+    from extractors.learning import LearningExtractor
+    from extractors.scenario import ScenarioExtractor
+    from extractors.graphics_tool import GraphicsToolExtractor
+    EXTRACTORS_AVAILABLE = True
+except ImportError as e:
+    print(f"Warning: Could not import extractors: {e}")
+    EXTRACTORS_AVAILABLE = False
 
 
 def slugify(text: str) -> str:
     """Convert text to URL-safe slug."""
     return text.lower().replace(' ', '-').replace('/', '-')
+
+
+def get_extractor_for_category(category: str, config: Config):
+    """
+    Get the specialized extractor for a given category.
+
+    Args:
+        category: Component category (e.g., 'commands', 'agents')
+        config: Config object with source_root
+
+    Returns:
+        Extractor instance or None if no specialized extractor exists
+    """
+    if not EXTRACTORS_AVAILABLE:
+        return None
+
+    extractor_map = {
+        'commands': CommandExtractor,
+        'agents': AgentExtractor,
+        'skills': SkillExtractor,
+        'patterns': PatternExtractor,
+        # 'rules': No class-based extractor (uses function-based)
+        # 'hooks': No class-based extractor (uses function-based)
+        # 'blueprints': No class-based extractor (uses function-based)
+        # 'templates': No specialized extractor yet
+        # 'prompts': No specialized extractor yet
+    }
+
+    extractor_class = extractor_map.get(category)
+    if extractor_class:
+        try:
+            return extractor_class(config)
+        except Exception as e:
+            print(f"Warning: Could not instantiate {extractor_class.__name__}: {e}")
+            return None
+    return None
 
 
 def extract_simple_metadata(source_file: Path, category: str) -> Dict:
@@ -129,6 +179,14 @@ def generate_category_docs(
 
     print(f"Found {len(source_files)} source file(s)")
 
+    # Get appropriate extractor
+    config = Config()
+    extractor = get_extractor_for_category(category, config)
+    if extractor:
+        print(f"✓ Using specialized extractor: {extractor.__class__.__name__}")
+    else:
+        print(f"ℹ️  Using simple metadata extractor (no specialized extractor for {category})")
+
     output_dir = get_output_dir(category, language)
     generated_count = 0
     components = []
@@ -136,8 +194,12 @@ def generate_category_docs(
     # Process each source file
     for source_file in source_files:
         try:
-            # Extract metadata
-            metadata = extract_simple_metadata(source_file, category)
+            # Extract metadata using specialized extractor or fallback
+            if extractor:
+                metadata = extractor.extract_one(source_file)
+            else:
+                metadata = extract_simple_metadata(source_file, category)
+
             if not metadata:
                 print(f"⚠️  Skipped {source_file.name} (no metadata)")
                 continue

@@ -1,12 +1,12 @@
 ---
-title: opus
+title: /opus
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# opus
+# /opus
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Purpose** | ✅ **Modell gewechselt zu Opus** (Maximum Quality, Extended Thinking) |
+| **Complexity** | low |
+| **Model** | opus |
+| **Category** | general |</div>
 
 
 ## What It Does
@@ -39,6 +39,18 @@ Switch to Opus (maximum quality)
 ## Usage
 
 
+### Examples
+
+#### Basic Usage
+
+
+
+**Code:**
+```bash
+/opus
+```
+
+
 
 
 ## Configuration
@@ -51,7 +63,6 @@ Switch to Opus (maximum quality)
 
 
 ## Related
-
 
 
 ---

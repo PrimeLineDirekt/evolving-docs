@@ -1,12 +1,12 @@
 ---
-title: macro-start
+title: /macro-start
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# macro-start
+# /macro-start
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Purpose** | Startet das komplette Macro-Analyse Dashboard (Backend + Frontend). |
+| **Complexity** | low |
+| **Model** | claude-sonnet-4-5 |
+| **Category** | documentation |</div>
 
 
 ## What It Does
@@ -41,15 +41,13 @@ confidence: 100
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
-```yaml
-project_path: /Users/neoforce/Buisiness/Projects/Macro-Analyse
-backend_port: 8000
-frontend_port: 3000
+```bash
+/macro-start
 ```
 
 
@@ -65,7 +63,6 @@ frontend_port: 3000
 
 
 ## Related
-
 
 
 ---

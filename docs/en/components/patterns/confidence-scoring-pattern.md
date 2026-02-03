@@ -194,7 +194,6 @@ candidate (50)
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/confidence-scoring-pattern.md`</small>

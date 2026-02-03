@@ -1,12 +1,12 @@
 ---
-title: cancel-ralph
+title: /cancel-ralph
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# cancel-ralph
+# /cancel-ralph
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Purpose** | Bricht einen laufenden Ralph Loop ab. |
+| **Complexity** | low |
+| **Model** | claude-sonnet-4-5 |
+| **Category** | workflow |</div>
 
 
 ## What It Does
@@ -41,37 +41,13 @@ Aktiven Ralph Loop abbrechen
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-# Prüfen und löschen
-if [ -f "/Users/neoforce/Buisiness/Evolving/.claude/ralph-loop.local.md" ]; then
-  rm "/Users/neoforce/Buisiness/Evolving/.claude/ralph-loop.local.md"
-  echo "Loop abgebrochen"
-fi
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-🛑 Ralph Loop abgebrochen nach {N} Iterationen.
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-ℹ️ Kein aktiver Ralph Loop gefunden.
+/cancel-ralph
 ```
 
 
@@ -87,7 +63,6 @@ fi
 
 
 ## Related
-
 
 
 ---

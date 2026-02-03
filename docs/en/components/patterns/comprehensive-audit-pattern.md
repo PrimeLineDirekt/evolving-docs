@@ -242,7 +242,6 @@ confidence: 100
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/comprehensive-audit-pattern.md`</small>

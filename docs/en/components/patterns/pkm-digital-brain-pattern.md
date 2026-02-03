@@ -306,7 +306,6 @@ Evolving/
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/pkm-digital-brain-pattern.md`</small>

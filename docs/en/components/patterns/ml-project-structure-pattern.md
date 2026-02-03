@@ -304,7 +304,6 @@ docker run -p 5000:5000 project:latest
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/ml-project-structure-pattern.md`</small>

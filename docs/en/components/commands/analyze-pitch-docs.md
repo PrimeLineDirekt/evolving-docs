@@ -1,12 +1,12 @@
 ---
-title: analyze-pitch-docs
+title: /analyze-pitch-docs
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# analyze-pitch-docs
+# /analyze-pitch-docs
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Purpose** | **Model**: sonnet |
+| **Complexity** | high |
+| **Model** | claude-sonnet-4-5 |
+| **Category** | workflow |</div>
 
 
 ## What It Does
@@ -41,103 +41,13 @@ confidence: 100
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-Gefundene Dateien:
-1. {dateiname} ({typ}, {größe})
-2. ...
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-                        ┌─────────────────────┐
-                        │   _inbox/ scannen   │
-                        └──────────┬──────────┘
-                                   │
-                    ┌──────────────▼──────────────┐
-                    │  pitch-document-analyzer    │
-                    │  (für jede Datei)           │
-                    └──────────────┬──────────────┘
-                                   │
-              ┌────────────────────┴────────────────────┐
-              │                                         │
-    ┌─────────▼─────────┐                    ┌─────────▼─────────┐
-    │  pitch-content-   │                    │  pitch-style-     │
-    │  categorizer      │                    │  extractor        │
-    │  (immer)          │                    │  (nur bei PPTX)   │
-    └─────────┬─────────┘                    └─────────┬─────────┘
-              │                                         │
-              └────────────────────┬────────────────────┘
-                                   │
-                    ┌──────────────▼──────────────┐
-                    │  Index & Glossar updaten    │
-                    └──────────────┬──────────────┘
-                                   │
-                    ┌──────────────▼──────────────┐
-                    │  Zusammenfassung ausgeben   │
-                    └─────────────────────────────┘
-```
-
-
-#### Example
-
-
-
-**Code:**
-```markdown
-# Pitch-Dokument Analyse abgeschlossen
-
-**Verarbeitet**: {Datum}
-**Dateien**: {N}
-
----
-
-## Verarbeitete Dokumente
-
-### 1. {Dateiname}
-- **Typ**: {dokumenttyp}
-- **Hersteller**: {hersteller oder "Nicht spezifiziert"}
-- **System**: {system oder "Allgemein"}
-- **Kategorisiert als**: `{pfad}`
-- **Neue Glossar-Einträge**: {N}
-- **Stil-Profil**: {Ja/Nein}
-
-### 2. {Dateiname}
-...
-
----
-
-## Neue KB-Einträge
-
-| Datei | Kategorie | Pfad |
-|-------|-----------|------|
-| ... | ... | ... |
-
----
-
-## Glossar-Updates
-
-{N} neue Begriffe hinzugefügt:
-- {Begriff 1} ({Kategorie})
-- {Begriff 2} ({Kategorie})
-...
-
----
-
-## Nächste Schritte
-
-- [ ] Original-Dateien aus `_inbox/` löschen?
-- [ ] Querverweise zu existierenden Dokumenten prüfen
-- [ ] Stil-Profile für neue Präsentationen nutzen
+/analyze-pitch-docs
 ```
 
 
@@ -153,7 +63,6 @@ Gefundene Dateien:
 
 
 ## Related
-
 
 
 ---

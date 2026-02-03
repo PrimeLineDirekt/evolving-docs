@@ -1,12 +1,12 @@
 ---
-title: context
+title: /context
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# context
+# /context
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
+| **Purpose** | Lade relevanten Kontext aus dem Knowledge Graph basierend auf Keywords. |
 | **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Model** | claude-sonnet-4-5 |
+| **Category** | memory |</div>
 
 
 ## What It Does
@@ -41,68 +41,13 @@ confidence: 100
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-User Input: "Kontext für Agent-Erstellung"
-Keywords: ["agent", "creation", "erstellen"]
-```
-
-
-#### Example
-
-
-
-**Code:**
-```markdown
-## Relevanter Kontext für: {topic}
-
-### Primary Entities (immer relevant)
-- **{node-name}** ({type}) - {description}
-  Path: {path}
-
-### Secondary Entities (zusätzlich hilfreich)
-- **{node-name}** ({type}) - {description}
-
-### Aktiver Memory-Kontext
-Aus: {context_file}
-- {key info from memory}
-
-### Verbundene Entities (via Graph)
-- {related nodes from edges.json}
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-## Relevanter Kontext für: Agent-Erstellung
-
-### Primary Entities
-- **Specialist Agent Template** (template) - Template für specialist agents
-  Path: .claude/templates/agents/specialist-agent.md
-
-- **Research Agent Template** (template) - Template für research agents
-  Path: .claude/templates/agents/research-agent.md
-
-- **Template Creator** (skill) - Template creation für Agents, Commands, etc.
-  Path: .claude/skills/template-creator/
-
-### Secondary Entities
-- **Progressive Disclosure Pattern** (pattern) - reference.md + examples.md
-- **Intake Gate Pattern** (pattern) - Input validation vor Ausführung
-- **12-Factor Agents** (learning) - 12 Prinzipien für Agent Design
-
-### Aktiver Memory-Kontext
-Aus: _memory/projects/evolving-system.json
-- Aktueller Focus: Domain Memory Implementation
-- Features: 8 (6 passing, 1 planned)
+/context
 ```
 
 
@@ -118,7 +63,6 @@ Aus: _memory/projects/evolving-system.json
 
 
 ## Related
-
 
 
 ---

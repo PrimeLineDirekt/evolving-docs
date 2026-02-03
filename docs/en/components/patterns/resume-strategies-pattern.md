@@ -354,7 +354,6 @@ Context > 80% Full?
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/resume-strategies-pattern.md`</small>

@@ -1,12 +1,12 @@
 ---
-title: macro-stop
+title: /macro-stop
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# macro-stop
+# /macro-stop
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Purpose** | Stoppt das komplette Macro-Analyse Dashboard (Backend + Frontend). |
+| **Complexity** | low |
+| **Model** | claude-sonnet-4-5 |
+| **Category** | general |</div>
 
 
 ## What It Does
@@ -41,26 +41,13 @@ confidence: 100
 
 ### Examples
 
-#### Example
-
-
-
-**Code:**
-```yaml
-project_path: /Users/neoforce/Buisiness/Projects/Macro-Analyse
-backend_port: 8000
-frontend_port: 3000
-```
-
-
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-kill -9 $(lsof -t -i :8000) 2>/dev/null
-kill -9 $(lsof -t -i :3000) 2>/dev/null
+/macro-stop
 ```
 
 
@@ -76,7 +63,6 @@ kill -9 $(lsof -t -i :3000) 2>/dev/null
 
 
 ## Related
-
 
 
 ---

@@ -178,7 +178,6 @@ def index_artifact(artifact_id: str, metadata: dict):
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/idempotent-redundancy-pattern.md`</small>

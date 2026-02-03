@@ -146,7 +146,6 @@ Confidence: 92%
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/research-confidence-scoring.md`</small>

@@ -373,7 +373,6 @@ SPARRING_AGENTS = {
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/blackboard-pattern.md`</small>

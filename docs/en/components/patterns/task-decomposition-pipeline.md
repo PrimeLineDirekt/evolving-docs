@@ -369,7 +369,6 @@ Query → Planner → [User Review] → Executor → Synthesizer → Answer
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/task-decomposition-pipeline.md`</small>

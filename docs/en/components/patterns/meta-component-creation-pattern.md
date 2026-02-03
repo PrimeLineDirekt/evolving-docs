@@ -219,7 +219,6 @@ I'll adapt to your project's {tools/framework}.
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/meta-component-creation-pattern.md`</small>

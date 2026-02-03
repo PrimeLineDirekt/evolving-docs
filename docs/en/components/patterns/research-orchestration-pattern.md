@@ -103,7 +103,6 @@ ALWAYS parallel for 2+ independent subagents:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/research-orchestration-pattern.md`</small>

@@ -114,7 +114,6 @@ Ich (ohne User-Nachfrage):
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/rules/proactive-doc-sync.md`</small>

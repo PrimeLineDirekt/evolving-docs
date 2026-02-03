@@ -373,7 +373,6 @@ GUT:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/templates/schema-extraction-strategy.md`</small>

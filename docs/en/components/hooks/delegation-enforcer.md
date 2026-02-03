@@ -53,7 +53,6 @@ confidence: 100
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/hooks/delegation-enforcer.py`</small>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)">
+  <defs>
+    <linearGradient id="agentGlow1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0.6" />
+    </linearGradient>
+    <linearGradient id="agentGlow2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#fb923c;stop-opacity:0.5" />
+    </linearGradient>
+    <radialGradient id="dataGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background grid pattern -->
+  <pattern id="agentGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(139, 92, 246, 0.08)" stroke-width="1"/>
+  </pattern>
+  <rect width="1600" height="900" fill="url(#agentGrid)"/>
+
+  <!-- Agent representations as cards/panels -->
+  <!-- Agent 1 - Code Reviewer -->
+  <g transform="translate(200, 200)">
+    <rect width="220" height="140" rx="12" fill="rgba(139, 92, 246, 0.15)" stroke="#8b5cf6" stroke-width="2"/>
+    <circle cx="110" cy="40" r="25" fill="url(#agentGlow1)"/>
+    <text x="110" y="90" font-family="monospace" font-size="14" fill="#a78bfa" text-anchor="middle">code-reviewer</text>
+    <text x="110" y="110" font-family="system-ui" font-size="11" fill="#818cf8" text-anchor="middle">Active</text>
+    <!-- Activity indicator -->
+    <circle cx="30" cy="30" r="4" fill="#10b981" opacity="0.8"/>
+  </g>
+
+  <!-- Agent 2 - Explorer -->
+  <g transform="translate(480, 150)">
+    <rect width="220" height="140" rx="12" fill="rgba(249, 115, 22, 0.15)" stroke="#f97316" stroke-width="2"/>
+    <circle cx="110" cy="40" r="25" fill="url(#agentGlow2)"/>
+    <text x="110" y="90" font-family="monospace" font-size="14" fill="#fb923c" text-anchor="middle">Explore</text>
+    <text x="110" y="110" font-family="system-ui" font-size="11" fill="#fdba74" text-anchor="middle">Ready</text>
+    <circle cx="30" cy="30" r="4" fill="#10b981" opacity="0.8"/>
+  </g>
+
+  <!-- Agent 3 - Debugger -->
+  <g transform="translate(900, 200)">
+    <rect width="220" height="140" rx="12" fill="rgba(99, 102, 241, 0.15)" stroke="#6366f1" stroke-width="2"/>
+    <circle cx="110" cy="40" r="25" fill="url(#agentGlow1)"/>
+    <text x="110" y="90" font-family="monospace" font-size="14" fill="#818cf8" text-anchor="middle">debugger</text>
+    <text x="110" y="110" font-family="system-ui" font-size="11" fill="#a5b4fc" text-anchor="middle">Idle</text>
+    <circle cx="30" cy="30" r="4" fill="#6b7280" opacity="0.6"/>
+  </g>
+
+  <!-- Agent 4 - Architect -->
+  <g transform="translate(340, 450)">
+    <rect width="220" height="140" rx="12" fill="rgba(139, 92, 246, 0.15)" stroke="#8b5cf6" stroke-width="2"/>
+    <circle cx="110" cy="40" r="25" fill="url(#agentGlow1)"/>
+    <text x="110" y="90" font-family="monospace" font-size="14" fill="#a78bfa" text-anchor="middle">code-architect</text>
+    <text x="110" y="110" font-family="system-ui" font-size="11" fill="#818cf8" text-anchor="middle">Active</text>
+    <circle cx="30" cy="30" r="4" fill="#10b981" opacity="0.8"/>
+  </g>
+
+  <!-- Agent 5 - Test Analyzer -->
+  <g transform="translate(740, 480)">
+    <rect width="220" height="140" rx="12" fill="rgba(249, 115, 22, 0.15)" stroke="#f97316" stroke-width="2"/>
+    <circle cx="110" cy="40" r="25" fill="url(#agentGlow2)"/>
+    <text x="110" y="90" font-family="monospace" font-size="14" fill="#fb923c" text-anchor="middle">test-analyzer</text>
+    <text x="110" y="110" font-family="system-ui" font-size="11" fill="#fdba74" text-anchor="middle">Ready</text>
+    <circle cx="30" cy="30" r="4" fill="#10b981" opacity="0.8"/>
+  </g>
+
+  <!-- Data flow lines between agents -->
+  <path d="M 310 270 Q 450 350 590 220" stroke="#60a5fa" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="5,5"/>
+  <path d="M 700 220 Q 850 300 900 270" stroke="#60a5fa" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="5,5"/>
+  <path d="M 420 340 Q 500 400 560 450" stroke="#8b5cf6" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M 740 520 Q 650 450 560 450" stroke="#f97316" stroke-width="2" fill="none" opacity="0.4"/>
+
+  <!-- Data flow particles -->
+  <circle cx="400" cy="310" r="4" fill="#60a5fa" opacity="0.8"/>
+  <circle cx="775" cy="260" r="4" fill="#60a5fa" opacity="0.8"/>
+  <circle cx="490" cy="425" r="4" fill="#8b5cf6" opacity="0.8"/>
+  <circle cx="650" cy="485" r="4" fill="#f97316" opacity="0.8"/>
+
+  <!-- Title -->
+  <text x="800" y="780" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle">
+    AI Agent Collaboration
+  </text>
+  <text x="800" y="820" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#a78bfa" text-anchor="middle">
+    Specialized Agents Working in Harmony
+  </text>
+</svg>

@@ -102,7 +102,6 @@ Level 3:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/agentic-maturity-model-pattern.md`</small>

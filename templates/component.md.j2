@@ -195,17 +195,29 @@ confidence: {{ confidence | default(100) }}
 {% if tips %}
 ### Tips
 
-{% for tip in tips %}
-!!! tip "{{ tip.title | default('Tip') }}"
-    {{ tip.content }}
+{% for title, items in tips | groupby('title') %}
+{% if title %}
+!!! tip "{{ title }}"
+{% for item in items %}
+    - {{ item.content }}
+{% endfor %}
+
+{% else %}
+{% for item in items %}
+!!! tip ""
+    {{ item.content }}
+
+{% endfor %}
+{% endif %}
 {% endfor %}
 {% endif %}
 
 ## Related
-
 {% if related %}
+
 {% for item in related %}
 - [{{ item.name }}]({{ item.link }}){% if item.description %} - {{ item.description }}{% endif %}
+
 {% endfor %}
 {% endif %}
 

@@ -297,7 +297,6 @@ Claude: "Das ist eine gute Gelegenheit zum Lernen!
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/learning-mode-pattern.md`</small>

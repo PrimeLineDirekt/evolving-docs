@@ -1,12 +1,12 @@
 ---
-title: interview-plan
+title: /interview-plan
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# interview-plan
+# /interview-plan
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Purpose** | Read this plan file $ARGUMENTS and interview me in detail using the AskUserQuestion tool about literally anything: |
+| **Complexity** | low |
+| **Model** | opus |
+| **Category** | workflow |</div>
 
 
 ## What It Does
@@ -39,6 +39,18 @@ Interview me about a plan before implementation
 ## Usage
 
 
+### Examples
+
+#### Basic Usage
+
+
+
+**Code:**
+```bash
+/interview-plan
+```
+
+
 
 
 ## Configuration
@@ -51,7 +63,6 @@ Interview me about a plan before implementation
 
 
 ## Related
-
 
 
 ---

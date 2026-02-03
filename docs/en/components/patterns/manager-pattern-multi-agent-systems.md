@@ -300,7 +300,6 @@ class AsyncManager:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/manager-pattern-multi-agent-systems.md`</small>

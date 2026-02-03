@@ -220,7 +220,6 @@ Welche Strategie?
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/four-bucket-context-pattern.md`</small>

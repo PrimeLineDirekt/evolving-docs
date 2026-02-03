@@ -106,7 +106,6 @@ rm knowledge/sessions/session-YYYY-MM-DD-HHMMSS.md
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/rules/session-evaluation.md`</small>

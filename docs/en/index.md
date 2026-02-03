@@ -100,9 +100,9 @@ Coordinated multi-agent execution for complex tasks. Delegate to specialists, no
 
 All component metadata is available as JSON:
 
-- [All Components](/api/components.json)
-- [Agents](/api/agents.json)
-- [Commands](/api/commands.json)
+- [All Components](../api/components.json)
+- [Agents](../api/agents.json)
+- [Commands](../api/commands.json)
 
 ## Contributing
 

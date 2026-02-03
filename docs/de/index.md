@@ -100,9 +100,9 @@ Koordinierte Multi-Agent-Ausführung für komplexe Aufgaben. Delegiere an Spezia
 
 Alle Komponenten-Metadaten sind als JSON verfügbar:
 
-- [Alle Komponenten](/api/components.json)
-- [Agents](/api/agents.json)
-- [Commands](/api/commands.json)
+- [Alle Komponenten](../api/components.json)
+- [Agents](../api/agents.json)
+- [Commands](../api/commands.json)
 
 ## Beitragen
 

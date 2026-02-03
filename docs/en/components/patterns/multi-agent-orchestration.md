@@ -356,7 +356,6 @@ Thresholds:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/multi-agent-orchestration.md`</small>

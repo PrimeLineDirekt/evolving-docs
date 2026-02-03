@@ -149,7 +149,6 @@ BAD: (implizite Annahmen)
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/prompts/README.md`</small>

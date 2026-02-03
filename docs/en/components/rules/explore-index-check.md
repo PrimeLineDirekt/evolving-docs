@@ -151,7 +151,6 @@ Claude (JETZT - richtig):
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/rules/explore-index-check.md`</small>

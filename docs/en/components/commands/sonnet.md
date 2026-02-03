@@ -1,12 +1,12 @@
 ---
-title: sonnet
+title: /sonnet
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# sonnet
+# /sonnet
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
+| **Purpose** | ✅ **Modell gewechselt zu Sonnet 4.5** (Balanced Performance) |
+| **Complexity** | low |
 | **Model** | sonnet |
-| **Category** | commands |</div>
+| **Category** | general |</div>
 
 
 ## What It Does
@@ -39,6 +39,18 @@ Switch to Sonnet (balanced performance)
 ## Usage
 
 
+### Examples
+
+#### Basic Usage
+
+
+
+**Code:**
+```bash
+/sonnet
+```
+
+
 
 
 ## Configuration
@@ -51,7 +63,6 @@ Switch to Sonnet (balanced performance)
 
 
 ## Related
-
 
 
 ---

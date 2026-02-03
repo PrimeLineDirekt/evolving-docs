@@ -148,7 +148,6 @@ Experience: exp-2026-001 (success, effectiveness=100%)
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/sub-agent-delegation-pattern.md`</small>

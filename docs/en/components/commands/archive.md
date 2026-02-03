@@ -1,12 +1,12 @@
 ---
-title: archive
+title: /archive
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# archive
+# /archive
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
+| **Purpose** | Führt manuelle Archivierung durch. Standardmäßig Dry-Run (safe mode). |
 | **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Model** | claude-sonnet-4-5 |
+| **Category** | memory |</div>
 
 
 ## What It Does
@@ -41,48 +41,13 @@ confidence: 100
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-/archive [TYPE] [FLAGS]
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-# Dry-Run für alle Typen
 /archive
-
-# Nur Sessions archivieren (Dry-Run)
-/archive sessions
-
-# Sessions tatsächlich archivieren
-/archive sessions --execute
-
-# Handoffs älter als 7 Tage archivieren (statt 14)
-/archive handoffs --age=7 --execute
-
-# Frequency-Limit umgehen
-/archive --force --execute
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-python3 "$CLAUDE_PROJECT_DIR"/.claude/hooks/auto-archival.py \
-  --type ${type:-all} \
-  ${flags}
 ```
 
 
@@ -98,7 +63,6 @@ python3 "$CLAUDE_PROJECT_DIR"/.claude/hooks/auto-archival.py \
 
 
 ## Related
-
 
 
 ---

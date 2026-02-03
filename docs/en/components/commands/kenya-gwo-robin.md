@@ -1,12 +1,12 @@
 ---
-title: kenya-gwo-robin
+title: /kenya-gwo-robin
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# kenya-gwo-robin
+# /kenya-gwo-robin
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Purpose** | **FORK** von Benjis Kenya GWO Plan. Robin's Version mit erweiterter Team-Struktur. |
+| **Complexity** | low |
+| **Model** | claude-sonnet-4-5 |
+| **Category** | workflow |</div>
 
 
 ## What It Does
@@ -39,6 +39,18 @@ confidence: 100
 ## Usage
 
 
+### Examples
+
+#### Basic Usage
+
+
+
+**Code:**
+```bash
+/kenya-gwo-robin
+```
+
+
 
 
 ## Configuration
@@ -51,7 +63,6 @@ confidence: 100
 
 
 ## Related
-
 
 
 ---

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)">
+  <defs>
+    <radialGradient id="memGlow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="memGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0" />
+    </radialGradient>
+    <linearGradient id="neuralPath" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#6366f1;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+
+  <!-- Neural network pattern background -->
+  <pattern id="memGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+    <circle cx="30" cy="30" r="1" fill="#8b5cf6" opacity="0.2"/>
+  </pattern>
+  <rect width="1600" height="900" fill="url(#memGrid)"/>
+
+  <!-- Central brain/memory core -->
+  <g transform="translate(800, 400)">
+    <!-- Core glow -->
+    <circle r="120" fill="url(#memGlow1)"/>
+    <circle r="80" fill="url(#memGlow2)"/>
+
+    <!-- Brain-like structure -->
+    <path d="M -60 -40 Q -80 -20 -60 0 Q -40 20 -20 20 Q 0 20 0 0 Q 0 -20 -20 -40 Q -40 -60 -60 -40 Z"
+          fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.6"/>
+    <path d="M 60 -40 Q 80 -20 60 0 Q 40 20 20 20 Q 0 20 0 0 Q 0 -20 20 -40 Q 40 -60 60 -40 Z"
+          fill="none" stroke="#6366f1" stroke-width="2" opacity="0.6"/>
+
+    <!-- Neural pathways -->
+    <path d="M -40 0 Q -20 -10 0 0 Q 20 10 40 0" stroke="#a78bfa" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M -30 -20 Q 0 -25 30 -20" stroke="#818cf8" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M -30 15 Q 0 20 30 15" stroke="#c4b5fd" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+    <!-- Core nodes -->
+    <circle cx="0" cy="0" r="8" fill="#8b5cf6" opacity="0.9"/>
+    <circle cx="-40" cy="0" r="5" fill="#6366f1" opacity="0.8"/>
+    <circle cx="40" cy="0" r="5" fill="#6366f1" opacity="0.8"/>
+    <circle cx="0" cy="-30" r="5" fill="#3b82f6" opacity="0.8"/>
+  </g>
+
+  <!-- Memory storage crystals/nodes around core -->
+  <!-- Domain Memory -->
+  <g transform="translate(400, 250)">
+    <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15" fill="rgba(139, 92, 246, 0.2)" stroke="#8b5cf6" stroke-width="2"/>
+    <text y="50" font-family="monospace" font-size="13" fill="#a78bfa" text-anchor="middle">Domain</text>
+    <circle cx="0" cy="0" r="8" fill="url(#memGlow1)"/>
+  </g>
+
+  <!-- Experience Memory -->
+  <g transform="translate(1200, 250)">
+    <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15" fill="rgba(99, 102, 241, 0.2)" stroke="#6366f1" stroke-width="2"/>
+    <text y="50" font-family="monospace" font-size="13" fill="#818cf8" text-anchor="middle">Experience</text>
+    <circle cx="0" cy="0" r="8" fill="url(#memGlow2)"/>
+  </g>
+
+  <!-- Graph Memory -->
+  <g transform="translate(300, 550)">
+    <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15" fill="rgba(59, 130, 246, 0.2)" stroke="#3b82f6" stroke-width="2"/>
+    <text y="50" font-family="monospace" font-size="13" fill="#60a5fa" text-anchor="middle">Graph</text>
+    <circle cx="0" cy="0" r="8" fill="url(#memGlow2)"/>
+  </g>
+
+  <!-- Session Memory -->
+  <g transform="translate(1300, 550)">
+    <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15" fill="rgba(139, 92, 246, 0.2)" stroke="#8b5cf6" stroke-width="2"/>
+    <text y="50" font-family="monospace" font-size="13" fill="#a78bfa" text-anchor="middle">Session</text>
+    <circle cx="0" cy="0" r="8" fill="url(#memGlow1)"/>
+  </g>
+
+  <!-- Connection pathways from core to storage -->
+  <path d="M 700 380 L 426 265" stroke="url(#neuralPath)" stroke-width="2" opacity="0.5"/>
+  <path d="M 900 380 L 1174 265" stroke="url(#neuralPath)" stroke-width="2" opacity="0.5"/>
+  <path d="M 720 480 L 326 535" stroke="url(#neuralPath)" stroke-width="2" opacity="0.5"/>
+  <path d="M 880 480 L 1274 535" stroke="url(#neuralPath)" stroke-width="2" opacity="0.5"/>
+
+  <!-- Data flow particles -->
+  <circle cx="563" cy="323" r="4" fill="#8b5cf6" opacity="0.8"/>
+  <circle cx="1037" cy="323" r="4" fill="#6366f1" opacity="0.8"/>
+  <circle cx="523" cy="508" r="4" fill="#3b82f6" opacity="0.8"/>
+  <circle cx="1077" cy="508" r="4" fill="#8b5cf6" opacity="0.8"/>
+
+  <!-- Title -->
+  <text x="800" y="780" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle">
+    Persistent Memory System
+  </text>
+  <text x="800" y="820" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#a78bfa" text-anchor="middle">
+    Domain • Experience • Graph • Session
+  </text>
+</svg>

@@ -280,7 +280,6 @@ done
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/recursive-research-pattern.md`</small>

@@ -1,12 +1,12 @@
 ---
-title: remember
+title: /remember
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# remember
+# /remember
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
+| **Purpose** | Speichere eine Erfahrung im Experience Memory System. |
 | **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Model** | claude-sonnet-4-5 |
+| **Category** | memory |</div>
 
 
 ## What It Does
@@ -41,33 +41,13 @@ confidence: 100
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-Was moechtest du speichern?
-1. solution - Fehler + Fix
-2. pattern - Erfolgreicher Ansatz
-3. decision - Architektur-Entscheidung
-4. workaround - Temporaerer Fix
-5. gotcha - Stolperfalle
-6. preference - User-Praeferenz
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-Experience gespeichert!
-ID: exp-2025-001
-Typ: {type}
-Score: {relevance_score}
-Tags: {tags}
+/remember
 ```
 
 
@@ -83,7 +63,6 @@ Tags: {tags}
 
 
 ## Related
-
 
 
 ---

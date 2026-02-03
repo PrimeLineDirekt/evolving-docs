@@ -1,12 +1,12 @@
 ---
-title: scenario-edit
+title: /scenario-edit
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# scenario-edit
+# /scenario-edit
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
+| **Purpose** | Du bearbeitest ein bestehendes Szenario. |
 | **Complexity** | medium |
 | **Model** | sonnet |
-| **Category** | commands |</div>
+| **Category** | workflow |</div>
 
 
 ## What It Does
@@ -41,43 +41,13 @@ Bearbeitet ein Szenario (Components hinzufügen/entfernen)
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-## Szenario: {display_name}
-
-### Agents ({count})
-{Liste aller Agents mit kurzer Beschreibung}
-
-### Commands ({count})
-{Liste aller Commands mit kurzer Beschreibung}
-
-### Skills ({count})
-{Liste aller Skills}
-
-### Knowledge ({count})
-{Liste der Knowledge-Dateien}
-
-### Status
-{status} | Tech: {tech_stack kurz}
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-Szenario "{name}" aktualisiert!
-
-## Änderungen
-{Liste der vorgenommenen Änderungen}
-
-Nutze /scenario {name} zum Aktivieren.
+/scenario-edit
 ```
 
 
@@ -93,7 +63,6 @@ Nutze /scenario {name} zum Aktivieren.
 
 
 ## Related
-
 
 
 ---

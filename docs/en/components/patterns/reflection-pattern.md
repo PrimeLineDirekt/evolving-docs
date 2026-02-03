@@ -371,7 +371,6 @@ result = reflection_chain.invoke({
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/reflection-pattern.md`</small>

@@ -1,12 +1,12 @@
 ---
-title: integrity-check
+title: /integrity-check
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# integrity-check
+# /integrity-check
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
+| **Purpose** | Schnelle Integritätsprüfung des Evolving-Systems ohne automatische Reparaturen. |
 | **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Model** | claude-sonnet-4-5 |
+| **Category** | memory |</div>
 
 
 ## What It Does
@@ -41,89 +41,10 @@ confidence: 100
 
 ### Examples
 
-#### Example
+#### Examples
 
 
 
-**Code:**
-```bash
-agents:    _stats.json (67) vs ls .claude/agents/*.md (67) ✅
-commands:  _stats.json (71) vs ls .claude/commands/*.md (71) ✅
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-INTEGRITY CHECK (2026-01-15)
-============================
-
-Counts:
-├── agents:     67/67 ✅
-├── commands:   71/71 ✅
-├── skills:      7/7  ✅
-├── hooks:      18/18 ✅
-├── patterns:   56/56 ✅
-├── learnings:  47/47 ✅
-└── templates:  12/12 ✅
-
-Graph:
-├── Nodes: 520 ✅
-├── Edges: 380 ✅
-├── Broken refs: 0 ✅
-└── Orphan nodes: 2 ⚠️
-
-Registrations:
-├── Complete: 298/300
-└── Incomplete: 2 ⚠️
-    ├── knowledge/decisions/decision-2026-01-14.md (missing: edges)
-    └── .claude/agents/new-agent.md (missing: router)
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SCORE: 95/100
-
-Recommendation: Run /tool-map --fix to repair 2 issues
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-# Quick check
-/integrity-check
-
-# Detailed output
-/integrity-check --verbose
-
-# For CI/CD integration
-/integrity-check --json
-
-# Auto-heal SAFE issues (broken edges, duplicates, expired)
-/integrity-check --auto-heal
-
-# Full healing with CAUTION-level detection
-/integrity-check --heal-all
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-Edge Partitions:
-├── edges-by-type.json: 9 types ✅
-├── edges-by-source.json: 12 sources ✅
-├── edges-index.json: 614 total ✅
-└── Sync: edges.json matches ✅
-```
 
 
 
@@ -139,6 +60,10 @@ Edge Partitions:
 
 ## Related
 
+- [`/tool-map`](#tool-map) - Full inventory with optional auto-fix
+- [`/tool-map --fix`](#tool-map---fix) - Repair found issues
+- [`scripts/partition-edges.py`](#scripts/partition-edges.py) - Regenerate edge partitions
+- [`scripts/self-heal.py`](#scripts/self-heal.py) - Auto-repair broken edges
 
 
 ---

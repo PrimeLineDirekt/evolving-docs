@@ -414,7 +414,6 @@ class ConfidenceCalibrator:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/metacognitive-pattern.md`</small>

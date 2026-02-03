@@ -296,7 +296,6 @@ command -v gitleaks >/dev/null && ...
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/hook-patterns-library.md`</small>

@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%)">
+  <defs>
+    <linearGradient id="ruleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:0.3" />
+    </linearGradient>
+    <pattern id="ruleGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(16, 185, 129, 0.08)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#ruleGrid)"/>
+
+  <!-- Rule documents stacked/layered effect -->
+  <g transform="translate(400, 200)">
+    <!-- Document stack -->
+    <rect x="0" y="10" width="400" height="480" rx="8" fill="rgba(15, 23, 42, 0.8)" stroke="#10b981" stroke-width="2"/>
+    <rect x="10" y="5" width="400" height="480" rx="8" fill="rgba(15, 23, 42, 0.6)" stroke="#059669" stroke-width="1.5" opacity="0.6"/>
+    <rect x="20" y="0" width="400" height="480" rx="8" fill="rgba(15, 23, 42, 0.4)" stroke="#047857" stroke-width="1" opacity="0.3"/>
+
+    <!-- Main document content -->
+    <g transform="translate(20, 40)">
+      <!-- Document header -->
+      <text x="0" y="0" font-family="monospace" font-size="20" font-weight="700" fill="#10b981">
+        core-principles.md
+      </text>
+      <line x1="0" y1="10" x2="360" y2="10" stroke="#10b981" stroke-width="1" opacity="0.4"/>
+
+      <!-- Rule sections -->
+      <text x="0" y="50" font-family="system-ui" font-size="14" font-weight="600" fill="#34d399">
+        Priority: CRITICAL
+      </text>
+      <text x="0" y="75" font-family="system-ui" font-size="14" fill="#94a3b8">
+        Trigger: Always - every interaction
+      </text>
+
+      <!-- Rule content lines -->
+      <rect x="0" y="100" width="360" height="2" fill="#334155" opacity="0.5"/>
+
+      <text x="0" y="130" font-family="system-ui" font-size="13" fill="#d1fae5">
+        ## AI-First Mindset
+      </text>
+      <text x="20" y="155" font-family="system-ui" font-size="12" fill="#94a3b8">
+        • Created WITH AI
+      </text>
+      <text x="20" y="175" font-family="system-ui" font-size="12" fill="#94a3b8">
+        • Leverage AI strengths
+      </text>
+
+      <text x="0" y="210" font-family="system-ui" font-size="13" fill="#d1fae5">
+        ## Sparring &gt; Ja-Sagen
+      </text>
+      <text x="20" y="235" font-family="system-ui" font-size="12" fill="#94a3b8">
+        • Radical honesty
+      </text>
+      <text x="20" y="255" font-family="system-ui" font-size="12" fill="#94a3b8">
+        • Challenge assumptions
+      </text>
+
+      <text x="0" y="290" font-family="system-ui" font-size="13" fill="#d1fae5">
+        ## Chain of Thought
+      </text>
+      <text x="20" y="315" font-family="system-ui" font-size="12" fill="#94a3b8">
+        • Sketch steps first
+      </text>
+      <text x="20" y="335" font-family="system-ui" font-size="12" fill="#94a3b8">
+        • Transparent reasoning
+      </text>
+
+      <text x="0" y="370" font-family="system-ui" font-size="13" fill="#d1fae5">
+        ## 80/20 Principle
+      </text>
+      <text x="20" y="395" font-family="system-ui" font-size="12" fill="#94a3b8">
+        • High-impact focus
+      </text>
+      <text x="20" y="415" font-family="system-ui" font-size="12" fill="#94a3b8">
+        • Avoid over-engineering
+      </text>
+    </g>
+  </g>
+
+  <!-- Rule categories sidebar -->
+  <g transform="translate(900, 200)">
+    <rect width="260" height="480" rx="8" fill="rgba(15, 23, 42, 0.6)" stroke="#334155" stroke-width="1.5"/>
+
+    <text x="20" y="35" font-family="system-ui" font-size="16" font-weight="600" fill="#e2e8f0">
+      Rule Categories
+    </text>
+    <line x1="20" y1="45" x2="240" y2="45" stroke="#334155" stroke-width="1"/>
+
+    <!-- Category list -->
+    <g font-family="system-ui" font-size="13">
+      <circle cx="30" cy="80" r="4" fill="#10b981"/>
+      <text x="45" y="85" fill="#94a3b8">Core Principles</text>
+      <text x="210" y="85" fill="#64748b">4</text>
+
+      <circle cx="30" cy="115" r="4" fill="#10b981"/>
+      <text x="45" y="120" fill="#94a3b8">Delegation</text>
+      <text x="210" y="120" fill="#64748b">8</text>
+
+      <circle cx="30" cy="150" r="4" fill="#10b981"/>
+      <text x="45" y="155" fill="#94a3b8">Memory</text>
+      <text x="210" y="155" fill="#64748b">6</text>
+
+      <circle cx="30" cy="185" r="4" fill="#10b981"/>
+      <text x="45" y="190" fill="#94a3b8">Debugging</text>
+      <text x="210" y="190" fill="#64748b">5</text>
+
+      <circle cx="30" cy="220" r="4" fill="#10b981"/>
+      <text x="45" y="225" fill="#94a3b8">Context</text>
+      <text x="210" y="225" fill="#64748b">4</text>
+
+      <circle cx="30" cy="255" r="4" fill="#10b981"/>
+      <text x="45" y="260" fill="#94a3b8">Workflow</text>
+      <text x="210" y="260" fill="#64748b">7</text>
+
+      <circle cx="30" cy="290" r="4" fill="#047857" opacity="0.6"/>
+      <text x="45" y="295" fill="#64748b">Automation</text>
+      <text x="210" y="295" fill="#475569">3</text>
+
+      <circle cx="30" cy="325" r="4" fill="#047857" opacity="0.6"/>
+      <text x="45" y="330" fill="#64748b">Scenarios</text>
+      <text x="210" y="330" fill="#475569">2</text>
+    </g>
+
+    <!-- Stats at bottom -->
+    <line x1="20" y1="370" x2="240" y2="370" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="400" font-family="system-ui" font-size="14" font-weight="600" fill="#10b981">
+      Total Rules: 44
+    </text>
+    <text x="20" y="425" font-family="system-ui" font-size="12" fill="#64748b">
+      Active: 39 | Staged: 5
+    </text>
+  </g>
+
+  <!-- Title -->
+  <text x="800" y="780" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle">
+    System Rules
+  </text>
+  <text x="800" y="820" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#10b981" text-anchor="middle">
+    Guidelines for Consistent AI Behavior
+  </text>
+</svg>

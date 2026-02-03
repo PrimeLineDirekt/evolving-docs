@@ -212,7 +212,6 @@ Ergebnis
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/rules/swarm-orchestration.md`</small>

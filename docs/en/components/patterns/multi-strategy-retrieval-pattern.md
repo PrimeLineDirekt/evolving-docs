@@ -241,7 +241,6 @@ Query: "API error"
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/multi-strategy-retrieval-pattern.md`</small>

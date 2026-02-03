@@ -72,7 +72,6 @@ User: "Ich muss mal schauen..."
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/rules/workflow-detection.md`</small>

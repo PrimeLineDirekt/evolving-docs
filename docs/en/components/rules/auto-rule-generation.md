@@ -203,7 +203,6 @@ User korrigiert Claude
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/rules/auto-rule-generation.md`</small>

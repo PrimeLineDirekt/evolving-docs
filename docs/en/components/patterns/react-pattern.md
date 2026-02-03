@@ -365,7 +365,6 @@ SOLUTION: Added null check for API response before accessing data property.
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/react-pattern.md`</small>

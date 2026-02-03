@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" style="background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%)">
+  <!-- Grid background -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(139, 92, 246, 0.1)" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#grid)"/>
+
+  <!-- Glowing nodes network -->
+  <!-- Central hub -->
+  <circle cx="800" cy="450" r="60" fill="url(#glow1)"/>
+  <circle cx="800" cy="450" r="20" fill="#8b5cf6" opacity="0.9"/>
+
+  <!-- Surrounding nodes -->
+  <circle cx="550" cy="300" r="40" fill="url(#glow2)"/>
+  <circle cx="550" cy="300" r="12" fill="#f97316" opacity="0.9"/>
+
+  <circle cx="1050" cy="300" r="40" fill="url(#glow1)"/>
+  <circle cx="1050" cy="300" r="12" fill="#8b5cf6" opacity="0.9"/>
+
+  <circle cx="400" cy="600" r="40" fill="url(#glow1)"/>
+  <circle cx="400" cy="600" r="12" fill="#8b5cf6" opacity="0.9"/>
+
+  <circle cx="1200" cy="600" r="40" fill="url(#glow2)"/>
+  <circle cx="1200" cy="600" r="12" fill="#f97316" opacity="0.9"/>
+
+  <circle cx="650" cy="700" r="35" fill="url(#glow2)"/>
+  <circle cx="650" cy="700" r="10" fill="#f97316" opacity="0.9"/>
+
+  <circle cx="950" cy="200" r="35" fill="url(#glow2)"/>
+  <circle cx="950" cy="200" r="10" fill="#f97316" opacity="0.9"/>
+
+  <!-- Connection lines -->
+  <line x1="800" y1="450" x2="550" y2="300" stroke="#8b5cf6" stroke-width="2" opacity="0.4"/>
+  <line x1="800" y1="450" x2="1050" y2="300" stroke="#8b5cf6" stroke-width="2" opacity="0.4"/>
+  <line x1="800" y1="450" x2="400" y2="600" stroke="#8b5cf6" stroke-width="2" opacity="0.4"/>
+  <line x1="800" y1="450" x2="1200" y2="600" stroke="#f97316" stroke-width="2" opacity="0.4"/>
+  <line x1="800" y1="450" x2="650" y2="700" stroke="#f97316" stroke-width="2" opacity="0.4"/>
+  <line x1="800" y1="450" x2="950" y2="200" stroke="#f97316" stroke-width="2" opacity="0.4"/>
+
+  <line x1="550" y1="300" x2="950" y2="200" stroke="#8b5cf6" stroke-width="1.5" opacity="0.3"/>
+  <line x1="1050" y1="300" x2="1200" y2="600" stroke="#8b5cf6" stroke-width="1.5" opacity="0.3"/>
+  <line x1="400" y1="600" x2="650" y2="700" stroke="#8b5cf6" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Animated particles (static positions for SVG) -->
+  <circle cx="675" cy="375" r="3" fill="#8b5cf6" opacity="0.6"/>
+  <circle cx="925" cy="375" r="3" fill="#f97316" opacity="0.6"/>
+  <circle cx="600" cy="525" r="3" fill="#8b5cf6" opacity="0.6"/>
+  <circle cx="1000" cy="525" r="3" fill="#f97316" opacity="0.6"/>
+
+  <!-- Title text -->
+  <text x="800" y="820" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle">
+    Evolving Knowledge System
+  </text>
+  <text x="800" y="860" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#a78bfa" text-anchor="middle">
+    AI-First Development Framework
+  </text>
+</svg>

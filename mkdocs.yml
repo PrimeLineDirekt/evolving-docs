@@ -34,7 +34,6 @@ theme:
     text: Inter
     code: JetBrains Mono
   features:
-    - navigation.instant
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
@@ -94,6 +93,7 @@ plugins:
       type: timeago
       fallback_to_build_date: true
       enable_git_follow: false
+      strict: false
 
 markdown_extensions:
   - abbr
@@ -178,16 +178,50 @@ extra_javascript:
 
 nav:
   - Home: index.md
-  - Agents (55): components/agents/index.md
-  - Blueprints (9): components/blueprints/index.md
-  - Commands (80): components/commands/index.md
-  - Graphics_Tools (40): components/graphics_tools/index.md
-  - Hooks (22): components/hooks/index.md
-  - Learnings (53): components/learnings/index.md
-  - Mcp_Servers (0): components/mcp_servers/index.md
-  - Patterns (59): components/patterns/index.md
-  - Prompts (1): components/prompts/index.md
-  - Rules (17): components/rules/index.md
-  - Scenarios (8): components/scenarios/index.md
-  - Skills (10): components/skills/index.md
-  - Templates (6): components/templates/index.md
+  - Getting Started:
+      - getting-started/index.md
+      - Quick Start: getting-started/quick-start.md
+      - Installation: getting-started/installation.md
+      - Configuration: getting-started/configuration.md
+  - Architecture:
+      - architecture/index.md
+      - Overview: architecture/overview.md
+      - Memory System: architecture/memory-system.md
+      - Knowledge Graph: architecture/knowledge-graph.md
+      - Context Router: architecture/context-router.md
+      - Context Routing: architecture/context-routing.md
+      - Agent Orchestration: architecture/agent-orchestration.md
+  - Core Concepts:
+      - core-concepts/index.md
+      - Overview: core-concepts/overview.md
+      - Domain Memory: core-concepts/domain-memory.md
+      - Prompt Patterns: core-concepts/prompt-patterns.md
+  - Features:
+      - features/index.md
+      - Automation: features/automation.md
+      - Agent Coordination: features/agent-coordination.md
+      - Context Engineering: features/context-engineering.md
+      - Knowledge Management: features/knowledge-management.md
+      - Intelligent Orchestration: features/intelligent-orchestration.md
+  - Guides:
+      - guides/index.md
+      - Creating Agents: guides/creating-agents.md
+      - Creating Commands: guides/creating-commands.md
+      - Writing Commands: guides/writing-commands.md
+      - Using Patterns: guides/using-patterns.md
+      - Extending System: guides/extending-system.md
+  - Components:
+      - components/index.md
+      - Agents (55): components/agents/index.md
+      - Blueprints (9): components/blueprints/index.md
+      - Commands (80): components/commands/index.md
+      - Graphics Tools (40): components/graphics_tools/index.md
+      - Hooks (22): components/hooks/index.md
+      - Learnings (53): components/learnings/index.md
+      - MCP Servers (0): components/mcp_servers/index.md
+      - Patterns (59): components/patterns/index.md
+      - Prompts (1): components/prompts/index.md
+      - Rules (17): components/rules/index.md
+      - Scenarios (8): components/scenarios/index.md
+      - Skills (10): components/skills/index.md
+      - Templates (6): components/templates/index.md

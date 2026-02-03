@@ -332,7 +332,6 @@ def update_review(item: dict, result: str) -> dict:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/spaced-repetition-pattern.md`</small>

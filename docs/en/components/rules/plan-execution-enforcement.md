@@ -156,7 +156,6 @@ Parallel starten:
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/rules/plan-execution-enforcement.md`</small>

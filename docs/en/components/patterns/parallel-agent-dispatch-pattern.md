@@ -200,7 +200,6 @@ Agent 3 → Fix race-conditions.test.ts
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/parallel-agent-dispatch-pattern.md`</small>

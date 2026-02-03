@@ -187,7 +187,6 @@ SEO Optimization: Market-specific keywords
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/bilingual-seo-system.md`</small>

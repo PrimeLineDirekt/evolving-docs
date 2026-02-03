@@ -452,7 +452,6 @@ echo '{}'
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/hook-development-reference.md`</small>

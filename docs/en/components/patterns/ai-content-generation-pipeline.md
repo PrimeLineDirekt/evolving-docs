@@ -1484,7 +1484,6 @@ function estimateMonthlyCost(itemsPerDay: number, strategy: keyof typeof MODEL_S
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/ai-content-generation-pipeline.md`</small>

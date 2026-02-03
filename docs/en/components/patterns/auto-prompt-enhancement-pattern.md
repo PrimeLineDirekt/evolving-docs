@@ -307,7 +307,6 @@ Task(
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/auto-prompt-enhancement-pattern.md`</small>

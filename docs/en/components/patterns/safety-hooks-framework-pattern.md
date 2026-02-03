@@ -396,7 +396,6 @@ except Exception as e:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/safety-hooks-framework-pattern.md`</small>

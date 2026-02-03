@@ -324,7 +324,6 @@ Free, Starter, Basic, Pro, Premium, Enterprise
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/freemium-saas-gates.md`</small>

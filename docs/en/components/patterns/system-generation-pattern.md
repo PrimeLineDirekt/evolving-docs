@@ -144,7 +144,6 @@ def inject_knowledge(architecture, blueprint):
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/system-generation-pattern.md`</small>

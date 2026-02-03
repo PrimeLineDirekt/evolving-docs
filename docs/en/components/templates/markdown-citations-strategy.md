@@ -273,7 +273,6 @@ MarkdownGenerationResult:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/templates/markdown-citations-strategy.md`</small>

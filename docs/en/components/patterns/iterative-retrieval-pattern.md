@@ -508,7 +508,6 @@ Debugger Agent:
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/iterative-retrieval-pattern.md`</small>

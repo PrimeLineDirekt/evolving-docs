@@ -260,7 +260,6 @@ investigations/
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/lock-methodology-pattern.md`</small>

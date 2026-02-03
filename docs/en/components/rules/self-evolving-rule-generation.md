@@ -246,7 +246,6 @@ Generierte Rule:
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/rules/self-evolving-rule-generation.md`</small>

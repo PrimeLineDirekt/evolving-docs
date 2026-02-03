@@ -301,7 +301,6 @@ Files: src/auth/oauth.ts
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/observation-compression-pattern.md`</small>

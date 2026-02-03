@@ -90,7 +90,6 @@ RICHTIG:
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/rules/hook-block-response.md`</small>

@@ -376,7 +376,6 @@ PROJECT_ANALYZE_STEPS = [
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/pev-pattern.md`</small>

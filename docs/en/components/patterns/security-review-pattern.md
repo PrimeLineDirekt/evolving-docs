@@ -204,7 +204,6 @@ Parameterisierte Queries verwenden.
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/security-review-pattern.md`</small>

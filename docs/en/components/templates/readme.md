@@ -87,7 +87,6 @@ Verknüpfte Patterns/Templates
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/templates/README.md`</small>

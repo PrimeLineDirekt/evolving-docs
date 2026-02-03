@@ -651,7 +651,6 @@ const validationRules = {
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/8-block-profile-system.md`</small>

@@ -107,7 +107,6 @@ confidence: 100
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/systematic-debugging-pattern.md`</small>

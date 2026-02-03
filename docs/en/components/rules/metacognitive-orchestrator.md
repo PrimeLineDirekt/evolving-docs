@@ -187,7 +187,6 @@ Claude: "Das klingt nach einem kreativen Verbesserungs-Task.
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/rules/metacognitive-orchestrator.md`</small>

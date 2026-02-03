@@ -1,12 +1,12 @@
 ---
-title: scenario
+title: /scenario
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# scenario
+# /scenario
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Purpose** | Du aktivierst ein Szenario und lädst dessen Kontext. |
+| **Complexity** | low |
+| **Model** | haiku |
+| **Category** | general |</div>
 
 
 ## What It Does
@@ -41,41 +41,13 @@ Aktiviert ein Szenario und zeigt verfügbare Komponenten
 
 ### Examples
 
-#### Example
-
-
-
-**Code:**
-```json
-{
-  "active_scenario": "{name}"
-}
-```
-
-
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-Szenario "{display_name}" aktiviert!
-
-## Projekt
-- Name: {project.name}
-- Tech Stack: {tech_stack}
-- Deployment: {project.deployment.platform}
-
-## Verfügbare Agents
-{Für jeden Agent in scenario: Name + kurze Beschreibung aus Agent-Datei}
-
-## Verfügbare Commands
-{Für jeden Command in scenario: Name + kurze Beschreibung}
-
-## Quick Start
-{Zeige die wichtigsten Commands für dieses Szenario}
-
-Nutze @{agent-name} um einen spezialisierten Agent zu involvieren.
+/scenario
 ```
 
 
@@ -91,7 +63,6 @@ Nutze @{agent-name} um einen spezialisierten Agent zu involvieren.
 
 
 ## Related
-
 
 
 ---

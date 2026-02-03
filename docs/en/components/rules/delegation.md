@@ -228,7 +228,6 @@ Sub-Agent gibt Delegation-Request zurück
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/rules/delegation.md`</small>

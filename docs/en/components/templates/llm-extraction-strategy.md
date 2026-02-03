@@ -257,7 +257,6 @@ Wann: Groq und andere rate-limited Providers
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/templates/llm-extraction-strategy.md`</small>

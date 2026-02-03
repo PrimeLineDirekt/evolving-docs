@@ -333,7 +333,6 @@ def load_agent_result(
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/checkpoint-validation-pattern.md`</small>

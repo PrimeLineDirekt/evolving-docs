@@ -235,7 +235,6 @@ Phase-Generierung:
 ## Related
 
 
-
 ---
 
 <small>Source: `.claude/rules/plan-execution-workflow.md`</small>

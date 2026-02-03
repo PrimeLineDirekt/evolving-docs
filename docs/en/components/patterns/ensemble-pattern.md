@@ -458,7 +458,6 @@ def validate_critical_decision(
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/ensemble-pattern.md`</small>

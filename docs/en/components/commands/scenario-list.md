@@ -1,12 +1,12 @@
 ---
-title: scenario-list
+title: /scenario-list
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# scenario-list
+# /scenario-list
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
-| **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Purpose** | Du zeigst alle verfügbaren Szenarien an. |
+| **Complexity** | low |
+| **Model** | haiku |
+| **Category** | creation |</div>
 
 
 ## What It Does
@@ -41,38 +41,13 @@ Zeigt alle verfügbaren Szenarien
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-## Verfügbare Szenarien
-
-| Szenario | Beschreibung | Status | Agents | Commands |
-|----------|--------------|--------|--------|----------|
-| evolving-dashboard | Web Dashboard mit Terminal | active | 5 | 4 |
-| ... | ... | ... | ... | ... |
-
-**Aktives Szenario**: {active_scenario oder "Keins"}
-
-## Commands
-- /scenario {name} - Szenario aktivieren
-- /scenario-create {name} - Neues Szenario erstellen
-- /scenario-edit {name} - Szenario bearbeiten
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-Keine Szenarien gefunden.
-
-Erstelle ein neues Szenario mit:
-/scenario-create {name}
+/scenario-list
 ```
 
 
@@ -88,7 +63,6 @@ Erstelle ein neues Szenario mit:
 
 
 ## Related
-
 
 
 ---

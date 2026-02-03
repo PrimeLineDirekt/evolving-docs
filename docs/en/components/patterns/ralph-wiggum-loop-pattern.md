@@ -160,7 +160,6 @@ output <promise>COMPLETE</promise>" \
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/ralph-wiggum-loop-pattern.md`</small>

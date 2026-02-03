@@ -232,7 +232,6 @@ Konservativ: 1 Wort ≈ 1.3 Tokens
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/templates/chunking-strategies.md`</small>

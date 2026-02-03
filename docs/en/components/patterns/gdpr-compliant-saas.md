@@ -1378,7 +1378,6 @@ async function updateMarketingConsent(
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/gdpr-compliant-saas.md`</small>

@@ -376,7 +376,6 @@ async function fetchWithFallback(
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/multi-source-aggregation-pattern.md`</small>

@@ -455,7 +455,6 @@ graph TD
 ## Related
 
 
-
 ---
 
 <small>Source: `knowledge/patterns/tree-of-thoughts-pattern.md`</small>

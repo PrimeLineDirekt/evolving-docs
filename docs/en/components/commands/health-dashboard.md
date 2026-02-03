@@ -1,12 +1,12 @@
 ---
-title: health-dashboard
+title: /health-dashboard
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# health-dashboard
+# /health-dashboard
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
+| **Purpose** | Du bist der Health Dashboard Generator. Erstelle einen kompakten visuellen Überblick über den System-Zustand. |
 | **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Model** | haiku |
+| **Category** | memory |</div>
 
 
 ## What It Does
@@ -41,76 +41,13 @@ Quick visual health overview - alle Key Metrics auf einen Blick
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-git status --porcelain | wc -l
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-╔═══════════════════════════════════════════════════════╗
-║            EVOLVING HEALTH DASHBOARD                  ║
-╠═══════════════════════════════════════════════════════╣
-║ COMPONENTS                                            ║
-║   {icon} Memory Files    {icon} Knowledge Graph       ║
-║   {icon} Detection Index {icon} Ideas Storage         ║
-║   {icon} Experience Storage                           ║
-╠═══════════════════════════════════════════════════════╣
-║ METRICS                                               ║
-║   Projects: {active}/{total}    Ideas: {count}        ║
-║   Experiences: {count}          Commands: {count}     ║
-║   Agents: {count}               Skills: {count}       ║
-╠═══════════════════════════════════════════════════════╣
-║ STATUS                                                ║
-║   Git: {clean/N changes}        Health: {score}       ║
-╚═══════════════════════════════════════════════════════╝
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-╔═══════════════════════════════════════════════════════╗
-║            EVOLVING HEALTH DASHBOARD                  ║
-╠═══════════════════════════════════════════════════════╣
-║ COMPONENTS                                            ║
-║   ✅ Memory Files    ✅ Knowledge Graph               ║
-║   ✅ Detection Index ✅ Ideas Storage                 ║
-║   ✅ Experience Storage                               ║
-╠═══════════════════════════════════════════════════════╣
-║ METRICS                                               ║
-║   Projects: 2 active    Ideas: 42                     ║
-║   Experiences: 27       Commands: 63                  ║
-║   Agents: 12            Skills: 8                     ║
-╠═══════════════════════════════════════════════════════╣
-║ STATUS                                                ║
-║   Git: clean            Health: 5/5 ✅                ║
-╚═══════════════════════════════════════════════════════╝
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-⚠️ Issues detected:
-  - {component}: {issue description}
-
-Run /system-health for detailed diagnostics.
+/health-dashboard
 ```
 
 
@@ -126,7 +63,6 @@ Run /system-health for detailed diagnostics.
 
 
 ## Related
-
 
 
 ---

@@ -1,12 +1,12 @@
 ---
-title: recall
+title: /recall
 type: command
 tags: []
 lang: en
 confidence: 100
 ---
 
-# recall
+# /recall
 
 
 ## Overview
@@ -15,10 +15,10 @@ confidence: 100
 | Attribute | Value |
 |-----------|-------|
 | **Type** | Command |
-| **Purpose** | Component description |
+| **Purpose** | Durchsuche das Experience Memory nach relevanten Erfahrungen. |
 | **Complexity** | medium |
-| **Model** | sonnet |
-| **Category** | commands |</div>
+| **Model** | claude-sonnet-4-5 |
+| **Category** | memory |</div>
 
 
 ## What It Does
@@ -41,46 +41,13 @@ confidence: 100
 
 ### Examples
 
-#### Example
+#### Basic Usage
 
 
 
 **Code:**
 ```bash
-{count} Experiences gefunden:
-
-[{type}] {id} ({relevance_score}) - {summary}
-  Tags: {tags}
-  Created: {created}
-
-[{type}] {id} ({relevance_score}) - {summary}
-  Tags: {tags}
-  Created: {created}
-
-...
-```
-
-
-#### Example
-
-
-
-**Code:**
-```bash
-/recall typescript error
-→ 5 Experiences gefunden:
-  [solution] exp-2025-001 (85) - TypeScript Property Error Fix
-  [gotcha] exp-2025-012 (78) - useEffect async Trap
-  ...
-
-/recall --type solution
-→ Alle Solutions sortiert nach Score
-
-/recall --project dashboard --recent 7d
-→ Dashboard-Experiences der letzten Woche
-
-/recall react hooks
-→ Alle Experiences zu React Hooks
+/recall
 ```
 
 
@@ -96,7 +63,6 @@ confidence: 100
 
 
 ## Related
-
 
 
 ---
