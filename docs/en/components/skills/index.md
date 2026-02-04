@@ -5,41 +5,54 @@ lang: en
 
 # Skills
 
-All skills in the Evolving system.
+Skills are reusable workflows loaded on-demand when invoked. They provide contextual guidance for specific tasks without bloating the base context.
 
+## At a Glance
 
+<div class="component-grid" markdown>
+<div class="component-card">
+<h3>21</h3>
+<p>Total Skills</p>
+</div>
+</div>
 
+## Superpowers Skills
 
+Core development workflow skills from the superpowers plugin.
 
+### Planning & Design
+- [Brainstorming](brainstorming.md) - Turn ideas into designs through collaborative dialogue
+- [Writing Plans](writing-plans.md) - Create detailed implementation plans
+- [Executing Plans](executing-plans.md) - Execute plans with hint-based delegation
 
-## All Components
+### Development Workflows
+- [Test-Driven Development](test-driven-development.md) - Red-Green-Refactor cycle
+- [Systematic Debugging](systematic-debugging.md) - Scientific approach to bug hunting
+- [Verification Before Completion](verification-before-completion.md) - Evidence-based completion
 
+### Agent Orchestration
+- [Dispatching Parallel Agents](dispatching-parallel-agents.md) - Run agents concurrently
+- [Subagent-Driven Development](subagent-driven-development.md) - Orchestrate specialized agents
 
+### Git & Collaboration
+- [Using Git Worktrees](using-git-worktrees.md) - Isolated workspaces
+- [Finishing Development Branch](finishing-development-branch.md) - Complete branches cleanly
+- [Code Review](code-review.md) - Request and receive reviews
 
-- [Core](core.md) - skill: core
+### Meta Skills
+- [Writing Skills](writing-skills.md) - Create new skill files
 
-- [External](external.md) - skill: external
+## Other Skills
 
-- [Frameworks](frameworks.md) - skill: frameworks
+- [Core](core.md) - Core system skills
+- [External](external.md) - External integration skills
+- [Frameworks](frameworks.md) - Framework-specific skills
+- [Specialized](specialized.md) - Specialized domain skills
+- [Workflows](workflows.md) - General workflow skills
 
-- [Pentest Checklist](pentest-checklist.md) - This skill should be used when the user asks to "plan a penetration test", "create a security assess
-
-- [Specialized](specialized.md) - skill: specialized
-
-- [Workflows](workflows.md) - skill: workflows
-
-- [inventory-report](inventory-report.md) - Generiert vollständiges Tool-Inventar für aktuelles Projekt
-
-- [remotion-best-practices](remotion.md) - Best practices for Remotion - Video creation in React
-
-- [x-reader](x-reader.md) - Lese X/Twitter Posts ohne Browser (via fxtwitter.com Proxy)
-
-- [youtube-transcript](youtube.md) - Hole YouTube Video Transcripts on-demand (kein MCP Server nötig)
-
-
-
-
-
-
-
-
+### Utility Skills
+- [Pentest Checklist](pentest-checklist.md) - Security assessment planning
+- [Inventory Report](inventory-report.md) - Generate tool inventory
+- [Remotion](remotion.md) - Video creation best practices
+- [X Reader](x-reader.md) - Read X/Twitter posts
+- [YouTube Transcript](youtube.md) - Fetch video transcripts

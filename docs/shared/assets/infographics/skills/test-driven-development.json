@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Test-Driven Development (TDD) Skill for an AI coding assistant. Dark theme with deep orange (#FF5722) and blue accents. Shows the Red-Green-Refactor cycle: 1) RED circle with X (Write failing test), 2) GREEN circle with checkmark (Make it pass), 3) BLUE circle with gear (Refactor). Circular arrows connecting all three. Side panel showing test pyramid: Unit (many) \u2192 Integration (some) \u2192 E2E (few). Labels: 'Fail First', 'Minimal Code', 'Clean Architecture'. Code snippet icons showing test \u2192 implementation flow. Clean modern flat illustration, tech documentation style. No photorealistic elements.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d1e8c/edrm3E_jsMrDw1TVKW_R8_TLKPZkek.png",
+  "timestamp": "2026-02-04T18:46:34.353793",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

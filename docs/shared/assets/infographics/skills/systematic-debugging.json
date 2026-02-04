@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Systematic Debugging Skill for an AI coding assistant. Dark theme with deep orange (#FF5722) and blue accents. Shows scientific debugging workflow: 1) OBSERVE (magnifying glass on error), 2) HYPOTHESIZE (lightbulb with question), 3) TEST (checklist with experiments), 4) VERIFY (checkmark confirmation). Evidence collection icons: stack traces, logs, git diffs. Decision tree showing: 'Single Fix Attempt \u2192 Fail \u2192 Sub-Agent Analysis \u2192 User Escalation'. Labels: 'Evidence Before Claims', 'No Guessing', '3-Strike Rule'. Binary search visualization narrowing down root cause. Clean modern flat illustration, tech documentation style. No photorealistic elements.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d1e90/mJT5ZNJOoYhGTsJzpmWKe_03I6w388.png",
+  "timestamp": "2026-02-04T18:47:23.745286",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

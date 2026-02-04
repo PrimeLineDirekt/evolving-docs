@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Verification Before Completion Skill for an AI coding assistant. Dark theme with deep orange (#FF5722) and blue accents. Shows validation checklist before marking work done: 1) Tests pass (green checkmark), 2) Build succeeds (gear icon), 3) No new warnings (warning triangle crossed out), 4) Git clean (branch icon). Red stop sign for 'Never claim fixed without verification'. Evidence chain: Code \u2192 Test \u2192 Build \u2192 Verify \u2192 Complete. Labels: 'Evidence Required', 'No Assumptions', 'Verified Complete'. Clean modern flat illustration, tech documentation style. No photorealistic elements.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d1ea3/ECBohFPMdo4AebN6RyQP0_4RZZLUMM.png",
+  "timestamp": "2026-02-04T18:50:29.108932",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

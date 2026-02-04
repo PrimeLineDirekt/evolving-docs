@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Subagent-Driven Development Skill for an AI coding assistant. Dark theme with deep orange (#FF5722) and blue accents. Shows orchestration pattern: Main agent (large node) spawning multiple sub-agents (smaller nodes) for independent tasks. Task types: Explore, Implement, Review. Parallel lanes showing concurrent execution. Result aggregation back to main. Model selection badges: Haiku (fast), Sonnet (balanced). Labels: 'Fresh Context', 'Specialized Agents', 'Parallel Execution'. Clean modern flat illustration, tech documentation style. No photorealistic elements.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d1eb1/daCQtK-9p4Rf6gUs1Tr1H_2G2ZjFJF.png",
+  "timestamp": "2026-02-04T18:52:34.822407",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

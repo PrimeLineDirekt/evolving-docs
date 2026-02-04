@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Brainstorming Skill workflow for an AI coding assistant. Dark theme with deep orange (#FF5722) and blue accents. Central brain/lightbulb icon connected to four phases: 1) Problem Space Definition (question marks), 2) Divergent Exploration (branching paths), 3) Idea Clustering (grouped dots), 4) Convergent Selection (funnel to star). Arrows showing iterative flow. Labels: 'Explore \u2192 Synthesize \u2192 Select', 'Creative Thinking', 'Structured Output'. Shows transformation from vague request to concrete implementation plan. Clean modern flat illustration, tech documentation style. No photorealistic elements.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d1e88/Uto7EpsNZ4v4TJD2gUXzW_aDHiDFhG.png",
+  "timestamp": "2026-02-04T18:45:53.407348",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Writing Skills Skill for an AI coding assistant. Dark theme with deep orange (#FF5722) and blue accents. Shows skill file anatomy: YAML frontmatter (name, description, model) \u2192 Markdown body (workflow steps, examples). Skill lifecycle: Draft \u2192 Test \u2192 Deploy. Skill invocation: '/skill-name' command triggering skill loading. Examples section with before/after. Labels: 'Reusable Workflows', 'Contextual Loading', 'Model Selection'. Clean modern flat illustration, tech documentation style. No photorealistic elements.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d1eaa/fqfO-KlmKTOXXRh478Ga1_ixGU4AbY.png",
+  "timestamp": "2026-02-04T18:51:36.142409",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Code Review Skills for an AI coding assistant. Dark theme with deep orange (#FF5722) and blue accents. Shows requesting and receiving review workflow: PR icon \u2192 Review request \u2192 Feedback collection \u2192 Implementation. Two flows: 'Requesting' (outgoing arrow to reviewer) and 'Receiving' (incoming feedback). Checklist icons for: conventions, bugs, security, performance. Confidence filter visualization (only high-confidence issues). Labels: 'Proactive Reviews', 'Confidence Filtering', 'Actionable Feedback'. Clean modern flat illustration, tech documentation style. No photorealistic elements.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d1ea7/nM6czlloiKqrceVN7cCU1_Td35SaL3.png",
+  "timestamp": "2026-02-04T18:51:01.393604",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}

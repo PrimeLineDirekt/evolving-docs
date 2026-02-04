@@ -1,0 +1,9 @@
+{
+  "prompt": "Technical infographic diagram showing Writing Plans Skill for an AI coding assistant. Dark theme with deep orange (#FF5722) and blue accents. Shows plan creation workflow: 1) REQUIREMENTS (document icon), 2) ARCHITECTURE (boxes and arrows), 3) PHASES (numbered timeline), 4) TASKS with hints [EXPLORE] [DELEGATE] [DIRECT]. Hierarchical structure: Plan \u2192 Phases \u2192 Tasks \u2192 Sub-tasks. Delegation hints badges in different colors. Interview step icon (chat bubbles). Labels: 'Phase Boundaries', 'Dependency Graph', 'Review Gates'. Shows transformation from spec to executable plan. Clean modern flat illustration, tech documentation style. No photorealistic elements.",
+  "cost_usd": 0.15,
+  "aspect_ratio": "16:9",
+  "url": "https://v3b.fal.media/files/b/0a8d1e95/mhp9cLVgoyI0se6WInsNj_c5cZl64G.png",
+  "timestamp": "2026-02-04T18:47:59.343176",
+  "type": "generate",
+  "model": "fal-ai/nano-banana-pro"
+}
