@@ -69,7 +69,7 @@ plugins:
           build: true
         - locale: de
           name: Deutsch
-          build: true
+          build: false
           nav_translations:
             Home: Startseite
             Getting Started: Erste Schritte
@@ -138,9 +138,6 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/neoforce/evolving
-  analytics:
-    provider: google
-    property: G-XXXXXXXXXX
   consent:
     title: Cookie consent
     description: >-
