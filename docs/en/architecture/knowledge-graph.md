@@ -2,6 +2,8 @@
 
 The knowledge graph is a unified entity-relationship system that connects all components, patterns, and knowledge artifacts in the Evolving system.
 
+![Knowledge Graph Architecture](../../shared/assets/infographics/knowledge-graph.png)
+
 ## Graph Structure
 
 ```mermaid

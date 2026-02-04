@@ -7,6 +7,8 @@ description: Deep dive into the domain memory system
 
 Domain Memory is Evolving's persistent project state system that maintains context across sessions, enabling the AI to remember goals, track progress, and learn from failures.
 
+![Domain Memory Concept](../../shared/assets/infographics/domain-memory.png)
+
 ## What is Domain Memory?
 
 Traditional AI assistants are stateless - they forget everything after each session. Domain Memory solves this by maintaining a persistent record of:

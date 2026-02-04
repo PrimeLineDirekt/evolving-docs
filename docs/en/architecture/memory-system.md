@@ -2,6 +2,8 @@
 
 The memory system provides persistent, structured state management across sessions, enabling the system to learn, adapt, and maintain context over time.
 
+![Memory System Architecture](../../shared/assets/infographics/memory-system.png)
+
 ## Memory Types
 
 ```mermaid
