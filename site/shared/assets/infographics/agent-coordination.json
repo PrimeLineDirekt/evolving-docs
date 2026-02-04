@@ -1,9 +1,0 @@
-{
-  "prompt": "Technical infographic diagram showing Agent Coordination for an AI system. Dark theme with green (#4CAF50) and blue accents. Shows multiple specialized agent icons: Explore (magnifying glass), Debug (bug), Plan (blueprint), Review (checkmark). Central orchestrator node connecting to agents with dependency arrows. Task pipeline with blockedBy relationships visualized. Failure recovery showing 3-attempt escalation. Review pipeline: code-reviewer \u2192 type-analyzer \u2192 silent-failure-hunter. Clean modern flat illustration, tech documentation aesthetic. Labels: 'Built-in Agents', 'Plugin Agents', 'Task Dependencies'. No photorealistic elements.",
-  "cost_usd": 0.15,
-  "aspect_ratio": "16:9",
-  "url": "https://v3b.fal.media/files/b/0a8cfd07/rRGKh9FQrxMymKb3o39bl_itAX8Eb0.png",
-  "timestamp": "2026-02-03T18:56:27.537079",
-  "type": "generate",
-  "model": "fal-ai/nano-banana-pro"
-}

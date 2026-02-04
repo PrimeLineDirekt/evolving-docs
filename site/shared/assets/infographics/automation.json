@@ -1,9 +1,0 @@
-{
-  "prompt": "Technical infographic diagram showing Automation features for an AI system. Dark theme with purple (#6366F1) and orange accents. Shows 22 hooks as event triggers connected to actions. Workflow detection: natural language \u2192 command recognition \u2192 execution. Auto-learning cycle: User Correction \u2192 Pattern Detection \u2192 Rule Generation \u2192 System Improvement. Hook types: PreToolUse, PostToolUse, Notification. Event-driven architecture visualization. Clean modern flat illustration, tech documentation style. Labels: '22 Hooks', 'Workflow Detection', 'Auto-Learning'. No photorealistic elements.",
-  "cost_usd": 0.15,
-  "aspect_ratio": "16:9",
-  "url": "https://v3b.fal.media/files/b/0a8cfd0d/0aHLeuKFmkRiaJWKL8EWq_ybU5rJQn.png",
-  "timestamp": "2026-02-03T18:57:32.357025",
-  "type": "generate",
-  "model": "fal-ai/nano-banana-pro"
-}

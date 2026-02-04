@@ -1,9 +1,0 @@
-{
-  "prompt": "Technical infographic diagram showing Intelligent Orchestration for an AI system. Dark theme with deep orange (#FF5722) as primary accent. Central orchestrator hub connecting to multiple specialized agents in a swarm pattern. Trait composition visualization showing 480 combinations (expertise \u00d7 personality \u00d7 approach). Model selection routing: haiku (fast) \u2192 sonnet (balanced) \u2192 opus (powerful). Parallel execution with dependency graph. Delegation request flow from sub-agent to orchestrator. Clean modern flat illustration, tech documentation aesthetic. Labels: 'Smart Delegation', 'Agent Swarm', '480 Trait Combinations'. No photorealistic elements.",
-  "cost_usd": 0.15,
-  "aspect_ratio": "16:9",
-  "url": "https://v3b.fal.media/files/b/0a8cfd11/e3GWOksZSZArsxVHN2pSs_g0OVZ4K8.png",
-  "timestamp": "2026-02-03T18:58:06.199514",
-  "type": "generate",
-  "model": "fal-ai/nano-banana-pro"
-}
