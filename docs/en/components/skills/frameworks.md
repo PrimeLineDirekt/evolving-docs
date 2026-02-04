@@ -1,96 +1,27 @@
 ---
-title: Frameworks
-type: skill
-tags: []
+title: Framework Skills
+type: category
 lang: en
-confidence: 80
+---
+
+# Framework Skills
+
+Framework skills provide sophisticated methodologies for specialized tasks like prompt engineering and research coordination.
+
+## Available Skills
+
+### [Prompt Pro Framework](prompt-pro-framework.md)
+
+Advanced Prompt Engineering System with 5-level technique hierarchy. Transforms any input into optimal Claude-optimized prompts through adaptive expert transformation and clarity-first architecture.
+
+**Use Cases**: Creating production-grade prompts, optimizing LLM performance, structured problem decomposition
+
+### [Research Orchestrator](research-orchestrator.md)
+
+Elite research coordinator with confidence scoring and multi-source validation. Specializes in planning systematic research, quality-driven execution, and actionable output generation.
+
+**Use Cases**: Market research, competitive analysis, technical research, fact validation
 
 ---
 
-# Frameworks
-
-
-
-
-
-## Overview
-
-<div class="component-meta" markdown>
-| Attribute | Value |
-|-----------|-------|
-| **Type** | Skill |
-| **Purpose** | skill: frameworks |
-| **Complexity** | Medium |
-| **Model** | sonnet |
-
-
-
-</div>
-
-
-
-## What It Does
-
-skill: frameworks
-
-
-
-## System Impact
-
-**Capabilities Provided:**
-- Structured approach to component creation
-- Automated validation and best practices
-- Standardized output format
-- Integration with system architecture
-
-**When to Use:**
-- Creating new system components
-- Standardizing component structure
-- Ensuring consistency across codebase
-- Automating repetitive creation tasks
-
-
-
-
-
-
-## Architecture
-
-
-
-
-
-
-
-## Usage
-
-
-
-
-
-
-
-## Configuration
-
-
-
-
-
-## Best Practices
-
-
-
-
-
-
-
-## Related
-
-
-
-
-
----
-
-
-<small>Source: `.claude/skills/frameworks`</small>
+<small>Category: Framework Skills</small>

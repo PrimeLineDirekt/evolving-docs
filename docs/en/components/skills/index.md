@@ -11,10 +11,12 @@ Skills are reusable workflows loaded on-demand when invoked. They provide contex
 
 <div class="component-grid" markdown>
 <div class="component-card">
-<h3>21</h3>
+<h3>28</h3>
 <p>Total Skills</p>
 </div>
 </div>
+
+---
 
 ## Superpowers Skills
 
@@ -42,17 +44,53 @@ Core development workflow skills from the superpowers plugin.
 ### Meta Skills
 - [Writing Skills](writing-skills.md) - Create new skill files
 
-## Other Skills
+---
 
-- [Core](core.md) - Core system skills
-- [External](external.md) - External integration skills
-- [Frameworks](frameworks.md) - Framework-specific skills
-- [Specialized](specialized.md) - Specialized domain skills
-- [Workflows](workflows.md) - General workflow skills
+## Framework Skills
 
-### Utility Skills
+Advanced frameworks for specialized workflows. See [Frameworks Index](frameworks.md).
+
+- [Prompt Pro Framework](prompt-pro-framework.md) - Advanced prompt engineering with 5-level technique hierarchy
+- [Research Orchestrator](research-orchestrator.md) - Elite research coordinator with confidence scoring
+
+---
+
+## External Workflow Skills
+
+Software development best practices from claude-workflow collection. See [External Index](external.md).
+
+- [API Design](api-design.md) - REST and GraphQL API design guidance
+- [Architecture Patterns](architecture-patterns.md) - Software architecture patterns and decisions
+- [Git Workflow](git-workflow.md) - Branching strategies and commit conventions
+- [Performance Optimization](performance-optimization.md) - Performance analysis and optimization
+- [Project Analysis](project-analysis.md) - Analyze project structure and tech stack
+- [Testing Strategy](testing-strategy.md) - Comprehensive testing strategies
+
+---
+
+## Specialized Skills
+
+Domain-specific skills for creative and e-commerce workflows. See [Specialized Index](specialized.md).
+
+- [Etsy Poster Creator](etsy-poster-creator.md) - Automated Etsy listings with Pinterest SEO
+- [MapToPoster](maptoposter.md) - City map poster generator with 17 themes
+
+---
+
+## Core Skills
+
+System component creation skills. See [Core Index](core.md).
+
+- [Template Creator](template-creator.md) - Create agents, commands, hooks, skills from templates
+
+---
+
+## Utility Skills
+
+Standalone utility skills for specific tasks.
+
+- [Inventory Report](inventory-report.md) - Generate complete tool inventory
 - [Pentest Checklist](pentest-checklist.md) - Security assessment planning
-- [Inventory Report](inventory-report.md) - Generate tool inventory
-- [Remotion](remotion.md) - Video creation best practices
-- [X Reader](x-reader.md) - Read X/Twitter posts
-- [YouTube Transcript](youtube.md) - Fetch video transcripts
+- [Remotion](remotion.md) - Video creation best practices in React
+- [X Reader](x-reader.md) - Read X/Twitter posts without browser
+- [YouTube Transcript](youtube.md) - Fetch video transcripts on-demand

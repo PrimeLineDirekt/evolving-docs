@@ -1,96 +1,21 @@
 ---
-title: Core
-type: skill
-tags: []
+title: Core Skills
+type: category
 lang: en
-confidence: 80
+---
+
+# Core Skills
+
+Core skills provide foundational capabilities for system creation and management.
+
+## Available Skills
+
+### [Template Creator](template-creator.md)
+
+Template Creation Assistant with auto-detection and progressive disclosure. Helps create new Agents, Commands, Hooks, and Skills from standardized templates with automatic placeholder replacement.
+
+**Use Cases**: Creating consistent system components, rapid prototyping, maintaining best practices
 
 ---
 
-# Core
-
-
-
-
-
-## Overview
-
-<div class="component-meta" markdown>
-| Attribute | Value |
-|-----------|-------|
-| **Type** | Skill |
-| **Purpose** | skill: core |
-| **Complexity** | Medium |
-| **Model** | sonnet |
-
-
-
-</div>
-
-
-
-## What It Does
-
-skill: core
-
-
-
-## System Impact
-
-**Capabilities Provided:**
-- Structured approach to component creation
-- Automated validation and best practices
-- Standardized output format
-- Integration with system architecture
-
-**When to Use:**
-- Creating new system components
-- Standardizing component structure
-- Ensuring consistency across codebase
-- Automating repetitive creation tasks
-
-
-
-
-
-
-## Architecture
-
-
-
-
-
-
-
-## Usage
-
-
-
-
-
-
-
-## Configuration
-
-
-
-
-
-## Best Practices
-
-
-
-
-
-
-
-## Related
-
-
-
-
-
----
-
-
-<small>Source: `.claude/skills/core`</small>
+<small>Category: Core Skills</small>
