@@ -8,7 +8,7 @@ from typing import Dict
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent))
 
-from config import get_source_files, get_output_dir, OUTPUT_DIRS, TEMPLATE_DIR, Config
+from config import get_source_files, get_output_dir, OUTPUT_DIRS, TEMPLATE_DIR, Config, EVOLVING_ROOT, set_roots
 from renderer import Renderer
 from parser import parse_markdown, extract_markdown_title, extract_markdown_sections
 
@@ -106,7 +106,7 @@ def extract_simple_metadata(source_file: Path, category: str) -> Dict:
         'examples': _extract_examples(body),
 
         # Source reference
-        'source_file': str(source_file.relative_to(Path('/Users/neoforce/Buisiness/Evolving'))),
+        'source_file': str(source_file.relative_to(EVOLVING_ROOT)),
     }
 
     return metadata
@@ -174,7 +174,7 @@ def _normalize_hook_metadata(raw: Dict, source_file: Path) -> Dict:
         'key_features': [f"Type: {raw.get('hook_type', 'general')}", f"Language: {raw.get('language', 'unknown')}"],
         'usage': f"Hook file: `{raw.get('filename', source_file.name)}`",
         'examples': [{'code': raw.get('code_snippet', ''), 'code_lang': raw.get('language', 'bash'), 'title': 'Implementation'}] if raw.get('code_snippet') else [],
-        'source_file': str(source_file.relative_to(Path('/Users/neoforce/Buisiness/Evolving'))),
+        'source_file': str(source_file.relative_to(EVOLVING_ROOT)),
     }
 
 
@@ -196,7 +196,7 @@ def _normalize_blueprint_metadata(raw: Dict, source_file: Path) -> Dict:
         'key_features': [],
         'usage': '',
         'examples': [],
-        'source_file': str(source_file.relative_to(Path('/Users/neoforce/Buisiness/Evolving'))),
+        'source_file': str(source_file.relative_to(EVOLVING_ROOT)),
     }
 
 
@@ -218,7 +218,7 @@ def _normalize_rule_metadata(raw: Dict, source_file: Path) -> Dict:
         'key_features': [],
         'usage': '',
         'examples': [],
-        'source_file': str(source_file.relative_to(Path('/Users/neoforce/Buisiness/Evolving'))),
+        'source_file': str(source_file.relative_to(EVOLVING_ROOT)),
     }
 
 
@@ -380,12 +380,33 @@ def main():
         choices=["en", "de"],
         help="Output language (default: en)",
     )
+    parser.add_argument(
+        "--source",
+        help="Path to evolving source repo (default: env EVOLVING_ROOT or local)",
+    )
+    parser.add_argument(
+        "--output",
+        help="Path to docs output repo (default: env DOCS_ROOT or repo root)",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Force regenerate all docs (ignore cache)",
+    )
 
     args = parser.parse_args()
 
+    # Apply root overrides before anything else
+    if args.source or args.output:
+        set_roots(source=args.source, output=args.output)
+
     if not args.all and not args.category:
-        parser.print_help()
-        sys.exit(1)
+        # Default to --all when --force is used (CI workflow)
+        if args.force:
+            args.all = True
+        else:
+            parser.print_help()
+            sys.exit(1)
 
     # Initialize renderer
     try:

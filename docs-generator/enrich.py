@@ -16,9 +16,9 @@ from pathlib import Path
 from typing import Dict, List, Optional
 import anthropic
 
-# Configuration
-DOCS_ROOT = Path("/Users/neoforce/Buisiness/evolving-docs/docs/en/components")
-SOURCE_ROOT = Path("/Users/neoforce/Buisiness/Evolving")
+# Configuration - uses env vars with local fallbacks
+DOCS_ROOT = Path(os.environ.get("DOCS_ROOT", str(Path(__file__).parent.parent))) / "docs" / "en" / "components"
+SOURCE_ROOT = Path(os.environ.get("EVOLVING_ROOT", "/Users/neoforce/Buisiness/Evolving"))
 
 # Categories and their source directories
 CATEGORIES = {

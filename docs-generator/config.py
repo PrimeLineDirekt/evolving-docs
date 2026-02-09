@@ -1,56 +1,64 @@
 """Configuration for documentation generator."""
+import os
 from pathlib import Path
 from typing import Dict, List
+
+# Local development fallbacks
+_DEFAULT_EVOLVING = "/Users/neoforce/Buisiness/Evolving"
+_DEFAULT_DOCS = str(Path(__file__).parent.parent)  # repo root
+
+# Root directories - configurable via env vars or set_roots()
+EVOLVING_ROOT = Path(os.environ.get("EVOLVING_ROOT", _DEFAULT_EVOLVING))
+DOCS_ROOT = Path(os.environ.get("DOCS_ROOT", _DEFAULT_DOCS))
+
+
+def set_roots(source: str = None, output: str = None):
+    """Override root directories (called from CLI args)."""
+    global EVOLVING_ROOT, DOCS_ROOT, SOURCE_DIRS, OUTPUT_DIRS, TEMPLATE_DIR
+    if source:
+        EVOLVING_ROOT = Path(source)
+    if output:
+        DOCS_ROOT = Path(output)
+    # Rebuild derived paths
+    SOURCE_DIRS.update(_build_source_dirs(EVOLVING_ROOT))
+    OUTPUT_DIRS.update(_build_output_dirs(DOCS_ROOT))
+    TEMPLATE_DIR = DOCS_ROOT / "templates"
 
 
 class Config:
     """Configuration object for extractors."""
-    def __init__(self, source_root: str = "/Users/neoforce/Buisiness/Evolving"):
-        self.source_root = Path(source_root)
+    def __init__(self, source_root: str = None):
+        self.source_root = Path(source_root) if source_root else EVOLVING_ROOT
 
 
-# Root directories
-EVOLVING_ROOT = Path("/Users/neoforce/Buisiness/Evolving")
-DOCS_ROOT = Path("/Users/neoforce/Buisiness/evolving-docs")
+def _build_source_dirs(root: Path) -> Dict[str, Path]:
+    return {
+        "agents": root / ".claude" / "agents",
+        "commands": root / ".claude" / "commands",
+        "skills": root / ".claude" / "skills",
+        "rules": root / ".claude" / "rules",
+        "patterns": root / "knowledge" / "patterns",
+        "templates": root / "knowledge" / "templates",
+        "prompts": root / "knowledge" / "prompts",
+        "blueprints": root / ".claude" / "blueprints",
+        "hooks": root / ".claude" / "hooks",
+    }
+
+
+def _build_output_dirs(root: Path) -> Dict[str, Dict[str, Path]]:
+    result = {}
+    for lang in ("en", "de"):
+        result[lang] = {}
+        for category in ("agents", "commands", "skills", "rules", "patterns", "templates", "prompts", "blueprints", "hooks"):
+            result[lang][category] = root / "docs" / lang / "components" / category
+    return result
+
 
 # Source directories in Evolving
-SOURCE_DIRS = {
-    "agents": EVOLVING_ROOT / ".claude" / "agents",
-    "commands": EVOLVING_ROOT / ".claude" / "commands",
-    "skills": EVOLVING_ROOT / ".claude" / "skills",
-    "rules": EVOLVING_ROOT / ".claude" / "rules",
-    "patterns": EVOLVING_ROOT / "knowledge" / "patterns",
-    "templates": EVOLVING_ROOT / "knowledge" / "templates",
-    "prompts": EVOLVING_ROOT / "knowledge" / "prompts",
-    "blueprints": EVOLVING_ROOT / ".claude" / "blueprints",
-    "hooks": EVOLVING_ROOT / ".claude" / "hooks",
-}
+SOURCE_DIRS = _build_source_dirs(EVOLVING_ROOT)
 
 # Output directories in evolving-docs
-OUTPUT_DIRS = {
-    "en": {
-        "agents": DOCS_ROOT / "docs" / "en" / "components" / "agents",
-        "commands": DOCS_ROOT / "docs" / "en" / "components" / "commands",
-        "skills": DOCS_ROOT / "docs" / "en" / "components" / "skills",
-        "rules": DOCS_ROOT / "docs" / "en" / "components" / "rules",
-        "patterns": DOCS_ROOT / "docs" / "en" / "components" / "patterns",
-        "templates": DOCS_ROOT / "docs" / "en" / "components" / "templates",
-        "prompts": DOCS_ROOT / "docs" / "en" / "components" / "prompts",
-        "blueprints": DOCS_ROOT / "docs" / "en" / "components" / "blueprints",
-        "hooks": DOCS_ROOT / "docs" / "en" / "components" / "hooks",
-    },
-    "de": {
-        "agents": DOCS_ROOT / "docs" / "de" / "components" / "agents",
-        "commands": DOCS_ROOT / "docs" / "de" / "components" / "commands",
-        "skills": DOCS_ROOT / "docs" / "de" / "components" / "skills",
-        "rules": DOCS_ROOT / "docs" / "de" / "components" / "rules",
-        "patterns": DOCS_ROOT / "docs" / "de" / "components" / "patterns",
-        "templates": DOCS_ROOT / "docs" / "de" / "components" / "templates",
-        "prompts": DOCS_ROOT / "docs" / "de" / "components" / "prompts",
-        "blueprints": DOCS_ROOT / "docs" / "de" / "components" / "blueprints",
-        "hooks": DOCS_ROOT / "docs" / "de" / "components" / "hooks",
-    },
-}
+OUTPUT_DIRS = _build_output_dirs(DOCS_ROOT)
 
 # Template directory
 TEMPLATE_DIR = DOCS_ROOT / "templates"
@@ -62,7 +70,6 @@ def get_source_files(category: str) -> List[Path]:
     if not source_dir or not source_dir.exists():
         return []
 
-    # Get all markdown, Python, and shell files
     files = []
     if category in ["agents", "commands", "skills", "rules", "patterns", "templates", "prompts", "blueprints"]:
         files = list(source_dir.glob("*.md"))
